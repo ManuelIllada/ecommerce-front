@@ -13,7 +13,7 @@ function NavBar({ name, ...props }) {
         <div>
           <a className="ms-4" href="/home">
             <img
-              class="logo-minimal lazyloaded"
+              className="logo-minimal lazyloaded"
               src="https://www.soflow.com/app/themes/so-flow/assets/img/logo-minimal.svg"
               alt="Europe"
               data-ll-status="loaded"
