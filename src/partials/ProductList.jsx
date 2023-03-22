@@ -9,16 +9,15 @@ function ProductList() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/products`,
+        url: `${process.env.REACT_APP_API_URL}/products`,
       });
-      console.log(response.data);
       setProducts(response.data);
     };
     getProducts();
   }, []);
 
   return (
-    <div className="d-flex flex-wrap g-3">
+    <div className="d-flex flex-wrap">
       {products.map((product) => (
         <Product product={product} key={product.id} />
       ))}

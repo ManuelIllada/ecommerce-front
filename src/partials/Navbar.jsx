@@ -10,12 +10,12 @@ function NavBar() {
   return (
     <div>
       <Navbar
-        className="navbar navbar-expand-md bg-dark navbar navbar-expand-lg fixed-top navbar-scroll"
+        className="navbar navbar-expand-md navbar-expand-lg fixed-top navbar-scroll"
         bg="light"
         expand="lg"
       >
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">SoftFlow</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -35,9 +35,6 @@ function NavBar() {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -46,7 +43,13 @@ function NavBar() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success">
+                <img
+                  src="https://images.vexels.com/media/users/3/143356/isolated/preview/64e14fe0195557e3f18ea3becba3169b-buscar-lupa.png"
+                  alt=""
+                  style={{ height: "1.5rem" }}
+                />
+              </Button>
             </Form>
 
             <Cart />
