@@ -10,7 +10,7 @@ function Cart({ name, ...props }) {
 
   return (
     <div className="ms-auto">
-      <Button onClick={handleShow} className="me-2">
+      <Button onClick={handleShow} className="me-2" variant="outline-success">
         <img
           style={{ height: "1.5rem" }}
           className="img-fluid"

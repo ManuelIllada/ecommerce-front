@@ -8,14 +8,14 @@ import Cart from "./Cart";
 
 function NavBar() {
   return (
-    <div>
+    <div className="container">
       <Navbar
         className="navbar navbar-expand-md navbar-expand-lg fixed-top navbar-scroll"
-        bg="light"
+        bg="dark"
         expand="lg"
       >
         <Container fluid>
-          <Navbar.Brand href="#">SoftFlow</Navbar.Brand>
+          <Navbar.Brand href="#">SoFlow</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
