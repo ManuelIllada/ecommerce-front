@@ -10,7 +10,7 @@ function Cart({ name, ...props }) {
 
   return (
     <div className="ms-auto">
-      <Button variant="primary" onClick={handleShow} className="me-2">
+      <Button onClick={handleShow} className="me-2" variant="outline-success">
         <img
           style={{ height: "1.5rem" }}
           className="img-fluid"
@@ -21,11 +21,26 @@ function Cart({ name, ...props }) {
       </Button>
       <Offcanvas placement="end" show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>My Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <div className="d-flex align-items-center">
+            <img
+              src="https://f.fcdn.app/imgs/c759cc/scott-montevideo.com.uy/bscouy/a575/original/catalogo/E-MOB_112_1/460_460/s-pro-e-mob-29-rojo-negro.jpg"
+              alt="compra"
+              style={{ height: "10rem" }}
+            />
+            <div>
+              <h5>Bicicleta Electrica</h5>
+              <div>
+                <p>U$S 500</p>
+                <p>cant</p>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div className="d-flex align-items-end">...</div>
         </Offcanvas.Body>
       </Offcanvas>
     </div>

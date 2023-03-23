@@ -1,19 +1,19 @@
 import NavBar from "../partials/Navbar";
 import ProductList from "../partials/ProductList";
 import React from "react";
+import Footer from "../partials/Footer";
 
 function home() {
   return (
-    <div>
-      <section>
-        <NavBar />
-      </section>
+    <>
+      {/* Hero */}
+      <NavBar />
       <div
-        className="p-5 text-center bg-image mt-5"
+        className="p-5 text-center bg-image"
         style={{
           backgroundImage:
-            "url('https://mdbootstrap.com/img/new/slides/041.webp')",
-          height: "20rem",
+            "url('https://i1.wp.com/www.soflow.com/app/uploads/2022/09/Soflow_Conda.jpg?ssl=1')",
+          height: "69rem",
         }}
       >
         <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
@@ -34,13 +34,15 @@ function home() {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center my-3">
-        <h1>Our Products</h1>
-      </div>
-      <div className="d-flex justify-content-center ">
+
+      <h1 className="text-center my-5">Our Products</h1>
+      <div>
         <ProductList />
       </div>
-    </div>
+      <section>
+        <Footer />
+      </section>
+    </>
   );
 }
 
