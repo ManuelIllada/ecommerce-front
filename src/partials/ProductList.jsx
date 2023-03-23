@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Product } from "./Product";
-import { Link } from "react-router-dom";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -22,9 +21,7 @@ function ProductList() {
   return (
     <div className="d-flex flex-wrap justify-content-around">
       {products.map((product) => (
-        <Link to={`/${product.category.slug}/${product.slug}`} key={product.id}>
-          <Product product={product} />
-        </Link>
+        <Product product={product} key={product.id} />
       ))}
     </div>
   );

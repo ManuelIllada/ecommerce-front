@@ -2,13 +2,14 @@ import NavBar from "../partials/Navbar";
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Product } from "../partials/Product";
 import HeroProducts from "../partials/HeroProducts";
 import Footer from "../partials/Footer";
 
 function Category() {
   const location = useLocation();
+  console.log(location.state);
 
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -36,7 +37,13 @@ function Category() {
 
       <div className="d-flex flex-wrap justify-content-around">
         {products.map((product) => (
-          <Product product={product} key={product.id} />
+          <Link
+            to={`/${product.category.slug}/${product.slug}`}
+            key={product.id}
+            state={product}
+          >
+            <Product product={product} key={product.id} />
+          </Link>
         ))}
       </div>
       <section>

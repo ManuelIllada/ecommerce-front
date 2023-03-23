@@ -59,7 +59,7 @@ function NavBar() {
               />
               <Button variant="outline-dark">
                 <img
-                  src="http://localhost:8000/public/video/videohome.mp4"
+                  src={`${process.env.REACT_APP_API_URL}/video/videohome.mp4`}
                   alt=""
                   style={{ height: "1.5rem" }}
                   variant="outline-light"
