@@ -13,7 +13,7 @@ function ProductList() {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}/products`,
       });
-
+      console.log(response.data);
       setProducts(response.data);
     };
     getProducts();
@@ -22,7 +22,10 @@ function ProductList() {
   return (
     <div className="d-flex flex-wrap justify-content-around">
       {products.map((product) => (
-        <Link to={`/${product.category.slug}/${product.slug}`} key={product.id}>
+        <Link
+          to={`/${product.categoryId.slug}/${product.slug}`}
+          key={product.id}
+        >
           <Product product={product} />
         </Link>
       ))}

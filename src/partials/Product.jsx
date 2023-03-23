@@ -6,12 +6,11 @@ import Button from "react-bootstrap/esm/Button";
 export const Product = ({ product }) => {
   return (
     <div className="shadow-lg p-3 mb-5 bg-body rounded">
-      <Card className="m-4" style={{ width: "18rem" }}>
+      <Card className="m-4" style={{ width: "18rem", height: "40rem" }}>
         <Card.Img variant="top" src={product.media} />
         <Card.Body>
           <Card.Title style={{ height: "3rem" }}>{product.name}</Card.Title>
           <hr />
-          <Card.Text>{product.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item>U$S {product.price}</ListGroup.Item>
