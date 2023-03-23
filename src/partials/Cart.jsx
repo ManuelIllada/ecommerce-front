@@ -19,7 +19,7 @@ function Cart({ name, ...props }) {
         />
         {name}
       </Button>
-      <Offcanvas show={show} onHide={handleClose} {...props}>
+      <Offcanvas placement="end" show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>My Cart</Offcanvas.Title>
         </Offcanvas.Header>

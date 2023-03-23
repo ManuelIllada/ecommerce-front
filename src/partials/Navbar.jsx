@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -30,7 +29,7 @@ function NavBar() {
         style={{ height: "3rem" }}
         expand="lg"
       >
-        <Navbar.Brand className="text-white mx-5" href="#">
+        <Navbar.Brand className="text-white mx-5" href="/">
           SoFlow
         </Navbar.Brand>
         <Navbar.Toggle
@@ -43,7 +42,7 @@ function NavBar() {
               <Link
                 state={item}
                 key={item.id}
-                to={`/category/${item.name}`}
+                to={`/${item.slug}`}
                 className="text-decoration-none ms-2 text-white"
               >
                 {item.name}
