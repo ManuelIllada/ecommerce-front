@@ -14,7 +14,7 @@ function Shop() {
         method: "GET",
         url: `http://localhost:8000/user/productlist`,
       });
-      console.log(response.data);
+
       setProductList(response.data);
     };
     getProductList();

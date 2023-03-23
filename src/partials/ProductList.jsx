@@ -12,7 +12,7 @@ function ProductList() {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}/products`,
       });
-      console.log(response.data);
+
       setProducts(response.data);
     };
     getProducts();
