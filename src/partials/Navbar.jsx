@@ -23,36 +23,36 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
+              <Nav.Link href="#action1">About Us</Nav.Link>
+              <Nav.Link href="#action2">Support</Nav.Link>
+              <NavDropdown title="Categories" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">E-SCOOTER</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">E-BIKE</NavDropdown.Item>
+                <NavDropdown.Item href="#action5">E-BOARD</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
+                  JUST FOR FUN
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">
-                <img
-                  src="https://images.vexels.com/media/users/3/143356/isolated/preview/64e14fe0195557e3f18ea3becba3169b-buscar-lupa.png"
-                  alt=""
-                  style={{ height: "1.5rem" }}
+            <div className="d-flex">
+              <Form className="d-flex me-3">
+                <Form.Control
+                  type="search"
+                  placeholder="Search"
+                  className="me-2"
+                  aria-label="Search"
                 />
-              </Button>
-            </Form>
-
-            <Cart />
+                <Button variant="outline-success">
+                  <img
+                    src="https://images.vexels.com/media/users/3/143356/isolated/preview/64e14fe0195557e3f18ea3becba3169b-buscar-lupa.png"
+                    alt=""
+                    style={{ height: "1.5rem" }}
+                  />
+                </Button>
+              </Form>
+              <Cart />
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -61,64 +61,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-{
-  /* <div>
-<nav className="navbar navbar-expand-md bg-dark navbar navbar-expand-lg fixed-top navbar-scroll">
-  <div>
-    <a className="ms-4" href="/home">
-      <img
-        className="logo-minimal lazyloaded"
-        src="https://www.soflow.com/app/themes/so-flow/assets/img/logo-minimal.svg"
-        alt="Europe"
-        data-ll-status="loaded"
-      />
-    </a>
-  </div>
-  <div className="d-flex gap-4 ms-5 ">
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>E-SCOOTER</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>E-BIKE</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>E-BOARD</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>JUST FOR FUN</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>SPARE PARTS</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>ACCESORIES</h5>
-    </a>
-    <a
-      href="/e-scooter"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      <h5>SUPPORT</h5>
-    </a>
-  </div>
-</nav>
-</div> */
-}

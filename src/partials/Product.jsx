@@ -5,7 +5,7 @@ import Button from "react-bootstrap/esm/Button";
 
 export const Product = ({ product }) => {
   return (
-    <div className="">
+    <div className="shadow-lg p-3 mb-5 bg-body rounded">
       <Card className="m-4" style={{ width: "18rem" }}>
         <Card.Img variant="top" src={product.media} />
         <Card.Body>

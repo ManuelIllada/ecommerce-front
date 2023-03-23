@@ -1,6 +1,7 @@
 import NavBar from "../partials/Navbar";
 import ProductList from "../partials/ProductList";
 import React from "react";
+import Footer from "../partials/Footer";
 
 function home() {
   return (
@@ -45,6 +46,9 @@ function home() {
       <div>
         <ProductList />
       </div>
+      <section>
+        <Footer />
+      </section>
     </>
   );
 }
