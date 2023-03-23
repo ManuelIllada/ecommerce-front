@@ -3,10 +3,24 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Cart from "./Cart";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    const getCategory = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${process.env.REACT_APP_API_URL}/categories`,
+      });
+      setCategory(response.data);
+    };
+    getCategory();
+  }, []);
+
   return (
     <div className="container">
       <Navbar
@@ -23,17 +37,16 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">About Us</Nav.Link>
-              <Nav.Link href="#action2">Support</Nav.Link>
-              <NavDropdown title="Categories" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">E-SCOOTER</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">E-BIKE</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">E-BOARD</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  JUST FOR FUN
-                </NavDropdown.Item>
-              </NavDropdown>
+              {category.map((item) => (
+                <Link
+                  state={item}
+                  key={item.id}
+                  to={`/category/${item.name}`}
+                  className="text-decoration-none ms-2"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </Nav>
             <div className="d-flex">
               <Form className="d-flex me-3">
