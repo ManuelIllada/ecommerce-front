@@ -14,10 +14,9 @@ function home() {
           <video
             className="col-lg-12 col-12"
             preload="metadata"
-            autoplay=""
-            muted="true"
-            loop="true"
-            playsinline=""
+            autoPlay={true}
+            muted={true}
+            loop={true}
             src="https://www.soflow.com/app/uploads/2022/04/220414_SoFlow_Lifestyle_BG_Loop.mp4"
           ></video>
           <div className="mask">
