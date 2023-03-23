@@ -1,5 +1,4 @@
 import NavBar from "../partials/Navbar";
-import ProductList from "../partials/ProductList";
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -16,11 +15,11 @@ function Category() {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}/categories/${location.state.id}`,
       });
-      console.log(response.data);
+
       setProducts(response.data);
     };
     getProducts();
-  }, []);
+  }, [location.state.id]);
 
   return (
     <>
@@ -51,12 +50,11 @@ function Category() {
       </section>
 
       <h1 className="text-center my-5">Our Products</h1>
-      <div>
-        <div className="d-flex flex-wrap justify-content-around">
-          {products.map((product) => (
-            <Product product={product} key={product.id} />
-          ))}
-        </div>
+
+      <div className="d-flex flex-wrap justify-content-around">
+        {products.map((product) => (
+          <Product product={product} key={product.id} />
+        ))}
       </div>
     </>
   );
