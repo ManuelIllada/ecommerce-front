@@ -23,7 +23,7 @@ function NavBar() {
   }, []);
 
   return (
-    <div className="container ">
+    <div>
       <Navbar
         className="navbar navbar-expand-md navbar-expand-lg fixed-top"
         bg="transparent"
@@ -58,11 +58,11 @@ function NavBar() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">
+              <Button variant="outline-dark">
                 <img
-                  src="https://images.vexels.com/media/users/3/143356/isolated/preview/64e14fe0195557e3f18ea3becba3169b-buscar-lupa.png"
+                  src="http://localhost:8000/public/video/videohome.mp4"
                   alt=""
-                  style={{ height: "1.5rem", outlineColor: "white" }}
+                  style={{ height: "1.5rem" }}
                   variant="outline-light"
                 />
               </Button>

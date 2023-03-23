@@ -4,7 +4,7 @@ import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 
 export default function App() {
   return (
-    <MDBFooter className="bg-light text-center text-white">
+    <MDBFooter className="bg-dark text-center text-white">
       <MDBContainer className="p-4 pb-0">
         <section className="mb-4">
           <MDBBtn
@@ -58,7 +58,7 @@ export default function App() {
           <MDBBtn
             floating
             className="m-1"
-            style={{ backgroundColor: "#333333" }}
+            style={{ backgroundColor: "dark" }}
             href="#!"
             role="button"
           >
@@ -71,10 +71,7 @@ export default function App() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2020 Copyright:
-        <a className="text-white" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+        © 2023 Copyright: Team9 Hack
       </div>
     </MDBFooter>
   );

@@ -9,7 +9,7 @@ export const Product = ({ product }) => {
       <Card className="m-4" style={{ width: "18rem" }}>
         <Card.Img variant="top" src={product.media} />
         <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
+          <Card.Title style={{ height: "3rem" }}>{product.name}</Card.Title>
           <hr />
           <Card.Text>{product.description}</Card.Text>
         </Card.Body>
@@ -17,15 +17,19 @@ export const Product = ({ product }) => {
           <ListGroup.Item>U$S {product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button variant="outline-success " type="submit">
-            <Card.Link href="#" style={{ textDecoration: "none" }}>
-              Buy Now
-            </Card.Link>
+          <Button
+            variant="outline-dark"
+            type="submit"
+            className="btn btn-outline-light btn-lg me-1"
+          >
+            Buy Now
           </Button>
-          <Button type="submit" variant="outline-success " className="ms-auto">
-            <Card.Link href="#" style={{ textDecoration: "none" }}>
-              Add Cart
-            </Card.Link>
+          <Button
+            variant="outline-dark"
+            type="submit"
+            className="btn btn-outline-light btn-lg"
+          >
+            Add Cart
           </Button>
         </Card.Body>
       </Card>

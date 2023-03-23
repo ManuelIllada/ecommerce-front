@@ -2,43 +2,67 @@ import NavBar from "../partials/Navbar";
 import ProductList from "../partials/ProductList";
 import React from "react";
 import Footer from "../partials/Footer";
+import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 
 function home() {
   return (
     <>
       {/* Hero */}
-      <NavBar />
-      <div
-        className="p-5 text-center bg-image"
-        style={{
-          backgroundImage:
-            "url('https://i1.wp.com/www.soflow.com/app/uploads/2022/09/Soflow_Conda.jpg?ssl=1')",
-          height: "69rem",
-        }}
-      >
-        <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
-          <div className="d-flex justify-content-center align-items-center h-100">
-            <div className="text-white">
-              <h1 className="mb-3">So Flow</h1>
-              <h4 className="mb-3">
-                Electric mobility with pure driving pleasure!
-              </h4>
-              <a
-                className="btn btn-outline-light btn-lg"
-                href="#!"
-                role="button"
-              >
-                Discover
-              </a>
+      <section>
+        <NavBar />
+        <div className="col-lg-12">
+          <video
+            className="col-lg-12 col-12"
+            preload="metadata"
+            autoplay=""
+            muted="true"
+            loop="true"
+            playsinline=""
+            src="https://www.soflow.com/app/uploads/2022/04/220414_SoFlow_Lifestyle_BG_Loop.mp4"
+          ></video>
+          <div className="mask">
+            <div className="d-flex justify-content-center align-items-center h-100">
+              <div className="text-white">
+                <h1 className="mb-3">So Flow</h1>
+                <h4 className="mb-3">
+                  Electric mobility with pure driving pleasure!
+                </h4>
+                <a
+                  className="btn btn-outline-light btn-lg"
+                  href="#!"
+                  role="button"
+                >
+                  Discover
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <h1 className="text-center my-5">Our Products</h1>
-      <div>
+      </section>
+      <section>
+        <h1 className="text-center my-5">Our Products</h1>
         <ProductList />
-      </div>
+      </section>
+      <section>
+        <MDBContainer className="p-4">
+          <section className="">
+            <MDBRow className="d-flex justify-content-center">
+              <MDBCol lg="6">
+                <div className="ratio ratio-16x9">
+                  <iframe
+                    className="shadow-1-strong rounded"
+                    src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
+                    title="YouTube video"
+                    allowFullScreen
+                    data-gtm-yt-inspected-2340190_699="true"
+                    id="388567449"
+                  ></iframe>
+                </div>
+              </MDBCol>
+            </MDBRow>
+          </section>
+        </MDBContainer>
+      </section>
       <section>
         <Footer />
       </section>
