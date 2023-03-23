@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import HeroProducts from "../partials/HeroProducts";
 import NavBar from "../partials/Navbar";
 
 const ProductInfo = () => {
@@ -8,12 +7,9 @@ const ProductInfo = () => {
   const { name, description, media, price } = location.state;
   return (
     <>
-      <NavBar />
+      <NavBar className="mb-5" />
 
-      <section>
-        <HeroProducts />
-      </section>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-5">
             <img src={media} alt={name} className="img-fluid" />

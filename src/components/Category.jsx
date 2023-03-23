@@ -9,7 +9,6 @@ import Footer from "../partials/Footer";
 
 function Category() {
   const location = useLocation();
-  console.log(location.state);
 
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -30,7 +29,7 @@ function Category() {
 
       {/* Hero */}
       <section>
-        <HeroProducts />
+        <HeroProducts background={location.state.media} />
       </section>
 
       <h1 className="text-center my-5">Our Products</h1>
