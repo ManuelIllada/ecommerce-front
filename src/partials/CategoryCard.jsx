@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function CategoryCard({ category }) {
   return (
-    <div className="contect ">
+    <div>
       <Link state={category} to={`/${category.slug}`}>
         <Card
           className="bg-image hover-zoom hover-shadow"
