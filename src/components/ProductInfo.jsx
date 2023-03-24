@@ -36,28 +36,28 @@ const ProductInfo = () => {
                 {media.map((item) => (
                   <div
                     key={item}
-                    className="preView border-1 rounded"
+                    className="preView border-1 rounded p-2"
                     onMouseOver={() => handleClick(item)}
                   >
                     <img src={item} alt={name} className="img-fluid" />
                   </div>
                 ))}
               </div>
-              <div className="col-9  imageZoom">
-                <Zoom
+              <div className="col-9  imageZoom" onClick={handleShow}>
+                {/*    <Zoom
                   img={showedImage}
                   zoomScale={2}
                   width={600}
                   height={600}
-                  onClick={handleShow}
                   className="img-fluid"
-                />
-                {/* <img
+                  style=""
+                /> */}
+                <img
                   src={showedImage}
                   alt={name}
                   className="img-fluid"
                   onClick={handleShow}
-                /> */}
+                />
               </div>
             </div>
           </div>
