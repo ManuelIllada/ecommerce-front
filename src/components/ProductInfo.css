@@ -1,5 +1,10 @@
 .preView:hover {
-  border: 5px solid red;
+  border: 3px solid lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.imageZoom {
+  cursor: zoom-in;
 }
 
 .memberImage {
