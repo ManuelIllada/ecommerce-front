@@ -18,7 +18,7 @@ function home() {
               autoPlay={true}
               muted={true}
               loop={true}
-              src="https://www.soflow.com/app/uploads/2022/04/220414_SoFlow_Lifestyle_BG_Loop.mp4"
+              src="https://cdn.discordapp.com/attachments/852698000890658876/1088544953866657902/videohome.mp4"
             ></video>
             <div className="mask">
               <div className="d-flex justify-content-center align-items-center h-100">

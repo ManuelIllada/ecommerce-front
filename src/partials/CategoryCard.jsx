@@ -13,9 +13,6 @@ function CategoryCard({ category }) {
           style={{ width: "18rem" }}
         >
           <img variant="top" src={category.cardImage} alt={category.name} />
-          <div className="mask d-flex justify-content-center align-items-center h-100 mt-5">
-            <Button variant="primary">{category.name}</Button>
-          </div>
         </Card>
       </Link>
     </div>

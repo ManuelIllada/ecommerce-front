@@ -38,7 +38,7 @@ function NavBar() {
         style={{ height: "3rem" }}
         expand="lg"
       >
-        <Navbar.Brand className="text-white mx-5" href="/">
+        <Navbar.Brand className="text-white mx-5 fs-2" href="/">
           SoFlow
         </Navbar.Brand>
         <Navbar.Toggle
@@ -46,7 +46,7 @@ function NavBar() {
           style={{ backgroundColor: "white" }}
         />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0 " navbarScroll>
+          <Nav className="me-auto my-2 my-lg-0 gap-4 fw-bold" navbarScroll>
             {category.map((item) => (
               <Link
                 state={item}
@@ -71,6 +71,7 @@ function NavBar() {
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ height: "1.5rem", width: "1.5rem" }}
                   fill="currentColor"
+                  color="white"
                   class="bi bi-search"
                   viewBox="0 0 16 16"
                 >
