@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import NavBar from "../partials/Navbar";
 import { addtoCart } from "../redux/productsCartSlice";
-import Zoom from "react-img-hover-zoom";
+/* import Zoom from "react-img-hover-zoom"; */
 import "./ProductInfo.css";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
