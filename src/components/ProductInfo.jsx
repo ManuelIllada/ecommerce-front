@@ -3,14 +3,21 @@ import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import NavBar from "../partials/Navbar";
 import { addtoCart } from "../redux/productsCartSlice";
+import "./ProductInfo.css";
+import { useState } from "react";
 
 const ProductInfo = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const { name, description, media, price } = location.state;
+  const [showedImage, setShowedImage] = useState(media[0]);
 
   const handleAddToCart = (item) => {
     dispatch(addtoCart(item));
+  };
+
+  const handleClick = (item) => {
+    setShowedImage(item);
   };
   return (
     <>
@@ -19,7 +26,22 @@ const ProductInfo = () => {
       <div className="container mt-5">
         <div className="row">
           <div className="col-5">
-            <img src={media} alt={name} className="img-fluid" />
+            <div className="row">
+              <div className="col-3">
+                {media.map((item) => (
+                  <div
+                    key={item}
+                    className="preView"
+                    onMouseOver={() => handleClick(item)}
+                  >
+                    <img src={item} alt={name} className="img-fluid" />
+                  </div>
+                ))}
+              </div>
+              <div className="col-9">
+                <img src={showedImage} alt={name} className="img-fluid" />
+              </div>
+            </div>
           </div>
           <div className="col-7">
             <h3>{name}</h3>

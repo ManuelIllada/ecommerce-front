@@ -17,7 +17,7 @@ function Category() {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}/categories/${location.state.id}`,
       });
-      console.log(response.data);
+
       setProducts(response.data);
     };
     getProducts();
