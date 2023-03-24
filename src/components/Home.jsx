@@ -3,6 +3,7 @@ import ProductList from "../partials/ProductList";
 import React from "react";
 import Footer from "../partials/Footer";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
+import CategoryList from "../partials/CategoryList";
 
 function home() {
   return (
@@ -22,7 +23,7 @@ function home() {
           <div className="mask">
             <div className="d-flex justify-content-center align-items-center h-100">
               <div className="text-white">
-                <h1 className="mb-3">So Flow</h1>
+                <h1 className="mb-3">SoFlow</h1>
                 <h4 className="mb-3">
                   Electric mobility with pure driving pleasure!
                 </h4>
@@ -40,7 +41,7 @@ function home() {
       </section>
       <section>
         <h1 className="text-center my-5">Our Products</h1>
-        <ProductList />
+        <CategoryList />
       </section>
       <section>
         <MDBContainer className="p-4">

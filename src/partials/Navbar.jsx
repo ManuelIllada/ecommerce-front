@@ -24,7 +24,7 @@ function NavBar() {
   return (
     <div>
       <Navbar
-        className="navbar navbar-expand-md navbar-expand-lg fixed-top"
+        className="navbar navbar-expand-md navbar-expand-lg fixed-top shadow-none"
         bg="transparent"
         style={{ height: "3rem" }}
         expand="lg"
@@ -59,7 +59,7 @@ function NavBar() {
               />
               <Button variant="outline-dark">
                 <img
-                  src={`${process.env.REACT_APP_API_URL}/video/videohome.mp4`}
+                  src="https://svgsilh.com/svg/1093183.svg"
                   alt=""
                   style={{ height: "1.5rem" }}
                   variant="outline-light"
