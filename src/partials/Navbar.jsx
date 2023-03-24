@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
   useEffect(() => {
     const getCategory = async () => {
@@ -20,12 +21,20 @@ function NavBar() {
     };
     getCategory();
   }, []);
-
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setBackground(true);
+    } else {
+      setBackground(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
   return (
     <div>
       <Navbar
-        className="navbar navbar-expand-md navbar-expand-lg fixed-top"
-        bg="transparent"
+        className={`navbar navbar-expand-md navbar-expand-lg fixed-top shadow-none ${
+          background ? "bg-black" : "bg-transparent"
+        } `}
         style={{ height: "3rem" }}
         expand="lg"
       >
@@ -59,7 +68,7 @@ function NavBar() {
               />
               <Button variant="outline-dark">
                 <img
-                  src={`${process.env.REACT_APP_API_URL}/video/videohome.mp4`}
+                  src="https://svgsilh.com/svg/1093183.svg"
                   alt=""
                   style={{ height: "1.5rem" }}
                   variant="outline-light"
