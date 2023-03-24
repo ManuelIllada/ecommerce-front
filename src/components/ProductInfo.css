@@ -1,3 +1,9 @@
 .preView:hover {
   border: 5px solid red;
 }
+
+.memberImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
