@@ -25,11 +25,14 @@ function Category() {
 
   return (
     <>
-      <NavBar />
-
       {/* Hero */}
       <section>
-        <HeroProducts background={location.state.media} />
+        <NavBar />
+
+        <HeroProducts
+          background={location.state.media}
+          name={location.state.name}
+        />
       </section>
 
       <h1 className="text-center my-5">Our Products</h1>
