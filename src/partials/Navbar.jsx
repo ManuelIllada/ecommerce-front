@@ -22,7 +22,6 @@ function NavBar() {
     getCategory();
   }, []);
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 100) {
       setBackground(true);
     } else {
