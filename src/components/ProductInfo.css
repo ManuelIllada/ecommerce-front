@@ -1,0 +1,8 @@
+.preView:hover {
+  border: 3px solid lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.imageZoom {
+  cursor: zoom-in;
+}

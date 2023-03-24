@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Product } from "../partials/Product";
 import CategoryCard from "./CategoryCard";
 
 function CategoryList() {
@@ -12,7 +11,6 @@ function CategoryList() {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}/categories`,
       });
-      console.log(response.data);
       setCategories(response.data);
     };
     getCategories();
@@ -21,7 +19,7 @@ function CategoryList() {
   return (
     <div className="d-flex flex-wrap justify-content-around">
       {categories.map((category) => (
-        <CategoryCard category={category} />
+        <CategoryCard key={category.id} category={category} />
       ))}
     </div>
   );

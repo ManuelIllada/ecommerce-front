@@ -1,5 +1,4 @@
 import NavBar from "../partials/Navbar";
-import ProductList from "../partials/ProductList";
 import React from "react";
 import Footer from "../partials/Footer";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
