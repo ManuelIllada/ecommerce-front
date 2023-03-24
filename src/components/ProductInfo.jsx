@@ -1,10 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import NavBar from "../partials/Navbar";
+import { addtoCart } from "../redux/productsCartSlice";
 
 const ProductInfo = () => {
+  const dispatch = useDispatch();
   const location = useLocation();
   const { name, description, media, price } = location.state;
+
+  const handleAddToCart = (item) => {
+    dispatch(addtoCart(item));
+  };
   return (
     <>
       <NavBar className="mb-5" />
@@ -20,7 +27,10 @@ const ProductInfo = () => {
             <small>${price}</small>
             <div>
               <button className="btn btn-primary m-3">Buy</button>
-              <button className="btn btn-outline-success m-3">
+              <button
+                onClick={() => handleAddToCart(location.state)}
+                className="btn btn-outline-success m-3"
+              >
                 Add to Cart +
               </button>
             </div>
