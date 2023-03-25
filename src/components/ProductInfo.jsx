@@ -47,20 +47,12 @@ const ProductInfo = () => {
                   ))}
                 </div>
                 <div className="col-9  imageZoom">
-                  <Zoom
-                    img={showedImage}
-                    zoomScale={2}
-                    width={600}
-                    height={600}
-                    onClick={handleShow}
+                  <img
+                    src={showedImage}
+                    alt={name}
                     className="img-fluid"
+                    onClick={handleShow}
                   />
-                  {/* <img
-                  src={showedImage}
-                  alt={name}
-                  className="img-fluid"
-                  onClick={handleShow}
-                /> */}
                 </div>
               </div>
             </div>

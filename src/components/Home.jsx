@@ -8,7 +8,7 @@ function home() {
   return (
     <>
       {/* Hero */}
-      <body style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+      <div style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
         <section>
           <NavBar />
           <div className="col-lg-12">
@@ -67,7 +67,7 @@ function home() {
         <section>
           <Footer />
         </section>
-      </body>
+      </div>
     </>
   );
 }

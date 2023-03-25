@@ -15,7 +15,7 @@ function Cart({ name, ...props }) {
           xmlns="http://www.w3.org/2000/svg"
           style={{ height: "1.5rem", width: "1.5rem" }}
           fill="currentColor"
-          class="bi bi-cart4"
+          className="bi bi-cart4"
           color="white"
           viewBox="0 0 20 20"
         >
