@@ -6,3 +6,9 @@
 .imageZoom {
   cursor: zoom-in;
 }
+
+.memberImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

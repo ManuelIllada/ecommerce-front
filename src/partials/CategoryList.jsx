@@ -17,7 +17,7 @@ function CategoryList() {
   }, []);
 
   return (
-    <div className="d-flex justify-content-around">
+    <div className="d-flex flex-wrap justify-content-around">
       {categories.map((category) => (
         <CategoryCard key={category.id} category={category} />
       ))}
