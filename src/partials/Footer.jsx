@@ -11,7 +11,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#3b5998" }}
-            href="#!"
+            href=""
           >
             <MDBIcon fab icon="facebook-f" />
           </MDBBtn>
@@ -20,7 +20,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#55acee" }}
-            href="#!"
+            href=""
             role="button"
           >
             <MDBIcon fab icon="twitter" />
@@ -30,7 +30,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#dd4b39" }}
-            href="#!"
+            href=""
             role="button"
           >
             <MDBIcon fab icon="google" />
@@ -39,7 +39,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#ac2bac" }}
-            href="#!"
+            href=""
             role="button"
           >
             <MDBIcon fab icon="instagram" />
@@ -49,7 +49,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#0082ca" }}
-            href="#!"
+            href=""
             role="button"
           >
             <MDBIcon fab icon="linkedin-in" />
@@ -59,7 +59,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "dark" }}
-            href="#!"
+            href=""
             role="button"
           >
             <MDBIcon fab icon="github" />
