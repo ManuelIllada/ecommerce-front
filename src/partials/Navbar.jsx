@@ -39,7 +39,12 @@ function NavBar() {
         expand="lg"
       >
         <Navbar.Brand className="text-white mx-5 fs-2" href="/">
-          SoFlow
+          <img
+            className="col-lg-12 col-12 pt-2 pb-2"
+            style={{ height: "4rem" }}
+            src="https://cdn.discordapp.com/attachments/992571782294929533/1089839115530412063/logo.png"
+            alt="logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbarScroll "
