@@ -3,22 +3,17 @@ import React from "react";
 function ShopCard({ product }) {
   return (
     <tr>
-      <td className="col-5">
-        <div className="col-4">
-          <img src={product.media} alt="img-product" />
-        </div>
-        <div className="col-4">
-          <div>{product.name}</div>
-          <div>{product.category}</div>
-        </div>
+      <td>
+        <img
+          src={product.media[0]}
+          style={{ width: "50px" }}
+          alt={product.name}
+        />
       </td>
-      <td className="col-2">U$S {product.price}</td>
-      <td className="col-2">
-        <button>1</button>
-      </td>
-      <td className="col-3">
-        U$S {product.element.price * 1} <button>x</button>
-      </td>
+      <td>{product.name}</td>
+      <td>{product.price}</td>
+      <td>{product.quantity}</td>
+      <td>{product.quantity * product.price}</td>
     </tr>
   );
 }
