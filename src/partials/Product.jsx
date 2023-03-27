@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/esm/Button";
+//import Button from "react-bootstrap/esm/Button";
 
 export const Product = ({ product }) => {
   return (
@@ -28,7 +28,7 @@ export const Product = ({ product }) => {
         <ListGroup className="list-group-flush">
           <ListGroup.Item>U$S {product.price}</ListGroup.Item>
         </ListGroup>
-        <Card.Body>
+        {/* <Card.Body>
           <Button
             variant="outline-dark"
             type="submit"
@@ -43,7 +43,7 @@ export const Product = ({ product }) => {
           >
             Add Cart
           </Button>
-        </Card.Body>
+        </Card.Body> */}
       </Card>
     </div>
   );
