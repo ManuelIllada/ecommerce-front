@@ -12,11 +12,7 @@ export default function HeroProducts({ background, name }) {
               <h4 className="mb-3">
                 Electric mobility with pure driving pleasure!
               </h4>
-              <a
-                className="btn btn-outline-light btn-lg"
-                href="#!"
-                role="button"
-              >
+              <a className="btn btn-outline-light btn-lg" href="" role="button">
                 Discover
               </a>
             </div>
