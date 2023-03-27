@@ -23,7 +23,7 @@ const members = [
   {
     name: "Manuel",
     img:
-      "https://cdn.discordapp.com/attachments/852698000890658876/1088833409977163817/qwey.png",
+      "https://cdn.discordapp.com/attachments/852698062668955739/1089920200633241600/qwey.png",
     bio: "Ad lorem ipsum y alguna cosita más",
     link: "https://es.wikipedia.org/wiki/Wikipedia:Portada",
   },
