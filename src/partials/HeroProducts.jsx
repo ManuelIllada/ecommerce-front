@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroProducts({ background, name }) {
   return (
@@ -17,9 +18,9 @@ export default function HeroProducts({ background, name }) {
             <h4 className="mb-3">
               Electric mobility with pure driving pleasure!
             </h4>
-            <a className="btn btn-outline-light btn-lg" href="" role="button">
+            <Link className="btn btn-outline-light btn-lg" to="" role="button">
               Discover
-            </a>
+            </Link>
           </div>
         </div>
       </div>

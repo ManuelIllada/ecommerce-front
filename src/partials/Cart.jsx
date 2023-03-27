@@ -33,23 +33,26 @@ function Cart({ name, ...props }) {
         <Offcanvas.Body>
           {stateCart &&
             stateCart.map((item) => (
-              <div key={item.id} className="d-flex align-items-center">
+              <div key={item.id} className="d-flex align-items-center mb-2">
                 <img
-                  src={item.media}
+                  src={item.media[0]}
+                  className="img-fluid"
                   alt={item.name}
-                  style={{ height: "10rem" }}
+                  style={{ height: "5rem" }}
                 />
                 <div className="ms-4 mt-3">
                   <h5>{item.name}</h5>
                   <div>
                     <p>U$S {item.price}</p>
                   </div>
+                  <div>
+                    <p>Quantity: {item.quantity}</p>
+                  </div>
                 </div>
               </div>
             ))}
           <hr />
 
-          <div className="d-flex align-items-end">...</div>
           <Link to={"/cart"}>
             <Button onClick={handleShow} className="me-2" variant="">
               <svg
