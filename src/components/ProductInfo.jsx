@@ -86,12 +86,7 @@ const ProductInfo = () => {
           >
             {media.map((item) => (
               <Carousel.Item key={item}>
-                <img
-                  className="d-block w-100"
-                  /* src={iteratorSymbol} */
-                  src={item}
-                  alt="First slide"
-                />
+                <img className="d-block w-100" src={item} alt="First slide" />
               </Carousel.Item>
             ))}
           </Carousel>
