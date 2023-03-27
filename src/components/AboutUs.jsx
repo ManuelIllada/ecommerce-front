@@ -1,11 +1,9 @@
-import NavBar from "../partials/Navbar";
+import Navbar from "../partials/Navbar";
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/esm/Button";
+//import Button from "react-bootstrap/esm/Button";
 import members from "../membersdb";
 import "./ProductInfo.css";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
 import Footer from "../partials/Footer";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
@@ -14,20 +12,7 @@ function AboutUs() {
     <>
       <div>
         <section>
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand href="#home">
-                <img
-                  alt=""
-                  src="/logo.svg"
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                />{" "}
-                React Bootstrap
-              </Navbar.Brand>
-            </Container>
-          </Navbar>
+          <Navbar bg="dark" variant="dark"></Navbar>
         </section>
         <div
           className="p-5 text-center bg-image"
@@ -41,7 +26,7 @@ function AboutUs() {
           <div className="container  text-center my-4">
             <h2>About this project</h2>
             <p>
-              Culto is our final project, an E-Commerce website which is built
+              Connen is our final project, an E-Commerce website which is built
               from scratch as the final work of the Coding Bootcamp and carried
               out by Hack Academy. The project is divided into three parts: The
               first one is a public interface where users can navigate search
@@ -61,8 +46,8 @@ function AboutUs() {
         <hr className="mx-4" />
         <section className="mb-5">
           <div className="d-flex justify-content-center">
-            {members.map((member) => (
-              <div className="mx-3">
+            {members.map((member, index) => (
+              <div key={index} className="mx-3">
                 <Card
                   className="hover-zoom bg-image"
                   style={{ width: "15rem" }}
@@ -114,7 +99,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     viewBox="0 0 512 512"
                     height="1em"
                     width="1em"
@@ -129,7 +113,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     viewBox="0 0 384 512"
                     height="1em"
                     width="1em"
@@ -144,7 +127,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     viewBox="0 0 384 512"
                     height="1em"
                     width="1em"
@@ -159,7 +141,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     viewBox="0 0 448 512"
                     height="1em"
                     width="1em"
@@ -174,7 +155,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     role="img"
                     viewBox="0 0 24 24"
                     height="1em"
@@ -191,7 +171,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     role="img"
                     viewBox="0 0 24 24"
                     height="1em"
@@ -208,7 +187,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     role="img"
                     viewBox="0 0 24 24"
                     height="1em"
@@ -225,7 +203,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     role="img"
                     viewBox="0 0 24 24"
                     height="1em"
@@ -242,7 +219,6 @@ function AboutUs() {
                     className="me-2"
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
                     viewBox="0 0 576 512"
                     height="1em"
                     width="1em"

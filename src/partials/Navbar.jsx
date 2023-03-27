@@ -64,6 +64,12 @@ function NavBar() {
             ))}
           </Nav>
           <div className="d-flex">
+            <Link
+              to={`/about`}
+              className="text-decoration-none mt-2 me-4 text-white fw-bold"
+            >
+              About Us
+            </Link>
             <Form className="d-flex me-3">
               <Form.Control
                 type="search"
