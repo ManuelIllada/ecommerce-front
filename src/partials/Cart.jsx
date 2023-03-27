@@ -44,6 +44,9 @@ function Cart({ name, ...props }) {
                   <div>
                     <p>U$S {item.price}</p>
                   </div>
+                  <div>
+                    <p>Quantity: {item.quantity}</p>
+                  </div>
                 </div>
               </div>
             ))}
