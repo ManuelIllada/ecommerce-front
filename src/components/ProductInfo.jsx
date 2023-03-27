@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import NavBar from "../partials/Navbar";
@@ -33,53 +33,48 @@ const ProductInfo = () => {
       <section className="mb-5 bg-dark">
         <NavBar />
       </section>
-      <div className="container ">
-        <div className="row d-flex justify-content-center">
-          <div className="col-6">
-            <section>
-              <div className="mt-5 px-5 row">
-                <div className="col-5">
-                  <div className="row">
-                    <div className="col-3">
-                      {media.map((item) => (
-                        <div
-                          key={item}
-                          className="preView border-1 rounded p-2"
-                          onMouseOver={() => handleClick(item)}
-                        >
-                          <img src={item} alt={name} className="img-fluid" />
-                        </div>
-                      ))}
-                    </div>
-                    <div className="col-9  imageZoom">
-                      <img
-                        src={showedImage}
-                        alt={name}
-                        className="img-fluid"
-                        onClick={handleShow}
-                      />
-                    </div>
+
+      <section>
+        <div className="mt-5 px-5 row">
+          <div className="col-12 col-md-6 col-lg-4">
+            <div className="row">
+              <div className="col-3">
+                {media.map((item) => (
+                  <div
+                    key={item}
+                    className="preView border-1 rounded p-2"
+                    onMouseOver={() => handleClick(item)}
+                  >
+                    <img src={item} alt={name} className="img-fluid" />
                   </div>
-                </div>
-                <div className="col-7">
-                  <h3>{name}</h3>
-                  <p>{description}</p>
-                  <small>${price}</small>
-                  <div>
-                    <button className="btn btn-primary m-3">Buy</button>
-                    <button
-                      onClick={() => handleAddToCart(location.state)}
-                      className="btn btn-outline-success m-3"
-                    >
-                      Add to Cart +
-                    </button>
-                  </div>
-                </div>
+                ))}
               </div>
-            </section>
+              <div className="col-9  imageZoom">
+                <img
+                  src={showedImage}
+                  alt={name}
+                  className="img-fluid"
+                  onClick={handleShow}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-6 col-lg-8 d-flex justify-content-center align-items-center flex-column">
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <small>${price}</small>
+            <div>
+              <button className="btn btn-primary m-3">Buy</button>
+              <button
+                onClick={() => handleAddToCart(location.state)}
+                className="btn btn-outline-success m-3"
+              >
+                Add to Cart +
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <Modal show={show} onHide={handleClose} media={media}>
         <Modal.Body>

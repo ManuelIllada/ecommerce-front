@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Cart({ name, ...props }) {
+  const stateCart = useSelector((state) => state.productCart);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -28,20 +31,22 @@ function Cart({ name, ...props }) {
           <Offcanvas.Title>My Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <div className="d-flex align-items-center">
-            <img
-              src="https://f.fcdn.app/imgs/c759cc/scott-montevideo.com.uy/bscouy/a575/original/catalogo/E-MOB_112_1/460_460/s-pro-e-mob-29-rojo-negro.jpg"
-              alt="compra"
-              style={{ height: "10rem" }}
-            />
-            <div className="ms-4 mt-3">
-              <h5>Electronic Bike</h5>
-              <div>
-                <p>U$S 500</p>
-                <p></p>
+          {stateCart &&
+            stateCart.map((item) => (
+              <div key={item.id} className="d-flex align-items-center">
+                <img
+                  src={item.media}
+                  alt={item.name}
+                  style={{ height: "10rem" }}
+                />
+                <div className="ms-4 mt-3">
+                  <h5>{item.name}</h5>
+                  <div>
+                    <p>U$S {item.price}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ))}
           <hr />
 
           <div className="d-flex align-items-end">...</div>
