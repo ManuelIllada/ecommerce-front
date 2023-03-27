@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../partials/Footer";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import CategoryList from "../partials/CategoryList";
-
+import { Link } from "react-router-dom";
 function home() {
   return (
     <>
@@ -33,13 +33,13 @@ function home() {
                   <h4 className="mb-3">
                     Electric mobility with pure driving pleasure!
                   </h4>
-                  <a
+                  <Link
                     className="btn btn-outline-light btn-lg"
-                    href=""
+                    to=""
                     role="button"
                   >
                     Discover
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
