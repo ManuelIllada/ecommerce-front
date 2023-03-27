@@ -27,6 +27,7 @@ function home() {
                     style={{ height: "10rem" }}
                     src="https://cdn.discordapp.com/attachments/992571782294929533/1089839850980642906/logosinnombre.png"
                     alt="logo"
+                    className="img-fluid"
                   />
                   <h1 className="mb-3">Connen™</h1>
                   <h4 className="mb-3">
