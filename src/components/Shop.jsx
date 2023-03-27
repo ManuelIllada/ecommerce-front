@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from "../partials/Navbar";
 import Table from "react-bootstrap/Table";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { ShopCard } from "../partials/ShopCard";
+/* import axios from "axios";
+import { useState, useEffect } from "react"; 
+import { ShopCard } from "../partials/ShopCard"; */
 
 function Shop() {
-  const [productlist, setProductList] = useState([]);
+  /*   const [productlist, setProductList] = useState([]);
 
   useEffect(() => {
     const getProductList = async () => {
@@ -18,7 +18,7 @@ function Shop() {
       setProductList(response.data);
     };
     getProductList();
-  }, []);
+  }, []); */
 
   return (
     <div>
@@ -36,9 +36,9 @@ function Shop() {
             </tr>
           </thead>
           <tbody>
-            {productlist.map((product) => (
+            {/* {productlist.map((product) => (
               <ShopCard product={product} key={product.id} />
-            ))}
+            ))} */}
           </tbody>
         </Table>
       </section>
