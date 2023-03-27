@@ -8,12 +8,12 @@ function home() {
   return (
     <>
       {/* Hero */}
-      <body style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+      <div style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
         <section>
           <NavBar />
-          <div className="col-lg-12">
+          <div className="col-lg-12 bg-image">
             <video
-              className="col-lg-12 col-12"
+              className="w-100"
               preload="metadata"
               autoPlay={true}
               muted={true}
@@ -21,15 +21,20 @@ function home() {
               src="https://cdn.discordapp.com/attachments/852698000890658876/1088544953866657902/videohome.mp4"
             ></video>
             <div className="mask">
-              <div className="d-flex justify-content-center align-items-center h-100">
-                <div className="text-white">
-                  <h1 className="mb-3">SoFlow</h1>
+              <div className="d-flex justify-content-center align-items-center w-100 h-100">
+                <div className="text-white d-flex justify-content-center align-items-center flex-column">
+                  <img
+                    style={{ height: "10rem" }}
+                    src="https://cdn.discordapp.com/attachments/992571782294929533/1089839850980642906/logosinnombre.png"
+                    alt="logo"
+                  />
+                  <h1 className="mb-3">Connen™</h1>
                   <h4 className="mb-3">
                     Electric mobility with pure driving pleasure!
                   </h4>
                   <a
                     className="btn btn-outline-light btn-lg"
-                    href="#!"
+                    href=""
                     role="button"
                   >
                     Discover
@@ -67,7 +72,7 @@ function home() {
         <section>
           <Footer />
         </section>
-      </body>
+      </div>
     </>
   );
 }

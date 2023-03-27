@@ -1,5 +1,4 @@
 import NavBar from "../partials/Navbar";
-import ProductList from "../partials/ProductList";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/esm/Button";

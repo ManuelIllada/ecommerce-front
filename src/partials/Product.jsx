@@ -9,7 +9,11 @@ export const Product = ({ product }) => {
       <Card className="m-4" style={{ width: "18rem", height: "40rem" }}>
         <Card.Body>
           <div style={{ height: "18rem" }}>
-            <Card.Img variant="top" src={product.media} className="img-fluid" />
+            <Card.Img
+              variant="top"
+              src={product.media[0]}
+              className="img-fluid"
+            />
           </div>
         </Card.Body>
         <Card.Body>
