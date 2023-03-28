@@ -12,8 +12,6 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
-    console.log(email);
-    console.log(password);
     event.preventDefault();
 
     const response = await axios({
