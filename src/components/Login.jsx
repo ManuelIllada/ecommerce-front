@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import axios from "axios";
 import { setUser } from "../redux/userSlice";
+import Navbar from "../partials/Navbar";
 
 function Login() {
   const navigate = useNavigate();
@@ -26,6 +27,9 @@ function Login() {
 
   return (
     <div className="container p-4">
+      <section>
+        <Navbar />
+      </section>
       <div className="row mt-5 justify-content-center">
         <div className="col-6">
           <form onSubmit={(event) => handleSubmit(event)}>

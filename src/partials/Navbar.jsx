@@ -1,13 +1,11 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Cart from "./Cart";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { FaUserAstronaut } from "react-icons/fa";
 function NavBar() {
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
@@ -70,26 +68,13 @@ function NavBar() {
             >
               About Us
             </Link>
-            <Form className="d-flex me-3">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{ height: "1.5rem", width: "1.5rem" }}
-                  fill="currentColor"
-                  color="white"
-                  className="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                </svg>
-              </Button>
-            </Form>
+            <Link
+              to={`/login`}
+              className="text-decoration-none mt-2 me-4 text-white fw-bold"
+            >
+              <FaUserAstronaut />
+            </Link>
+
             <Cart />
           </div>
         </Navbar.Collapse>
