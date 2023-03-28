@@ -16,24 +16,23 @@ function SignUp() {
   /* const navigate = useNavigate(); */
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const formData = new FormData();
+    formData.append("firstname", inputFirstname);
+    formData.append("lastname", inputLastname);
+    formData.append("email", inputEmail);
+    formData.append("address", inputAddress);
+    formData.append("password", inputPassword);
+    formData.append("phone", inputPhone);
+    formData.append("avatar", inputAvatar);
+
     const response = await axios({
       method: "POST",
-      /* headers: {
-        Authorization: `Bearer ${user.token}`,
-        "Content-Type": "multipart/form-data",
-      }, */
       url: `${process.env.REACT_APP_API_URL}/users`,
-      data: {
-        inputFirstname,
-        inputLastname,
-        inputEmail,
-        inputAddress,
-        inputPassword,
-        inputPhone,
-        inputAvatar,
+      data: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
       },
     });
-    console.log("ola");
     console.log(response);
     /* navigate("/login"); */
   };
