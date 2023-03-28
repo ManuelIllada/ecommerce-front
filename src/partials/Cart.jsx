@@ -17,8 +17,8 @@ function Cart({ name, ...props }) {
     <div className="ms-auto">
       <FaOpencart
         onClick={handleShow}
-        className="text-decoration-none mt-2 me-4 text-white fw-bold"
-        size={30}
+        className="text-decoration-none text-white fw-bold"
+        size={25}
       />
 
       <Offcanvas placement="end" show={show} onHide={handleClose} {...props}>

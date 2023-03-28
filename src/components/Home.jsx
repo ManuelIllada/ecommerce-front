@@ -46,7 +46,7 @@ function home() {
           </div>
         </section>
         <section>
-          <h1 className="text-center text-light my-5">Our Products</h1>
+          <h1 className="text-white">Aca un Carousel de Marcas</h1>
           <CategoryList />
         </section>
 

@@ -6,6 +6,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUserAstronaut } from "react-icons/fa";
+import { AiOutlineSearch } from "react-icons/ai";
 function NavBar() {
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
@@ -28,15 +29,15 @@ function NavBar() {
   };
   window.addEventListener("scroll", changeBackground);
   return (
-    <div>
-      <Navbar
-        className={`navbar navbar-expand-md navbar-expand-lg fixed-top shadow-none ${
-          background ? "bg-black" : "bg-transparent"
-        } `}
-        style={{ height: "3rem" }}
-        expand="lg"
-      >
-        <Navbar.Brand className="text-white mx-5 fs-2" href="/">
+    <Navbar
+      className={`navbar  navbar-expand-md navbar-expand-lg fixed-top shadow-none ${
+        background ? "bg-black" : "bg-transparent"
+      } `}
+      style={{ height: "4rem" }}
+      expand="lg"
+    >
+      <div className="container">
+        <Navbar.Brand className="text-white fs-2" href="/">
           <img
             className="col-lg-12 col-12 pt-2 pb-2"
             style={{ height: "4rem" }}
@@ -49,7 +50,7 @@ function NavBar() {
           style={{ backgroundColor: "white" }}
         />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0 gap-4 fw-bold" navbarScroll>
+          <Nav className="ms-auto my-2 my-lg-0 gap-4 fw-bold" navbarScroll>
             {category.map((item) => (
               <Link
                 state={item}
@@ -60,26 +61,22 @@ function NavBar() {
                 {item.name}
               </Link>
             ))}
-          </Nav>
-          <div className="d-flex">
-            <Link
-              to={`/about`}
-              className="text-decoration-none mt-2 me-4 text-white fw-bold"
-            >
-              About Us
-            </Link>
+
+            <span className="text-decoration-none  text-white fw-bold">
+              <AiOutlineSearch size={24} />
+            </span>
             <Link
               to={`/login`}
-              className="text-decoration-none mt-2 me-4 text-white fw-bold"
+              className="text-decoration-none  text-white fw-bold"
             >
-              <FaUserAstronaut />
+              <FaUserAstronaut size={20} />
             </Link>
 
             <Cart />
-          </div>
+          </Nav>
         </Navbar.Collapse>
-      </Navbar>
-    </div>
+      </div>
+    </Navbar>
   );
 }
 

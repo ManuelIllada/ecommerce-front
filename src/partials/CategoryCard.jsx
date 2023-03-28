@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 function CategoryCard({ category }) {
   return (
-    <div>
-      <Link state={category} to={`/${category.slug}`}>
-        <Card
-          className="bg-image hover-zoom hover-shadow"
-          style={{ width: "18rem" }}
-        >
-          <img variant="top" src={category.cardImage} alt={category.name} />
-        </Card>
-      </Link>
-    </div>
+    <Link state={category} to={`/${category.slug}`} style={{ width: "20%" }}>
+      <Card className=" m-3 bg-image hover-zoom hover-shadow">
+        <img
+          variant="top"
+          src={category.cardImage}
+          className="img-fluid "
+          alt={category.name}
+        />
+      </Card>
+    </Link>
   );
 }
 
