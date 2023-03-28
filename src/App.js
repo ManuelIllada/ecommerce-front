@@ -5,6 +5,7 @@ import Category from "./components/Category";
 import ProductInfo from "./components/ProductInfo";
 import AboutUs from "./components/AboutUs";
 import Shop from "./components/Shop";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/:category/:product" element={<ProductInfo />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/cart" element={<Shop />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
