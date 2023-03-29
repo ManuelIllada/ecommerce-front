@@ -1,10 +1,8 @@
 import NavBar from "../partials/Navbar";
 import React from "react";
 import Footer from "../partials/Footer";
-import AboutUsButton from "../partials/AboutUsButton";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import CategoryList from "../partials/CategoryList";
-import { Link } from "react-router-dom";
 import "./Home.css";
 function home() {
   return (
@@ -36,13 +34,6 @@ function home() {
                   <h4 className="mb-3">
                     Electric mobility with pure driving pleasure!
                   </h4>
-                  <Link
-                    className="btn btn-outline-light btn-lg"
-                    to=""
-                    role="button"
-                  >
-                    Discover
-                  </Link>
                 </div>
               </div>
             </div>
