@@ -20,15 +20,16 @@ function home() {
               loop={true}
               src="https://cdn.discordapp.com/attachments/852698000890658876/1088544953866657902/videohome.mp4"
             ></video>
-            <div className="mask">
+            <div className="mask ">
               <div className="d-flex justify-content-center align-items-center w-100 h-100">
-                <div className="text-white d-flex justify-content-center align-items-center flex-column">
+                <div className="d-none  d-md-block text-white d-flex justify-content-center align-items-center flex-column text-center">
                   <img
                     style={{ height: "10rem" }}
                     src="https://cdn.discordapp.com/attachments/992571782294929533/1089839850980642906/logosinnombre.png"
                     alt="logo"
                     className="img-fluid img-responsive"
                   />
+
                   <h1 className="mb-3">Connen™</h1>
                   <h4 className="mb-3">
                     Electric mobility with pure driving pleasure!
@@ -50,9 +51,9 @@ function home() {
           <CategoryList />
         </section>
 
-        <section>
+        <section className="mt-5">
           <MDBContainer className="p-4">
-            <section className="">
+            <section>
               <MDBRow className="d-flex justify-content-center">
                 <MDBCol lg="6">
                   <div className="ratio ratio-16x9">
