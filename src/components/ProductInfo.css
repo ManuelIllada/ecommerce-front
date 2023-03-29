@@ -12,3 +12,16 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.link-to-about {
+  height: 40px;
+  width: auto;
+  color: rgb(26, 26, 26);
+  background-color: rgb(212, 192, 118);
+  font-size: 100%;
+  position: fixed;
+  left: -80px;
+  top: 45vh;
+  z-index: 100;
+  transform: rotate(-90deg);
+}
