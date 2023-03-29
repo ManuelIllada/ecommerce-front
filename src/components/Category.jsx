@@ -25,32 +25,39 @@ function Category() {
 
   return (
     <>
-      {/* Hero */}
-      <section>
-        <NavBar />
+      <body
+        className="bg-image"
+        style={{
+          backgroundImage: `url("https://cdn.discordapp.com/attachments/852698000890658876/1090624580168732753/photo-1616410731303-6affae095a0a.png")`,
+        }}
+      >
+        {/* Hero */}
+        <section>
+          <NavBar />
 
-        <HeroProducts
-          background={location.state.media}
-          name={location.state.name}
-        />
-      </section>
+          <HeroProducts
+            background={location.state.media}
+            name={location.state.name}
+          />
+        </section>
 
-      <h1 className="text-center my-5">Our Products</h1>
+        <h1 className="text-center my-5">Our Products</h1>
 
-      <div className="d-flex flex-wrap justify-content-around">
-        {products.map((product) => (
-          <Link
-            to={`/${product.category.slug}/${product.slug}`}
-            key={product.id}
-            state={product}
-          >
-            <Product product={product} key={product.id} />
-          </Link>
-        ))}
-      </div>
-      <section>
-        <Footer />
-      </section>
+        <div className="d-flex flex-wrap justify-content-around">
+          {products.map((product) => (
+            <Link
+              to={`/${product.category.slug}/${product.slug}`}
+              key={product.id}
+              state={product}
+            >
+              <Product product={product} key={product.id} />
+            </Link>
+          ))}
+        </div>
+        <section>
+          <Footer />
+        </section>
+      </body>
     </>
   );
 }
