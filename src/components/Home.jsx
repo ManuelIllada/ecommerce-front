@@ -2,6 +2,7 @@ import NavBar from "../partials/Navbar";
 import React from "react";
 import Footer from "../partials/Footer";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
+import AboutUsButton from "../partials/AboutUsButton";
 import CategoryList from "../partials/CategoryList";
 import "./Home.css";
 function home() {
