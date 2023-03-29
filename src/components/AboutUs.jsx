@@ -204,14 +204,39 @@ function AboutUs() {
           </div>
         </section>
         <section
+          className="text-light"
           style={{
             backgroundColor: "#4f4f4f",
             height: "25rem",
           }}
         >
-          <h2 className="text-light py-4">
+          <h2 className="py-4 text-center">
             Instructivo de cómo usar la página
           </h2>
+          <div className="container">
+            <div className="row justify-content-around">
+              <div className="col-sm-12 col-md-3 text-center">
+                <h3>For Customers</h3>
+                <p>
+                  Sientete libre de navegar por este sitio, agrega productos a
+                  tu carrito, y finaliza tu compra logeandote con las
+                  credenciales de usuario:
+                </p>
+                <p>Email: username@gmail.com</p>
+                <p>Contraseña: password</p>
+              </div>
+              <div className="col-sm-12 col-md-3 text-center">
+                <h3>For Admins</h3>
+                <p>
+                  Si quieres probar las funcionalidades de Admin, como crear,
+                  aditar o borrar ya sea categorias, productos, usuarios u
+                  ordenes puedes acceder con las siguientes credenciales:
+                </p>
+                <p>Email: admin@gmail.com</p>
+                <p>Contraseña: password</p>
+              </div>
+            </div>
+          </div>
         </section>
         <section className="my-5">
           <div className="d-flex justify-content-center">
@@ -226,12 +251,16 @@ function AboutUs() {
                     variant="top"
                     src={member.img}
                     style={{
-                      height: "8rem",
-                      width: "8rem",
+                      height: "6rem",
+                      width: "6rem",
                       borderRadius: "100%",
                     }}
                   />
-                  <h6>{member.name}</h6>
+                  <h5>
+                    {" "}
+                    <strong> {member.firstname}</strong>
+                  </h5>
+                  <h6>{member.lastname}</h6>
                   <Card.Body>
                     <MDBBtn
                       floating
