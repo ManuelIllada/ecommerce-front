@@ -5,14 +5,13 @@ import AboutUsButton from "../partials/AboutUsButton";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import CategoryList from "../partials/CategoryList";
 import { Link } from "react-router-dom";
-
+import "./Home.css";
 function home() {
   return (
     <>
       {/* Hero */}
-      <AboutUsButton />
-      <div style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
-        <section>
+      <div style={{ backgroundColor: "rgb(65, 61, 61)" }}>
+        <section className="position-relative hero-container">
           <NavBar />
           <div className="col-lg-12 bg-image">
             <video

@@ -78,14 +78,51 @@ const ProductInfo = () => {
           </div>
         </section>
         <hr className="mx-5" />
-        <div>
-          <div className="container">
+        <div className="container d-flex justify-content-around">
+          <div className=" col-3 shadow">
             <h4 className="semi-bold">Payment Methods</h4>
             <Button></Button>
             <p>Credit cards</p>
             <small>Interest free installments with selected banks!</small>
+            <div>
+              <img
+                src="https://http2.mlstatic.com/storage/logos-api-admin/a5f047d0-9be0-11ec-aad4-c3381f368aaf-m.svg"
+                alt="visa"
+                className="me-2"
+              />
+              <img
+                src="https://http2.mlstatic.com/storage/logos-api-admin/d7e372a0-f39b-11eb-8e0d-6f4af49bf82e-m.svg"
+                alt="Oca"
+                className="me-2"
+              />
+              <img
+                src="https://http2.mlstatic.com/storage/logos-api-admin/fbf867c0-9108-11ed-87b1-fd4dd99fac51-m.svg"
+                alt="American Express"
+                className="me-2"
+              />
+              <img
+                src="https://http2.mlstatic.com/storage/logos-api-admin/aa2b8f70-5c85-11ec-ae75-df2bef173be2-m.svg"
+                alt="masterCard"
+              />
+            </div>
+            <p>Debit cards</p>
+            <img
+              src="https://http2.mlstatic.com/storage/logos-api-admin/a5f047d0-9be0-11ec-aad4-c3381f368aaf-m.svg"
+              alt="visa"
+              className="me-2"
+            />
+            <img
+              src="https://http2.mlstatic.com/storage/logos-api-admin/aa2b8f70-5c85-11ec-ae75-df2bef173be2-m.svg"
+              alt="masterCard"
+            />
           </div>
-          <div></div>
+          <div className=" col-3 shadow">
+            <h4>Protected Purchase with Mercado Pago</h4>
+            <div className="">
+              <p>Receive the product you were expecting or your money back.</p>
+              <p>Learn more about warranty</p>
+            </div>
+          </div>
         </div>
         <section className="mt-auto">
           <Footer />

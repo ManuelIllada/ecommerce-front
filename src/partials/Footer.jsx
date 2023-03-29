@@ -6,6 +6,19 @@ export default function App() {
   return (
     <MDBFooter className="bg-dark text-center text-white mt-5">
       <MDBContainer className="p-4 pb-0">
+        <hr />
+        <section>
+          <div className="row justify-content-between">
+            <div className="footerColumn col">
+              <h3>Local</h3>
+              <p>
+                Av 18 de Julio 1704 . Montevideo
+                <br />L a V: 9 a 18 hs.
+              </p>
+            </div>
+          </div>
+        </section>
+        <hr />
         <section className="mb-4">
           <MDBBtn
             floating
