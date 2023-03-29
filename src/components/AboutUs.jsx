@@ -18,81 +18,52 @@ function AboutUs() {
           className="p-5 text-center bg-image"
           style={{
             backgroundImage:
-              "url('https://mdbootstrap.com/img/new/slides/041.webp')",
-            height: "20rem",
+              "url('https://images.pexels.com/photos/548084/pexels-photo-548084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+            backgroundPosition: "bottom",
+            height: "15rem",
           }}
         ></div>
-        <section>
-          <div className="container  text-center my-4">
+        <section
+          style={{
+            backgroundColor: "#4f4f4f",
+          }}
+        >
+          <div className="container text-center py-5 text-light">
             <h2>About this project</h2>
             <p>
               Connen is our final project, an E-Commerce website which is built
               from scratch as the final work of the Coding Bootcamp and carried
-              out by Hack Academy. The project is divided into three parts: The
-              first one is a public interface where users can navigate search
-              and add products to a cart. It is not a requirement to be logged
-              until you proceed to checkout. The user can add later its personal
-              information to buy a product and check his/her previous orders.
-              The second part of this project includes an administrator panel.
-              The Admin has permissions to read, add, update and delete
-              products, categories, and users. The third part consist in a REST
-              API. The process: The process consisted of 3 work weeks that
-              includes approximately 450 man hours. We used the agile
-              methodology, testing the application and modifying our goals based
-              on the data collected.
+              out by Hack Academy. The project is divided into three parts:
+            </p>
+            <ul className="justify-content-start">
+              <li>
+                The first one is a public interface where users can navigate
+                search and add products to a cart. It is not a requirement to be
+                logged until you proceed to checkout. The user can add later its
+                personal information to buy a product and check his/her previous
+                orders.
+              </li>
+              <li>
+                The second part of this project includes an administrator panel.
+                The Admin has permissions to read, add, update and delete
+                products, categories, and users.
+              </li>
+              <li>The third part consist in a REST API.</li>
+            </ul>
+            <p>
+              The process: The process consisted of 3 work weeks that includes
+              approximately 450 man hours. We used the agile methodology,
+              testing the application and modifying our goals based on the data
+              collected.
             </p>
           </div>
         </section>
-        <hr className="mx-4" />
-        <section className="mb-5">
-          <div className="d-flex justify-content-center">
-            {members.map((member, index) => (
-              <div key={index} className="mx-3">
-                <Card
-                  className="hover-zoom bg-image"
-                  style={{ width: "15rem" }}
-                >
-                  <Card.Img
-                    className="img-fluid float-right "
-                    variant="top"
-                    src={member.img}
-                    style={{ height: "18rem" }}
-                  />
-                  <Card.Body>
-                    <h6>{member.name}</h6>
-                  </Card.Body>
-                  <Card.Body className="d-flex justify-content-center">
-                    <MDBBtn
-                      floating
-                      className="m-1"
-                      style={{ backgroundColor: "#0082ca" }}
-                      href=""
-                      role="button"
-                    >
-                      <MDBIcon fab icon="linkedin-in" />
-                    </MDBBtn>
-                    <MDBBtn
-                      floating
-                      className="m-1"
-                      style={{ backgroundColor: "dark" }}
-                      href=""
-                      role="button"
-                    >
-                      <MDBIcon fab icon="github" />
-                    </MDBBtn>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section>
-          <div>
-            <h3 className="text-center mb-5">
+          <div className="my-4">
+            <h4 className="text-center mb-3">
               Some of the implemented technologies...
-            </h3>
-            <div className="">
+            </h4>
+            <div className="container">
               <ul className="d-flex justify-content-around">
                 <ol>
                   <svg
@@ -232,6 +203,61 @@ function AboutUs() {
             </div>
           </div>
         </section>
+        <section
+          style={{
+            backgroundColor: "#4f4f4f",
+            height: "25rem",
+          }}
+        >
+          <h2 className="text-light py-4">
+            Instructivo de cómo usar la página
+          </h2>
+        </section>
+        <section className="my-5">
+          <div className="d-flex justify-content-center">
+            {members.map((member, index) => (
+              <div
+                key={index}
+                className="mx-2 d-flex flex-column align-items-center justify-content-center"
+              >
+                <div className="bg-image" style={{ width: "15rem" }}>
+                  <Card.Img
+                    className="img-fluid"
+                    variant="top"
+                    src={member.img}
+                    style={{
+                      height: "8rem",
+                      width: "8rem",
+                      borderRadius: "100%",
+                    }}
+                  />
+                  <h6>{member.name}</h6>
+                  <Card.Body>
+                    <MDBBtn
+                      floating
+                      className="m-1"
+                      style={{ backgroundColor: "#4f4f4f" }}
+                      href=""
+                      role="button"
+                    >
+                      <MDBIcon fab icon="linkedin-in" />
+                    </MDBBtn>
+                    <MDBBtn
+                      floating
+                      className="m-1"
+                      style={{ backgroundColor: "#4f4f4f" }}
+                      href=""
+                      role="button"
+                    >
+                      <MDBIcon fab icon="github" />
+                    </MDBBtn>
+                  </Card.Body>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="mt-5">
           <Footer />
         </section>

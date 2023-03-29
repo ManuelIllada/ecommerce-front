@@ -1,6 +1,7 @@
 import NavBar from "../partials/Navbar";
 import React from "react";
 import Footer from "../partials/Footer";
+import AboutUsButton from "../partials/AboutUsButton";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import CategoryList from "../partials/CategoryList";
 import { Link } from "react-router-dom";
