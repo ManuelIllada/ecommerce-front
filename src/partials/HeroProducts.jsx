@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./HeroProduct.css";
 
 export default function HeroProducts({ background, name }) {

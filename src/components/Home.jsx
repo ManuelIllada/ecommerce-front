@@ -13,6 +13,7 @@ function home() {
       <div style={{ backgroundColor: "rgb(65, 61, 61)" }}>
         <section className="position-relative hero-container">
           <NavBar />
+          <AboutUsButton />
           <div className="col-lg-12 bg-image">
             <video
               className="w-100"
