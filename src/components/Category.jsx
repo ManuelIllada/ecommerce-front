@@ -26,12 +26,7 @@ function Category() {
 
   return (
     <>
-      <div
-        className="bg-image"
-        style={{
-          backgroundImage: `url("https://cdn.discordapp.com/attachments/852698000890658876/1090624580168732753/photo-1616410731303-6affae095a0a.png")`,
-        }}
-      >
+      <div className="bg-image" style={{ backgroundColor: "#f0e8d5" }}>
         {/* Hero */}
         <section>
           <NavBar />
