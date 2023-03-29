@@ -17,10 +17,12 @@ function CategoryList() {
   }, []);
 
   return (
-    <div className="d-flex flex-wrap justify-content-around">
-      {categories.map((category) => (
-        <CategoryCard key={category.id} category={category} />
-      ))}
+    <div className="container-fluid">
+      <div className="row d-flex justify-content-center">
+        {categories.map((category) => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
+      </div>
     </div>
   );
 }
