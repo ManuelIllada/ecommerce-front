@@ -16,12 +16,6 @@ export default function HeroProducts({ background, name }) {
               className="img-fluid"
             />
             <h1 className="mb-3">{name}</h1>
-            <h4 className="mb-3">
-              Electric mobility with pure driving pleasure!
-            </h4>
-            <Link className="btn btn-outline-light btn-lg" to="" role="button">
-              Discover
-            </Link>
           </div>
         </div>
       </div>
