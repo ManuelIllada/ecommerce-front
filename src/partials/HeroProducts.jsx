@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./HeroProduct.css";
 
 export default function HeroProducts({ background, name }) {
   return (
-    <div className="bg-image">
+    <div className="bg-image hero-product">
       <img src={background} className="img-fluid w-100" alt="hero Section" />
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
         <div className="d-flex justify-content-center align-items-center w-100 h-100">
