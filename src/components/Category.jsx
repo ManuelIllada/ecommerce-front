@@ -21,11 +21,12 @@ function Category() {
       setProducts(response.data);
     };
     getProducts();
+    console.log(location.state.id);
   }, [location.state.id]);
 
   return (
     <>
-      <body
+      <div
         className="bg-image"
         style={{
           backgroundImage: `url("https://cdn.discordapp.com/attachments/852698000890658876/1090624580168732753/photo-1616410731303-6affae095a0a.png")`,
@@ -57,7 +58,7 @@ function Category() {
         <section>
           <Footer />
         </section>
-      </body>
+      </div>
     </>
   );
 }

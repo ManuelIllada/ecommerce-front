@@ -17,7 +17,7 @@ function Cart({ name, ...props }) {
     <div className="ms-auto">
       <FaOpencart
         onClick={handleShow}
-        className="text-decoration-none text-white fw-bold"
+        className="text-decoration-none text-white fw-bold "
         size={25}
       />
 
