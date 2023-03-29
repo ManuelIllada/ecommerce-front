@@ -31,8 +31,8 @@ const ProductInfo = () => {
   };
   return (
     <>
-      <body className="bg-dark">
-        <section className=" bg-dark">
+      <body style={{ backgroundColor: "rgb(65, 61, 61)" }}>
+        <section style={{ backgroundColor: "rgb(65, 61, 61)" }}>
           <NavBar />
         </section>
         <section>
@@ -62,9 +62,9 @@ const ProductInfo = () => {
               </div>
             </div>
             <div className="col-lg-6 col-md-8 col-sm-10  d-flex justify-content-center align-items-center flex-column ms-5 text-center">
-              <h3 className="mb-4">{name}</h3>
-              <p>{description}</p>
-              <small>${price}</small>
+              <h3 className="mb-4 text-white">{name}</h3>
+              <p className="text-white">{description}</p>
+              <small className="text-white">${price}</small>
               <div>
                 <button className="btn btn-primary m-3">Buy</button>
                 <button
@@ -78,8 +78,8 @@ const ProductInfo = () => {
           </div>
         </section>
         <hr className="mx-5" />
-        <div className="container d-flex justify-content-around">
-          <div className=" col-3 shadow">
+        <div className=" text-white container d-flex justify-content-around">
+          <div className="p-3 col-3 shadow">
             <h4 className="semi-bold">Payment Methods</h4>
             <Button></Button>
             <p>Credit cards</p>
@@ -116,7 +116,7 @@ const ProductInfo = () => {
               alt="masterCard"
             />
           </div>
-          <div className=" col-3 shadow">
+          <div className="p-3 col-3 shadow">
             <h4>Protected Purchase with Mercado Pago</h4>
             <div className="">
               <p>Receive the product you were expecting or your money back.</p>

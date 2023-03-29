@@ -6,7 +6,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 export const Product = ({ product }) => {
   return (
     <Card
-      className="m-4 rounded hover-zoom hover-shadow"
+      className="bg-black bg-opacity-25 m-4 rounded hover-zoom hover-shadow"
       style={{ width: "18rem", height: "30rem", borderRadius: "100px" }}
     >
       <Card.Body>

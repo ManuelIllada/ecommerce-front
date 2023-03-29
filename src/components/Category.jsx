@@ -26,7 +26,7 @@ function Category() {
 
   return (
     <>
-      <div className="bg-image" style={{ backgroundColor: "#f0e8d5" }}>
+      <div className="bg-image" style={{ backgroundColor: "rgb(65, 61, 61)" }}>
         {/* Hero */}
         <section>
           <NavBar />
@@ -37,7 +37,7 @@ function Category() {
           />
         </section>
 
-        <h1 className="text-center my-5">Our Products</h1>
+        <h1 className="text-center text-white my-5">Our Products</h1>
 
         <div className="d-flex flex-wrap justify-content-around">
           {products.map((product) => (

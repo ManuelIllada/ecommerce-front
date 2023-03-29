@@ -71,7 +71,7 @@ function Login() {
 
             <div className="text-center">
               <p>
-                Not a member? <Link>Register</Link>
+                Not a member? <Link to="/register">Register</Link>
               </p>
               <p>or sign up with:</p>
               <button type="button" className="btn btn-link btn-floating mx-1">
