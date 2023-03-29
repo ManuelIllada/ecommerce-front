@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUserAstronaut } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
+import { Button } from "react-bootstrap";
 function NavBar() {
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
@@ -45,10 +46,7 @@ function NavBar() {
             alt="logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="navbarScroll "
-          style={{ backgroundColor: "white" }}
-        />
+        <Navbar.Toggle aria-controls="navbarScroll " />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto my-2 my-lg-0 gap-4 fw-bold" navbarScroll>
             {category.map((item) => (
@@ -61,7 +59,6 @@ function NavBar() {
                 {item.name}
               </Link>
             ))}
-
             <span className="text-decoration-none  text-white fw-bold">
               <AiOutlineSearch size={24} />
             </span>
@@ -71,8 +68,9 @@ function NavBar() {
             >
               <FaUserAstronaut size={20} />
             </Link>
-
-            <Cart />
+            <Button className="bg-transparent p-0 me-auto" variant="link">
+              <Cart />
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </div>
