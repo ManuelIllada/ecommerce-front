@@ -4,6 +4,7 @@ import Footer from "../partials/Footer";
 import { MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import CategoryList from "../partials/CategoryList";
 import { Link } from "react-router-dom";
+
 function home() {
   return (
     <>
