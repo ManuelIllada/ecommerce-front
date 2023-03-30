@@ -7,6 +7,7 @@ import "./ProductInfo.css";
 import { useState } from "react";
 import { Modal, Carousel, Button } from "react-bootstrap";
 import Footer from "../partials/Footer";
+import HeroProducts from "../partials/HeroProducts";
 
 const ProductInfo = () => {
   const [show, setShow] = useState(false);

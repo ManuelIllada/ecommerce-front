@@ -20,8 +20,15 @@ export const productCartSlice = createSlice({
         state.push({ ...actions.payload, quantity: 1 });
       }
     },
+    uptdateQuantity: (state, actions) => {
+      // state.push({ ...actions.payload, quantity: 1 });
+    },
   },
 });
-export const { addtoCart, setToken } = productCartSlice.actions;
+export const {
+  addtoCart,
+  setToken,
+  uptdateQuantity,
+} = productCartSlice.actions;
 
 export default productCartSlice.reducer;
