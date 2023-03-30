@@ -21,7 +21,10 @@ export const productCartSlice = createSlice({
       }
     },
     uptdateQuantity: (state, actions) => {
-      // state.push({ ...actions.payload, quantity: 1 });
+      const productExist = state.find(
+        (product) => product.id === actions.payload.id
+      );
+      productExist.quantity = actions.payload.value;
     },
   },
 });

@@ -48,7 +48,7 @@ function Cart({ name, ...props }) {
           </Link>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {stateCart.length > 0 &&
+          {stateCart &&
             stateCart.map((item) => (
               <div
                 key={item.id}
