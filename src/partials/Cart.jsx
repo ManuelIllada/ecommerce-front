@@ -12,7 +12,7 @@ function Cart({ name, ...props }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  console.log(stateCart);
   return (
     <div className="ms-auto">
       <FaOpencart
@@ -26,7 +26,7 @@ function Cart({ name, ...props }) {
           <Offcanvas.Title>My Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {stateCart.length > 0 &&
+          {stateCart &&
             stateCart.map((item) => (
               <div key={item.id} className="d-flex align-items-center mb-2">
                 <img

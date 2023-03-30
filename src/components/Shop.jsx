@@ -2,17 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 import { uptdateQuantity } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
-  const [newValue, setNewValue] = useState();
-  const dispatch = useDispatch();
-  console.log(newValue);
 
-  const handleUptdateQuantity = () => {
-    dispatch(uptdateQuantity(newValue));
+  const dispatch = useDispatch();
+
+  const handleUptdateQuantity = (value, id) => {
+    dispatch(uptdateQuantity({ value, id }));
   };
 
   return (
@@ -71,12 +69,13 @@ function Shop() {
                                   className="w-75"
                                   type="number"
                                   min="1"
-                                  value={newValue}
-                                  defaultValue={product.quantity}
-                                  onChange={(event) =>
-                                    setNewValue(event.target.value)
-                                  }
-                                  onClick={handleUptdateQuantity}
+                                  value={product.quantity}
+                                  onChange={(event) => {
+                                    handleUptdateQuantity(
+                                      event.target.value,
+                                      product.id
+                                    );
+                                  }}
                                 />
                               </div>
                               <div style={{ width: "80px" }}>
@@ -137,7 +136,6 @@ function Shop() {
                           <div className="form-outline form-white mb-4">
                             <input
                               type="text"
-                              id="typeText"
                               className="form-control form-control-lg"
                               siez="17"
                               placeholder="1234 5678 9012 3457"
@@ -152,7 +150,6 @@ function Shop() {
                               <div className="form-outline form-white">
                                 <input
                                   type="text"
-                                  id="typeExp"
                                   className="form-control form-control-lg"
                                   placeholder="MM/YYYY"
                                   size="7"
@@ -166,7 +163,6 @@ function Shop() {
                               <div className="form-outline form-white">
                                 <input
                                   type="password"
-                                  id="typeText"
                                   className="form-control form-control-lg"
                                   placeholder="&#9679;&#9679;&#9679;"
                                   size="1"
