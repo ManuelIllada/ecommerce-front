@@ -1,9 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { uptdateQuantity } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
+  const [newValue, setNewValue] = useState();
+  const dispatch = useDispatch();
+  console.log(newValue);
+
+  const handleUptdateQuantity = () => {
+    dispatch(uptdateQuantity(newValue));
+  };
 
   return (
     <section className="h-100 " style={{ backgroundColor: "#eee" }}>
@@ -57,12 +67,22 @@ function Shop() {
                             </div>
                             <div className="d-flex flex-row align-items-center">
                               <div style={{ width: "50px" }}>
-                                <h5 className="fw-normal mb-0">
-                                  {product.quantity}
-                                </h5>
+                                <input
+                                  className="w-75"
+                                  type="number"
+                                  min="1"
+                                  value={newValue}
+                                  defaultValue={product.quantity}
+                                  onChange={(event) =>
+                                    setNewValue(event.target.value)
+                                  }
+                                  onClick={handleUptdateQuantity}
+                                />
                               </div>
                               <div style={{ width: "80px" }}>
-                                <h5 className="mb-0">{product.price}</h5>
+                                <h5 className="mb-0">
+                                  {product.price * product.quantity}
+                                </h5>
                               </div>
                               <Link>
                                 <i className="fas fa-trash-alt text-danger"></i>

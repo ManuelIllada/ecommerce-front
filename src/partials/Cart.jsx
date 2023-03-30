@@ -26,7 +26,7 @@ function Cart({ name, ...props }) {
           <Offcanvas.Title>My Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {stateCart &&
+          {stateCart.length > 0 &&
             stateCart.map((item) => (
               <div key={item.id} className="d-flex align-items-center mb-2">
                 <img
