@@ -1,0 +1,20 @@
+.hover-zoom {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: whitesmoke;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-zoom:hover .title {
+  transform: translate(-50%, -50%) scale(1);
+}

@@ -26,12 +26,16 @@ export const productCartSlice = createSlice({
       );
       productExist.quantity = actions.payload.value;
     },
+    deleteElement: (state, actions) => {
+      return state.filter((item) => item.id !== actions.payload.id);
+    },
   },
 });
 export const {
   addtoCart,
   setToken,
   uptdateQuantity,
+  deleteElement,
 } = productCartSlice.actions;
 
 export default productCartSlice.reducer;

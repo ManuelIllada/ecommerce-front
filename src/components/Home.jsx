@@ -51,14 +51,18 @@ function home() {
             <section>
               <MDBRow className="d-flex justify-content-center">
                 <MDBCol lg="6">
+                  <h2 className="text-white text-center fs-4">
+                    Official sponsor Final eSkootr Championship at Marseille
+                  </h2>
                   <div className="ratio ratio-16x9">
                     <iframe
-                      className="shadow-1-strong rounded"
-                      src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
-                      title="YouTube video"
-                      allowFullScreen
-                      data-gtm-yt-inspected-2340190_699="true"
-                      id="388567449"
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/sjUqW7KV21g"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </MDBCol>
