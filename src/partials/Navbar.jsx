@@ -103,6 +103,7 @@ function NavBar() {
                 </Button>
               </div>
             </li>
+
             <li className="nav-item ms-3 d-flex justify-content-end">
               <Link
                 to={`/login`}

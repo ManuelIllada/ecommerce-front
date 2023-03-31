@@ -52,7 +52,7 @@ function SignUp() {
     <>
       <MDBContainer
         fluid
-        className="pb-5 pt-3 px-5 bg-image vh-100 scroll"
+        className="overflow-y-auto pb-5 pt-3 px-5 bg-image vh-100"
         style={{
           backgroundImage:
             'url("https://wallpapercrafter.com/desktop/34708-BMW-Motorrad-Concept-Link-Electric-bike-HD-4k.jpg")',
