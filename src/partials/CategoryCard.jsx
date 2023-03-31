@@ -7,7 +7,7 @@ function CategoryCard({ category }) {
   return (
     <Link
       state={category}
-      className="m-3 bg-image rounded hover-zoom hover-shadow hover-overlay col-9 col-sm-5 col-lg-3 col-xl-2"
+      className="m-3 bg-image rounded hover-zoom hover-shadow hover-overlay col-9 col-sm-5 col-lg-3 col-xl-2 g-0"
       to={`/${category.slug}`}
     >
       <Card>
