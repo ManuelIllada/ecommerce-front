@@ -40,6 +40,16 @@ const ProductInfo = () => {
         <section style={{ backgroundColor: "rgb(65, 61, 61)" }}>
           <NavBar />
         </section>
+        <div
+          className="p-5 text-center bg-image hero-container"
+          style={{
+            backgroundImage:
+              "url('https://cdn.discordapp.com/attachments/852698000890658876/1090763480115712163/portada.jpg')",
+            backgroundPosition: "bottom",
+            width: "100%",
+            height: "16rem",
+          }}
+        ></div>
         <section>
           <div className="px-5 row d-flex justify-content-center py-5">
             <div className="my-3"></div>

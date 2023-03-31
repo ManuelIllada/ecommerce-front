@@ -21,7 +21,13 @@ export const productCartSlice = createSlice({
       }
     },
     uptdateQuantity: (state, actions) => {
-      // state.push({ ...actions.payload, quantity: 1 });
+      const productExist = state.find(
+        (product) => product.id === actions.payload.id
+      );
+      productExist.quantity = actions.payload.value;
+    },
+    deleteElement: (state, actions) => {
+      return state.filter((item) => item.id !== actions.payload.id);
     },
   },
 });
@@ -29,6 +35,7 @@ export const {
   addtoCart,
   setToken,
   uptdateQuantity,
+  deleteElement,
 } = productCartSlice.actions;
 
 export default productCartSlice.reducer;

@@ -15,17 +15,18 @@ function AboutUs() {
           <Navbar bg="dark" variant="dark"></Navbar>
         </section>
         <div
-          className="p-5 text-center bg-image"
+          className="p-5 text-center bg-image hero-container"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/548084/pexels-photo-548084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+              "url('https://cdn.discordapp.com/attachments/852698000890658876/1090763480115712163/portada.jpg')",
             backgroundPosition: "bottom",
-            height: "15rem",
+            width: "100%",
+            height: "16rem",
           }}
         ></div>
         <section
           style={{
-            backgroundColor: "#4f4f4f",
+            backgroundColor: "rgb(65, 61, 61)",
           }}
         >
           <div className="container text-center py-5 text-light">
@@ -206,7 +207,7 @@ function AboutUs() {
         <section
           className="text-light"
           style={{
-            backgroundColor: "#4f4f4f",
+            backgroundColor: "rgb(65, 61, 61)",
             height: "25rem",
           }}
         >

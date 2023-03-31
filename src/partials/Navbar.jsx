@@ -66,7 +66,10 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto text-align-right">
             {category.map((item) => (
-              <li className="nav-item ms-3 d-flex justify-content-end">
+              <li
+                key={item.id}
+                className="nav-item ms-3 d-flex justify-content-end"
+              >
                 <Link
                   state={item}
                   key={item.id}
