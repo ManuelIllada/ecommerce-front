@@ -41,10 +41,6 @@ function NavBar() {
   };
   window.addEventListener("resize", changeBackground);
   window.addEventListener("scroll", changeBackground);
-  const handleLogOut = () => {
-    dispatch(logOut());
-    navigate("/");
-  };
 
   return (
     <nav
