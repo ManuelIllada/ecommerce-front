@@ -7,10 +7,14 @@ import { FaUserAstronaut } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RxDropdownMenu } from "react-icons/rx";
 import { Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import LogOutModal from "./LogOutModal";
+import ProfileEdit from "./ProfileEdit";
 
 function NavBar() {
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
     const getCategory = async () => {
@@ -86,14 +90,49 @@ function NavBar() {
                 size={24}
               />
             </li>
-            <li className="nav-item ms-3 d-flex justify-content-end">
-              <Link
-                to={`/login`}
-                className="text-decoration-none text-white fw-bold"
-              >
-                <FaUserAstronaut size={20} />
-              </Link>
-            </li>
+            {user === null ? (
+              <li className="nav-item ms-3 d-flex justify-content-end">
+                <Link
+                  to={`/login`}
+                  className="text-decoration-none text-white fw-bold"
+                >
+                  <FaUserAstronaut size={20} />
+                </Link>
+              </li>
+            ) : (
+              <li className="nav-item ms-3 d-flex justify-content-end">
+                <li class="dropdown">
+                  <button
+                    class="btn text-white p-0 pb-1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <FaUserAstronaut size={20} />
+                  </button>
+                  <ul class="dropdown-menu bg-dark bg-opacity-50">
+                    <li>
+                      <a
+                        class="link-secondary dropdown-item text-white "
+                        href="#"
+                      >
+                        <ProfileEdit />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="link-secondary dropdown-item text-white"
+                        href="#"
+                      >
+                        ShopList
+                      </a>
+                    </li>
+                    <li>
+                      <LogOutModal />
+                    </li>
+                  </ul>
+                </li>
+              </li>
+            )}
             <li className="nav-item ms-3 d-flex justify-content-end">
               <div>
                 <Button className="bg-transparent p-0 me-auto" variant="link">
