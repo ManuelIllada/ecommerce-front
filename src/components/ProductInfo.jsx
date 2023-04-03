@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../partials/Navbar";
 import { addtoCart } from "../redux/productsCartSlice";
 import "./ProductInfo.css";
@@ -10,7 +10,7 @@ import Footer from "../partials/Footer";
 
 const ProductInfo = () => {
   const [show, setShow] = useState(false);
-
+  const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
@@ -24,6 +24,11 @@ const ProductInfo = () => {
 
   const handleAddToCart = (item) => {
     dispatch(addtoCart(item));
+  };
+
+  const handleBuy = (item) => {
+    dispatch(addtoCart(item));
+    navigate("/cart");
   };
 
   const handleClick = (item) => {
@@ -76,7 +81,12 @@ const ProductInfo = () => {
               <p className="text-white">{description}</p>
               <small className="text-white">${price}</small>
               <div>
-                <button className="btn btn-primary m-3">Buy</button>
+                <button
+                  onClick={() => handleBuy(location.state)}
+                  className="btn btn-primary m-3"
+                >
+                  Buy
+                </button>
                 <button
                   onClick={() => handleAddToCart(location.state)}
                   className="btn btn-outline-success m-3"

@@ -4,7 +4,6 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaOpencart } from "react-icons/fa";
-import CloseButton from "react-bootstrap/CloseButton";
 
 function Cart({ name, ...props }) {
   const stateCart = useSelector((state) => state.productCart);

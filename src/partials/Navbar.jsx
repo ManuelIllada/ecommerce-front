@@ -1,6 +1,8 @@
 import React from "react";
 import Cart from "./Cart";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUserAstronaut } from "react-icons/fa";
@@ -12,6 +14,8 @@ import LogOutModal from "./LogOutModal";
 import ProfileEdit from "./ProfileEdit";
 
 function NavBar() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
   const user = useSelector((state) => state.user);
@@ -37,6 +41,10 @@ function NavBar() {
   };
   window.addEventListener("resize", changeBackground);
   window.addEventListener("scroll", changeBackground);
+  const handleLogOut = () => {
+    dispatch(logOut());
+    navigate("/");
+  };
 
   return (
     <nav

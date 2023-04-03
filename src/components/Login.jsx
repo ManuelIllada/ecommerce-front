@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import axios from "axios";
 import { setUser } from "../redux/userSlice";
-import Navbar from "../partials/Navbar";
 import {
   MDBBtn,
   MDBContainer,
@@ -39,7 +38,7 @@ function Login() {
   return (
     <MDBContainer
       fluid
-      className="p-4 bg-image vh-100"
+      className="overflow-y-auto p-4 bg-image vh-100"
       style={{
         backgroundImage:
           'url("https://wallpapercrafter.com/desktop/34708-BMW-Motorrad-Concept-Link-Electric-bike-HD-4k.jpg")',
@@ -60,7 +59,6 @@ function Login() {
             Connen™ <br />
             <span>The best offer</span>
           </h1>
-
           <p
             className="px-3 text-white"
             style={{ color: "hsl(217, 10%, 50.8%)" }}
@@ -71,7 +69,6 @@ function Login() {
             aliquid ipsum atque?
           </p>
         </MDBCol>
-
         <MDBCol md="6">
           <MDBCard className="my-5 " style={{ opacity: "85%" }}>
             <form onSubmit={(event) => handleSubmit(event)}>
@@ -79,7 +76,8 @@ function Login() {
                 <MDBInput
                   wrapperClass="mb-4"
                   label="Email"
-                  id="form1"
+                  id="email"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
@@ -87,12 +85,12 @@ function Login() {
                 <MDBInput
                   wrapperClass="mb-4"
                   label="Password"
-                  id="form1"
+                  id="password"
+                  name="password"
                   type="password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
-
                 <div className="d-flex justify-content-center mb-4">
                   <MDBCheckbox
                     name="flexCheck"
@@ -101,19 +99,21 @@ function Login() {
                     label="Subscribe to our newsletter"
                   />
                 </div>
-
                 <MDBBtn
                   className="w-100 mb-4"
-                  size="md"
                   type="submit"
                   style={{ backgroundColor: "rgb(65, 61, 61)" }}
                 >
-                  sign up
+                  Sign In
                 </MDBBtn>
-
                 <div className="text-center">
+                  <div className="d-flex justify-content-center">
+                    <p>Dont you have an account?</p>
+                    <Link to="/SignUp" className="ms-2 link-secondary">
+                      Sign Up
+                    </Link>
+                  </div>
                   <p>or sign up with:</p>
-
                   <MDBBtn
                     tag="a"
                     color="none"
@@ -122,7 +122,6 @@ function Login() {
                   >
                     <MDBIcon fab icon="facebook-f" size="sm" />
                   </MDBBtn>
-
                   <MDBBtn
                     tag="a"
                     color="none"
@@ -131,7 +130,6 @@ function Login() {
                   >
                     <MDBIcon fab icon="twitter" size="sm" />
                   </MDBBtn>
-
                   <MDBBtn
                     tag="a"
                     color="none"
@@ -140,7 +138,6 @@ function Login() {
                   >
                     <MDBIcon fab icon="google" size="sm" />
                   </MDBBtn>
-
                   <MDBBtn
                     tag="a"
                     color="none"
@@ -157,74 +154,6 @@ function Login() {
       </MDBRow>
     </MDBContainer>
   );
-
-  // return (
-  //   <div className="container p-4">
-  //     <div className="row mt-5 justify-content-center">
-  //       <div className="col-6">
-  //         <form onSubmit={(event) => handleSubmit(event)}>
-  //           <div className="form mb-4">
-  //             <label className="form-label" htmlFor="email">
-  //               Email address
-  //             </label>
-  //             <input
-  //               name="email"
-  //               type="email"
-  //               id="email"
-  //               className="form-control"
-  //               value={email}
-  //               onChange={(event) => setEmail(event.target.value)}
-  //             />
-  //           </div>
-
-  //           <div className="form mb-4">
-  //             <label className="form-label " htmlFor="password">
-  //               Password
-  //             </label>
-  //             <input
-  //               name="password"
-  //               type="password"
-  //               id="password"
-  //               className="form-control"
-  //               value={password}
-  //               onChange={(event) => setPassword(event.target.value)}
-  //             />
-  //           </div>
-
-  //           <div className="row mb-4">
-  //             <div className="col d-flex justify-content-center"></div>
-  //           </div>
-
-  //           <button type="submit" className="btn btn-primary btn-block mb-4">
-  //             Sign in
-  //           </button>
-
-  //           <div className="text-center">
-  //             <p>
-  //               Not a member? <Link to="/register">Register</Link>
-  //             </p>
-  //             <p>or sign up with:</p>
-  //             <button type="button" className="btn btn-link btn-floating mx-1">
-  //               <i className="fab fa-facebook-f"></i>
-  //             </button>
-
-  //             <button type="button" className="btn btn-link btn-floating mx-1">
-  //               <i className="fab fa-google"></i>
-  //             </button>
-
-  //             <button type="button" className="btn btn-link btn-floating mx-1">
-  //               <i className="fab fa-twitter"></i>
-  //             </button>
-
-  //             <button type="button" className="btn btn-link btn-floating mx-1">
-  //               <i className="fab fa-github"></i>
-  //             </button>
-  //           </div>
-  //         </form>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default Login;

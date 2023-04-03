@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { uptdateQuantity } from "../redux/productsCartSlice";
+import { uptdateQuantity, deleteElement } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
@@ -11,6 +11,9 @@ function Shop() {
 
   const handleUptdateQuantity = (value, id) => {
     dispatch(uptdateQuantity({ value, id }));
+  };
+  const handleDeleteElement = (id) => {
+    dispatch(deleteElement({ id }));
   };
 
   return (
@@ -83,9 +86,13 @@ function Shop() {
                                   {product.price * product.quantity}
                                 </h5>
                               </div>
-                              <Link>
+                              <div
+                                onClick={() => {
+                                  handleDeleteElement(product.id);
+                                }}
+                              >
                                 <i className="fas fa-trash-alt text-danger"></i>
-                              </Link>
+                              </div>
                             </div>
                           </div>
                         </div>
