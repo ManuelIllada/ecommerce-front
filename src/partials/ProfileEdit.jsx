@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-//name y props son los de arriba en options
-
-function ProfileEdit({ name, ...props }) {
+function ProfileEdit({ name }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
-  //el button va en el dropdwon
+
   return (
     <>
-      <a
-        onClick={toggleShow}
-        class="link-secondary dropdown-item text-white"
-        href="#"
-      >
+      <div onClick={toggleShow} class="link-secondary dropdown-item text-white">
         {name}
-      </a>
+      </div>
 
       <Offcanvas
         scroll="true"
