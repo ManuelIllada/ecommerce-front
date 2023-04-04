@@ -10,6 +10,7 @@ import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import LogOutModal from "./LogOutModal";
 import ProfileEdit from "./ProfileEdit";
+import ShopList from "./ShopList";
 
 function NavBar() {
   const stateCart = useSelector((state) => state.productCart);
@@ -115,9 +116,7 @@ function NavBar() {
                     <ProfileEdit user={user} />
                   </li>
                   <li>
-                    <a class="link-secondary dropdown-item text-white" href="#">
-                      ShopList
-                    </a>
+                    <ShopList user={user} />
                   </li>
                   <li>
                     <LogOutModal />
