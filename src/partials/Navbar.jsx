@@ -130,7 +130,7 @@ function NavBar() {
                 <Button className="bg-transparent p-0 me-auto" variant="link">
                   <Cart />
                 </Button>
-                <div className="text-warning  text-center position-absolute top-0 start-100 translate-middle">
+                <div className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary bg-opacity-50">
                   {stateCart.reduce(
                     (accumulator, currentItem) =>
                       accumulator + currentItem.quantity,
