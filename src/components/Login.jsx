@@ -72,7 +72,7 @@ function Login() {
         <MDBCol md="6">
           <MDBCard className="my-5 " style={{ opacity: "85%" }}>
             <form onSubmit={(event) => handleSubmit(event)}>
-              <MDBCardBody className="p-5">
+              <MDBCardBody className="p-5 ">
                 <MDBInput
                   wrapperClass="mb-4"
                   label="Email"
