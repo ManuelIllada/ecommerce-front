@@ -100,32 +100,28 @@ function NavBar() {
                 </Link>
               </li>
             ) : (
-              <li className="nav-item ms-3 d-flex justify-content-end">
-                <li class="dropdown">
-                  <button
-                    class="btn text-white p-0 pb-1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <FaUserAstronaut size={20} />
-                  </button>
-                  <ul class="dropdown-menu bg-dark bg-opacity-50">
-                    <li>
-                      <ProfileEdit name={user.firstname} />
-                    </li>
-                    <li>
-                      <a
-                        class="link-secondary dropdown-item text-white"
-                        href="#"
-                      >
-                        ShopList
-                      </a>
-                    </li>
-                    <li>
-                      <LogOutModal />
-                    </li>
-                  </ul>
-                </li>
+              <li className="nav-item ms-3 d-flex justify-content-end dropdown">
+                <Button
+                  className="btn text-white bg-transparent p-0 me-auto"
+                  variant="link"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <FaUserAstronaut size={20} />
+                </Button>
+                <ul class="dropdown-menu bg-dark bg-opacity-50">
+                  <li>
+                    <ProfileEdit user={user} />
+                  </li>
+                  <li>
+                    <a class="link-secondary dropdown-item text-white" href="#">
+                      ShopList
+                    </a>
+                  </li>
+                  <li>
+                    <LogOutModal />
+                  </li>
+                </ul>
               </li>
             )}
             <li className="nav-item ms-3 d-flex justify-content-end">

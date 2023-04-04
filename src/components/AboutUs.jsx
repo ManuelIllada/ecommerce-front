@@ -240,11 +240,11 @@ function AboutUs() {
           </div>
         </section>
         <section className="my-5">
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center align-items-center">
             {members.map((member, index) => (
               <div
                 key={index}
-                className="mx-2 d-flex flex-column align-items-center justify-content-center"
+                className="d-flex flex-column align-items-center justify-content-center"
               >
                 <div className="bg-image" style={{ width: "15rem" }}>
                   <Card.Img
