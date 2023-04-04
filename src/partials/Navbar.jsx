@@ -12,6 +12,7 @@ import LogOutModal from "./LogOutModal";
 import ProfileEdit from "./ProfileEdit";
 
 function NavBar() {
+  const stateCart = useSelector((state) => state.productCart);
   const [background, setBackground] = useState(false);
   const [category, setCategory] = useState([]);
   const user = useSelector((state) => state.user);
@@ -125,10 +126,17 @@ function NavBar() {
               </li>
             )}
             <li className="nav-item ms-3 d-flex justify-content-end">
-              <div>
+              <div className="position-relative">
                 <Button className="bg-transparent p-0 me-auto" variant="link">
                   <Cart />
                 </Button>
+                <div className="text-warning  text-center position-absolute top-0 start-100 translate-middle">
+                  {stateCart.reduce(
+                    (accumulator, currentItem) =>
+                      accumulator + currentItem.quantity,
+                    0
+                  )}
+                </div>
               </div>
             </li>
           </ul>
