@@ -10,8 +10,10 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { RxDropdownMenu } from "react-icons/rx";
 import { Button } from "react-bootstrap";
 import { logOut } from "../redux/userSlice";
+import { useSelector } from "react-redux";
 
 function NavBar() {
+  const stateCart = useSelector((state) => state.productCart);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [background, setBackground] = useState(false);
@@ -97,10 +99,17 @@ function NavBar() {
             </li>
 
             <li className="nav-item ms-3 d-flex justify-content-end">
-              <div>
+              <div className="position-relative">
                 <Button className="bg-transparent p-0 me-auto" variant="link">
                   <Cart />
                 </Button>
+                <div className="text-warning  text-center position-absolute top-0 start-100 translate-middle">
+                  {stateCart.reduce(
+                    (accumulator, currentItem) =>
+                      accumulator + currentItem.quantity,
+                    0
+                  )}
+                </div>
               </div>
             </li>
 
