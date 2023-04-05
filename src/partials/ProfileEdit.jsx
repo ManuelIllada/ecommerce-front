@@ -10,7 +10,10 @@ function ProfileEdit({ user }) {
 
   return (
     <>
-      <div onClick={toggleShow} class="link-secondary dropdown-item text-white">
+      <div
+        onClick={toggleShow}
+        className="link-secondary dropdown-item text-white"
+      >
         {user.firstname}
       </div>
 
@@ -31,79 +34,173 @@ function ProfileEdit({ user }) {
             <h3>Profile Edit</h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="text-white ">
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Avatar
+        <Offcanvas.Body>
+          <div className="accordion " id="accordionExample">
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Avatar
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                className="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">
+                    <img
+                      src={user.avatar}
+                      className="img-fluid rounded"
+                      alt="avatar"
+                      style={{
+                        height: "4rem",
+                        width: "4rem",
+                      }}
+                    />
+                  </div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              <img
-                src={user.avatar}
-                className="img-fluid"
-                alt="avatar"
-                style={{
-                  height: "4rem",
-                  width: "4rem",
-                }}
-              />
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Firstname
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">{user.firstname}</div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light" />
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Lastname
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">{user.lastname}</div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Firstname
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Email
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">{user.email}</div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              {user.firstname}
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Address
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">{user.address}</div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light " />
-            </div>
-          </div>
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Lastname
-            </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              {user.lastname}
-            </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light" />
-            </div>
-          </div>
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Email
-            </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              {user.email}
-            </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light" />
-            </div>
-          </div>
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Address
-            </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              {user.address}
-            </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light" />
-            </div>
-          </div>
-          <div class="row border m-2">
-            <div class="col-4  p-3 bg-body-black bg-opacity-50 rounded">
-              Phone
-            </div>
-            <div class="col-4 p-3  bg-body-black bg-opacity-50 rounded">
-              {user.phone}
-            </div>
-            <div class="col-4 p-3    bg-body-black bg-opacity-50 rounded">
-              <AiFillEdit className="text-light" />
+            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  Phone
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                  <div className="col-6">{user.phone}</div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    <AiFillEdit className="text-light" size="25" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Offcanvas.Body>

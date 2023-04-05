@@ -51,27 +51,36 @@ function Cart({ name, ...props }) {
             stateCart.map((item) => (
               <div
                 key={item.id}
-                className="d-flex align-items-center mb-2 text-white border p-2 "
+                className="d-flex align-items-center mb-2 text-white bg-dark bg-opacity-50 rounded py-2 px-4 "
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title={item.name}
               >
-                <div className="col-5 hover-zoom">
+                <div className="col-4 rounded bg-light bg-opacity-25 hover-zoom d-flex align-items-center justify-content-center p-2">
                   <Link to={`/${item.category.slug}/${item.slug}`} state={item}>
                     <img
                       src={item.media[0]}
-                      className="img-fluid rounded"
+                      className="img-fluid"
                       alt={item.name}
                       style={{ height: "5rem" }}
                     />
                   </Link>
                 </div>
-                <div className=" mt-3 col-5">
-                  <div>
-                    <p>U$S {item.price}</p>
+                <div className="col-8 rounded my-2 mx-1 row">
+                  <div className="col-12 d-flex align-items-center justify-content-start p-3">
+                    <p className="m-0" style={{ fontSize: 20 }}>
+                      {item.category.name}: {item.name}
+                    </p>
                   </div>
-                  <div>
-                    <p>Quantity: {item.quantity}</p>
+                  <div className="col-6 d-flex justify-content-start align-items-end">
+                    <p className="m-1" style={{ fontSize: 15 }}>
+                      x{item.quantity}
+                    </p>
+                  </div>
+                  <div className="col-6 opacity-75 d-flex justify-content-end align-items-end">
+                    <p className="m-1" style={{ fontSize: 16 }}>
+                      U$S {item.price}
+                    </p>
                   </div>
                 </div>
               </div>
