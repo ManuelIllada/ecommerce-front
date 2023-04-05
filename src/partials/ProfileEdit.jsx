@@ -19,7 +19,6 @@ function ProfileEdit({ user }) {
 
       <Offcanvas
         scroll="true"
-        backdrop="true"
         placement="end"
         show={show}
         onHide={handleClose}

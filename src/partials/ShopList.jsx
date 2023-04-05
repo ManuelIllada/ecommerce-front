@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { AiFillEdit } from "react-icons/ai";
+import { TbTruckDelivery } from "react-icons/tb";
 
 function ShopList({ user }) {
   const [show, setShow] = useState(false);
@@ -16,7 +16,6 @@ function ShopList({ user }) {
 
       <Offcanvas
         scroll="true"
-        backdrop="true"
         placement="end"
         show={show}
         onHide={handleClose}
@@ -43,7 +42,16 @@ function ShopList({ user }) {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  Order #1
+                  <div className="col-6">
+                    Order #1
+                    <TbTruckDelivery
+                      className="ms-3"
+                      style={{ fontSize: 40 }}
+                    />
+                  </div>
+                  <div className="col-6 d-flex justify-content-end align-items-center">
+                    In Coming
+                  </div>
                 </button>
               </h2>
               <div
@@ -52,10 +60,7 @@ function ShopList({ user }) {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
-                  <div className="col-6">Linea de entrega</div>
-                  <div className="col-6 d-flex justify-content-end align-items-center">
-                    Estado de entrega
-                  </div>
+                  Lista de productos del pedido
                 </div>
               </div>
             </div>

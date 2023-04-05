@@ -242,18 +242,18 @@ function AboutUs() {
         <section className="my-5">
           <div className="d-flex justify-content-center align-items-center">
             {members.map((member, index) => (
-              <div
-                key={index}
-                className="d-flex flex-column align-items-center justify-content-center"
-              >
-                <div className="bg-image" style={{ width: "15rem" }}>
+              <div key={index}>
+                <div
+                  className="d-flex flex-column align-items-center justify-content-center"
+                  style={{ width: "15rem" }}
+                >
                   <Card.Img
-                    className="img-fluid"
+                    className="img-fluid object-fit-cover mb-3"
                     variant="top"
                     src={member.img}
                     style={{
-                      height: "6rem",
-                      width: "6rem",
+                      height: "10rem",
+                      width: "10rem",
                       borderRadius: "100%",
                     }}
                   />
@@ -267,7 +267,7 @@ function AboutUs() {
                       floating
                       className="m-1"
                       style={{ backgroundColor: "#4f4f4f" }}
-                      href=""
+                      href="https://www.linkedin.com/in/manuillada/"
                       role="button"
                     >
                       <MDBIcon fab icon="linkedin-in" />
@@ -276,7 +276,7 @@ function AboutUs() {
                       floating
                       className="m-1"
                       style={{ backgroundColor: "#4f4f4f" }}
-                      href=""
+                      href="https://github.com/ManuelIllada"
                       role="button"
                     >
                       <MDBIcon fab icon="github" />
