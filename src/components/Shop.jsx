@@ -6,9 +6,7 @@ import { uptdateQuantity, deleteElement } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
-
   const dispatch = useDispatch();
-
   const handleUptdateQuantity = (value, id) => {
     dispatch(uptdateQuantity({ value, id }));
   };
@@ -90,6 +88,8 @@ function Shop() {
                                 onClick={() => {
                                   handleDeleteElement(product.id);
                                 }}
+                                role="button"
+                                className="cursor-pointer"
                               >
                                 <i className="fas fa-trash-alt text-danger"></i>
                               </div>
