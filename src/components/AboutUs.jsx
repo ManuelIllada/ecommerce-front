@@ -233,6 +233,7 @@ function AboutUs() {
                   aditar o borrar ya sea categorias, productos, usuarios u
                   ordenes puedes acceder con las siguientes credenciales:
                 </p>
+
                 <p>Email: admin@gmail.com</p>
                 <p>Contraseña: password</p>
               </div>

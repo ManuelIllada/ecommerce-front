@@ -13,7 +13,6 @@ import {
   MDBCardBody,
   MDBInput,
   MDBCheckbox,
-  MDBIcon,
 } from "mdb-react-ui-kit";
 
 function Login() {
@@ -113,39 +112,13 @@ function Login() {
                       Sign Up
                     </Link>
                   </div>
-                  <p>or sign up with:</p>
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="mx-3"
-                    style={{ color: "rgb(65, 61, 61)" }}
-                  >
-                    <MDBIcon fab icon="facebook-f" size="sm" />
-                  </MDBBtn>
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="mx-3"
-                    style={{ color: "rgb(65, 61, 61)" }}
-                  >
-                    <MDBIcon fab icon="twitter" size="sm" />
-                  </MDBBtn>
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="mx-3"
-                    style={{ color: "rgb(65, 61, 61)" }}
-                  >
-                    <MDBIcon fab icon="google" size="sm" />
-                  </MDBBtn>
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="mx-3"
-                    style={{ color: "rgb(65, 61, 61)" }}
-                  >
-                    <MDBIcon fab icon="github" size="sm" />
-                  </MDBBtn>
+                  <div className="d-flex justify-content-center">
+                    <p>For admins</p>
+                    <Link to={"http://localhost:3005/"} className="ms-1">
+                      {" "}
+                      click here
+                    </Link>
+                  </div>
                 </div>
               </MDBCardBody>
             </form>
