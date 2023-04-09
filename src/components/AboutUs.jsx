@@ -1,4 +1,4 @@
-import Navbar from "../partials/Navbar";
+import NavBar from "../partials/Navbar";
 import React from "react";
 import Card from "react-bootstrap/Card";
 //import Button from "react-bootstrap/esm/Button";
@@ -11,8 +11,8 @@ function AboutUs() {
   return (
     <>
       <div>
-        <section>
-          <Navbar bg="dark" variant="dark"></Navbar>
+        <section className="mb-5">
+          <NavBar />
         </section>
         <div
           className="p-5 text-center bg-image hero-container"

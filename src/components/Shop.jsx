@@ -6,6 +6,7 @@ import { uptdateQuantity, deleteElement } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
+  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const handleUptdateQuantity = (value, id) => {
     dispatch(uptdateQuantity({ value, id }));
@@ -15,9 +16,9 @@ function Shop() {
   };
 
   return (
-    <section className="h-100 " style={{ backgroundColor: "#eee" }}>
-      <div className=" py-5 h-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
+    <>
+      <div className="container">
+        <div className="row d-flex justify-content-center align-items-center mt-5">
           <div className="col">
             <div className="card">
               <div className="card-body p-4">
@@ -36,14 +37,6 @@ function Shop() {
                         <p className="mb-1">Shopping cart</p>
                         <p className="mb-0">
                           You have {stateCart.length} items in your cart
-                        </p>
-                      </div>
-                      <div>
-                        <p className="mb-0">
-                          <span className="text-muted">Sort by:</span>
-                          <a href="#!" className="text-body">
-                            price <i className="fas fa-angle-down mt-1"></i>
-                          </a>
                         </p>
                       </div>
                     </div>
@@ -65,7 +58,7 @@ function Shop() {
                               </div>
                             </div>
                             <div className="d-flex flex-row align-items-center">
-                              <div style={{ width: "50px" }}>
+                              <div style={{ width: "75px" }}>
                                 <input
                                   className="w-75"
                                   type="number"
@@ -81,7 +74,7 @@ function Shop() {
                               </div>
                               <div style={{ width: "80px" }}>
                                 <h5 className="mb-0">
-                                  {product.price * product.quantity}
+                                  ${product.price * product.quantity}
                                 </h5>
                               </div>
                               <div
@@ -100,14 +93,14 @@ function Shop() {
                     ))}
                   </div>
                   <div className="col-lg-5">
-                    <div className="card bg-primary text-white rounded-3">
+                    <div className="card bg-dark text-white rounded-3">
                       <div className="card-body">
                         <div className="d-flex justify-content-between align-items-center mb-4">
                           <h5 className="mb-0">Card details</h5>
                           <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                            className="img-fluid rounded-3"
-                            style={{ width: "45px" }}
+                            src={user.avatar}
+                            className="img-fluid rounded-3 border border-white"
+                            style={{ width: "60px" }}
                             alt="Avatar"
                           />
                         </div>
@@ -127,55 +120,64 @@ function Shop() {
                         </a>
 
                         <form className="mt-4">
-                          <div className="form-outline form-white mb-4">
+                          <div className="form-floating mb-3">
                             <input
                               type="text"
                               id="typeName"
-                              className="form-control form-control-lg"
+                              className="form-control form-control-lg border border-white bg-black text-light"
                               siez="17"
                               placeholder="Cardholder's Name"
                             />
-                            <label className="form-label" htmlFor="typeName">
+                            <label
+                              className="form-label text-light"
+                              htmlFor="typeName"
+                            >
                               Cardholder's Name
                             </label>
                           </div>
 
-                          <div className="form-outline form-white mb-4">
+                          <div className="form-floating mb-3">
                             <input
                               type="text"
-                              className="form-control form-control-lg"
+                              className="form-control form-control-lg border border-white bg-black text-light"
                               siez="17"
                               placeholder="1234 5678 9012 3457"
                             />
-                            <label className="form-label" htmlFor="typeText">
+                            <label
+                              className="form-label text-light"
+                              htmlFor="typeText"
+                            >
                               Card Number
                             </label>
                           </div>
 
                           <div className="row mb-4">
                             <div className="col-md-6">
-                              <div className="form-outline form-white">
+                              <div className="form-floating mb-3">
                                 <input
                                   type="text"
-                                  className="form-control form-control-lg"
+                                  className="form-control form-control-lg border border-white bg-black text-light"
                                   placeholder="MM/YYYY"
                                   size="7"
                                 />
-                                <label className="form-label" htmlFor="typeExp">
+                                <label
+                                  className="form-label text-light"
+                                  htmlFor="typeExp"
+                                >
                                   Expiration
                                 </label>
                               </div>
                             </div>
                             <div className="col-md-6">
-                              <div className="form-outline form-white">
+                              <div className="form-floating mb-3">
                                 <input
-                                  type="password"
-                                  className="form-control form-control-lg"
+                                  type="text"
+                                  className="form-control form-control-lg border border-white bg-black text-light"
                                   placeholder="&#9679;&#9679;&#9679;"
                                   size="1"
                                 />
                                 <label
-                                  className="form-label"
+                                  className="form-label text-light"
                                   htmlFor="typeText"
                                 >
                                   Cvv
@@ -189,17 +191,41 @@ function Shop() {
 
                         <div className="d-flex justify-content-between">
                           <p className="mb-2">Subtotal</p>
-                          <p className="mb-2">$4798.00</p>
+                          <p className="mb-2">
+                            $
+                            {stateCart.reduce(
+                              (accumulator, currentItem) =>
+                                accumulator +
+                                currentItem.quantity * currentItem.price,
+                              0
+                            )}
+                          </p>
                         </div>
 
                         <div className="d-flex justify-content-between">
                           <p className="mb-2">Shipping</p>
-                          <p className="mb-2">$20.00</p>
+                          <p className="mb-2">
+                            ${" "}
+                            {stateCart.reduce(
+                              (accumulator, currentItem) =>
+                                accumulator + currentItem.quantity * 20,
+                              0
+                            )}
+                          </p>
                         </div>
 
                         <div className="d-flex justify-content-between mb-4">
                           <p className="mb-2">Total(Incl. taxes)</p>
-                          <p className="mb-2">$4818.00</p>
+                          <p className="mb-2">
+                            ${" "}
+                            {stateCart.reduce(
+                              (accumulator, currentItem) =>
+                                accumulator +
+                                (currentItem.quantity * currentItem.price +
+                                  currentItem.quantity * 20),
+                              0
+                            )}
+                          </p>
                         </div>
 
                         <button
@@ -223,7 +249,7 @@ function Shop() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
