@@ -14,6 +14,29 @@ function Shop() {
   const handleDeleteElement = (id) => {
     dispatch(deleteElement({ id }));
   };
+  const handleCheckoutClick = () => {
+    if (user) {
+      const tooltip = new window.bootstrap.Tooltip(
+        document.getElementById("checkout"),
+        {
+          title: "¡Compra exitosa!",
+          placement: "bottom",
+          trigger: "click",
+        }
+      );
+      tooltip.show();
+    } else {
+      const tooltip = new window.bootstrap.Tooltip(
+        document.getElementById("checkout"),
+        {
+          title: "Debes iniciar sesión para continuar",
+          placement: "bottom",
+          trigger: "click",
+        }
+      );
+      tooltip.show();
+    }
+  };
 
   return (
     <>
@@ -97,12 +120,17 @@ function Shop() {
                       <div className="card-body">
                         <div className="d-flex justify-content-between align-items-center mb-4">
                           <h5 className="mb-0">Card details</h5>
-                          <img
-                            src={user.avatar}
+                          {/* <img
+                            src={
+                              user.avatar
+                                ? user.avatar
+                                : "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"
+                            }
+                            s
                             className="img-fluid rounded-3 border border-white"
                             style={{ width: "60px" }}
                             alt="Avatar"
-                          />
+                          /> */}
                         </div>
 
                         <p className="small mb-2">Card type</p>
@@ -217,7 +245,7 @@ function Shop() {
                         <div className="d-flex justify-content-between mb-4">
                           <p className="mb-2">Total(Incl. taxes)</p>
                           <p className="mb-2">
-                            ${" "}
+                            $
                             {stateCart.reduce(
                               (accumulator, currentItem) =>
                                 accumulator +
@@ -230,10 +258,23 @@ function Shop() {
 
                         <button
                           type="button"
-                          className="btn btn-info btn-block btn-lg"
+                          className="btn btn-success btn-block btn-lg"
+                          id="checkout"
+                          onClick={() => {
+                            handleCheckoutClick();
+                          }}
                         >
                           <div className="d-flex justify-content-between">
-                            <span>$4818.00</span>
+                            <span>
+                              $
+                              {stateCart.reduce(
+                                (accumulator, currentItem) =>
+                                  accumulator +
+                                  (currentItem.quantity * currentItem.price +
+                                    currentItem.quantity * 20),
+                                0
+                              )}
+                            </span>
                             <span>
                               Checkout
                               <i className="fas fa-long-arrow-alt-right ms-2"></i>
