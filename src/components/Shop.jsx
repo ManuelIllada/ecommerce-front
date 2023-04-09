@@ -120,17 +120,18 @@ function Shop() {
                       <div className="card-body">
                         <div className="d-flex justify-content-between align-items-center mb-4">
                           <h5 className="mb-0">Card details</h5>
-                          {/* <img
-                            src={
-                              user.avatar
-                                ? user.avatar
-                                : "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"
-                            }
-                            s
-                            className="img-fluid rounded-3 border border-white"
-                            style={{ width: "60px" }}
-                            alt="Avatar"
-                          /> */}
+                          <div>
+                            <img
+                              src={
+                                user && user.avatar
+                                  ? user.avatar
+                                  : "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"
+                              }
+                              className="img-fluid rounded-3 border border-white"
+                              style={{ width: "60px" }}
+                              alt="Avatar"
+                            />
+                          </div>
                         </div>
 
                         <p className="small mb-2">Card type</p>
