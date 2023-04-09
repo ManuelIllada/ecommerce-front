@@ -2,14 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { uptdateQuantity, deleteElement } from "../redux/productsCartSlice";
+import { updateQuantity, deleteElement } from "../redux/productsCartSlice";
 
 function Shop() {
   const stateCart = useSelector((state) => state.productCart);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const handleUptdateQuantity = (value, id) => {
-    dispatch(uptdateQuantity({ value, id }));
+  const handleUpdateQuantity = (value, id) => {
+    dispatch(updateQuantity({ value, id }));
   };
   const handleDeleteElement = (id) => {
     dispatch(deleteElement({ id }));
@@ -92,9 +92,10 @@ function Shop() {
                                   className="w-75"
                                   type="number"
                                   min="1"
+                                  max={product.stock}
                                   value={product.quantity}
                                   onChange={(event) => {
-                                    handleUptdateQuantity(
+                                    handleUpdateQuantity(
                                       event.target.value,
                                       product.id
                                     );
