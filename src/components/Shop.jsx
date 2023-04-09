@@ -25,6 +25,9 @@ function Shop() {
         }
       );
       tooltip.show();
+      setTimeout(() => {
+        tooltip.hide();
+      }, 5000);
     } else {
       const tooltip = new window.bootstrap.Tooltip(
         document.getElementById("checkout"),
@@ -35,6 +38,9 @@ function Shop() {
         }
       );
       tooltip.show();
+      setTimeout(() => {
+        tooltip.hide();
+      }, 5000);
     }
   };
 
