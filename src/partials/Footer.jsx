@@ -1,20 +1,49 @@
 import React from "react";
 
 import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
+import { Button } from "react-bootstrap";
 
 export default function App() {
   return (
-    <MDBFooter className="bg-dark text-center text-white mt-5">
+    <MDBFooter
+      className="bg-dark text-center text-white"
+      style={{ font: "small-caps 100%/200% serif" }}
+    >
       <MDBContainer className="p-4 pb-0">
         <hr />
         <section>
-          <div className="row justify-content-between">
+          <div className="row justify-content-between  d-flex align-items-center justify-content-center my-4">
             <div className="footerColumn col">
               <h3>Local</h3>
               <p>
                 Av 18 de Julio 1704 . Montevideo
-                <br />L a V: 9 a 18 hs.
+                <br />M a F: 9 a 18 hs.
               </p>
+            </div>
+            <div className="footerColumn col d-none d-md-block">
+              <img
+                src="https://cdn.discordapp.com/attachments/992571782294929533/1089839115530412063/logo.png"
+                className="img-fluid"
+                style={{ height: "8rem" }}
+                alt="conen"
+              />
+            </div>
+            <div className="footerColumn col ">
+              <form className="w-100">
+                <h3 className="titleFooter">Newsletter</h3>
+                <p>Suscribe to recive our promotions and new</p>
+                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email"
+                  />
+
+                  <button className="bg-dark text-white" type="button">
+                    Suscribe
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -24,7 +53,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#3b5998" }}
-            href=""
+            href="facebook"
           >
             <MDBIcon fab icon="facebook-f" />
           </MDBBtn>
@@ -33,7 +62,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#55acee" }}
-            href=""
+            href="twitter"
             role="button"
           >
             <MDBIcon fab icon="twitter" />
@@ -43,7 +72,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#dd4b39" }}
-            href=""
+            href="google"
             role="button"
           >
             <MDBIcon fab icon="google" />
@@ -52,7 +81,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#ac2bac" }}
-            href=""
+            href="instagram"
             role="button"
           >
             <MDBIcon fab icon="instagram" />
@@ -62,7 +91,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "#0082ca" }}
-            href=""
+            href="linkedin"
             role="button"
           >
             <MDBIcon fab icon="linkedin-in" />
@@ -72,7 +101,7 @@ export default function App() {
             floating
             className="m-1"
             style={{ backgroundColor: "dark" }}
-            href=""
+            href="github"
             role="button"
           >
             <MDBIcon fab icon="github" />
