@@ -7,7 +7,7 @@ export const productCartSlice = createSlice({
     setToken: (state, actions) => {
       return { ...state, ...actions.payload };
     },
-    addtoCart: (state, actions) => {
+    addToCart: (state, actions) => {
       const productExist = state.find(
         (product) => product.id === actions.payload.id
       );
@@ -32,7 +32,7 @@ export const productCartSlice = createSlice({
   },
 });
 export const {
-  addtoCart,
+  addToCart,
   setToken,
   updateQuantity,
   deleteElement,

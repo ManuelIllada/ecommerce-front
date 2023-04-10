@@ -1,14 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../partials/Navbar";
-import { addtoCart } from "../redux/productsCartSlice";
+import { addToCart } from "../redux/productsCartSlice";
 import "./ProductInfo.css";
 import { useState } from "react";
 import { Modal, Carousel, Button } from "react-bootstrap";
 import Footer from "../partials/Footer";
 
 const ProductInfo = () => {
+  const stateCart = useSelector((state) => state.productCart);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const handleClose = () => setShow(false);
@@ -23,11 +25,21 @@ const ProductInfo = () => {
   };
 
   const handleAddToCart = (item) => {
-    dispatch(addtoCart(item));
+    const match = stateCart.some((product) => item.id === product.id);
+    const itemStore = stateCart.find((product) => item.id === product.id);
+    if (item.stock > 0 && !match) {
+      console.log("agregar", match);
+      dispatch(addToCart(item));
+    } else if (match && item.stock > itemStore.quantity) {
+      console.log("match", match);
+      dispatch(addToCart(item));
+    } else {
+      console.log("imposible seguir");
+    }
   };
 
   const handleBuy = (item) => {
-    dispatch(addtoCart(item));
+    dispatch(addToCart(item));
     navigate("/cart");
   };
 

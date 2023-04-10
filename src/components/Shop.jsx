@@ -8,6 +8,7 @@ function Shop() {
   const stateCart = useSelector((state) => state.productCart);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+
   const handleUpdateQuantity = (value, id) => {
     dispatch(updateQuantity({ value, id }));
   };

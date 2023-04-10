@@ -132,7 +132,7 @@ function NavBar() {
                 <div className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary bg-opacity-50">
                   {stateCart.reduce(
                     (accumulator, currentItem) =>
-                      accumulator + currentItem.quantity,
+                      accumulator + Number(currentItem.quantity),
                     0
                   )}
                 </div>
