@@ -8,6 +8,7 @@ import "./ProductInfo.css";
 import { useState } from "react";
 import { Modal, Carousel, Button } from "react-bootstrap";
 import Footer from "../partials/Footer";
+import { toast } from "react-hot-toast";
 
 const ProductInfo = () => {
   const stateCart = useSelector((state) => state.productCart);
@@ -34,7 +35,10 @@ const ProductInfo = () => {
       console.log("match", match);
       dispatch(addToCart(item));
     } else {
-      console.log("imposible seguir");
+      toast.error("No tenemos mas Stock disponible 😢", {
+        position: "bottom-right",
+        duration: 3000,
+      });
     }
   };
 
