@@ -7,7 +7,7 @@ import AboutUs from "./components/AboutUs";
 import Shop from "./components/Shop";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
-import Checkout from "./components/Checkout";
+import Thanks from "./components/Thanks";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/cart" element={<Shop />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
     </div>
   );

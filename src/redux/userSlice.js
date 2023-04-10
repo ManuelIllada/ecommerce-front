@@ -9,7 +9,7 @@ export const userSlice = createSlice({
     },
 
     logOutUser: (state, action) => {
-      return null;
+      return {};
     },
   },
 });

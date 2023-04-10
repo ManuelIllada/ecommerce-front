@@ -10,7 +10,10 @@ function ShopList({ user }) {
 
   return (
     <>
-      <div onClick={toggleShow} class="link-secondary dropdown-item text-white">
+      <div
+        onClick={toggleShow}
+        className="link-secondary dropdown-item text-white"
+      >
         ShopList
       </div>
 

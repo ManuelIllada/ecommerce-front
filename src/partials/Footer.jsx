@@ -1,7 +1,6 @@
 import React from "react";
 
 import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
-import { Button } from "react-bootstrap";
 
 export default function App() {
   return (

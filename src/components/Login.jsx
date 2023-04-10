@@ -31,7 +31,7 @@ function Login() {
     });
     console.log(response.data);
     dispatch(setUser(response.data));
-    navigate("/");
+    navigate(-1);
   };
 
   return (

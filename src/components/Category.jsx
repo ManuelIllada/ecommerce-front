@@ -21,7 +21,6 @@ function Category() {
       setProducts(response.data);
     };
     getProducts();
-    console.log(location.state.id);
   }, [location.state.id]);
 
   return (

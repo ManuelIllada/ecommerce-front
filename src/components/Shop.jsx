@@ -1,10 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { updateQuantity, deleteElement } from "../redux/productsCartSlice";
+import {
+  updateQuantity,
+  deleteElement,
+  EmptyCart,
+} from "../redux/productsCartSlice";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 function Shop() {
+  const notifySuccess = (message) =>
+    toast.success(message, {
+      duration: 2000,
+      position: "bottom-right",
+    });
+  const notifyError = (error) =>
+    toast.error(error, {
+      duration: 2000,
+      position: "bottom-right",
+    });
+  const navigate = useNavigate();
   const stateCart = useSelector((state) => state.productCart);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -15,8 +32,50 @@ function Shop() {
   const handleDeleteElement = (id) => {
     dispatch(deleteElement({ id }));
   };
-  const handleCheckoutClick = () => {
-    if (user) {
+
+  const createNewOrder = async () => {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ products: stateCart, user: user }),
+    }).then((res) => res.json());
+
+    if (response.message) {
+      notifySuccess(response.message);
+      dispatch(EmptyCart());
+      navigate("/thanks");
+    } else {
+      notifyError(response.error);
+    }
+  };
+  const handleCheckoutClick = async () => {
+    if (!user.token) {
+      console.log("falta logear");
+      Swal.fire({
+        text: "Debe logearse para continuar",
+        icon: "info",
+        showDenyButton: true,
+        denyButtonText: "No",
+        confirmButtonText: "Si",
+      }).then((response) => {
+        if (response.isDenied) {
+          console.log("negado..");
+        } else {
+          navigate("/login");
+        }
+      });
+    } else {
+      createNewOrder();
+    }
+  };
+
+  /*   const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ products: stateCart, user: user }),
+      }).then((res) => res.json());
+    console.log(response); */
+  /*   if (user) {
       const tooltip = new window.bootstrap.Tooltip(
         document.getElementById("checkout"),
         {
@@ -42,8 +101,7 @@ function Shop() {
       setTimeout(() => {
         tooltip.hide();
       }, 5000);
-    }
-  };
+    } */
 
   return (
     <>
