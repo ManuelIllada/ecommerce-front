@@ -10,6 +10,7 @@ import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import LogOutModal from "./LogOutModal";
 import ProfileEdit from "./ProfileEdit";
+import { BiUserCircle } from "react-icons/bi";
 import ShopList from "./ShopList";
 
 function NavBar() {
@@ -109,7 +110,18 @@ function NavBar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <FaUserAstronaut size={20} />
+                  {user.avatar ? (
+                    <img
+                      src={user.avatar}
+                      alt="user avatar"
+                      className="img-fluid rounded-circle  object-fit-cover"
+                      width={"50px"}
+                    />
+                  ) : (
+                    <FaUserAstronaut size={20} />
+                  )}
+
+                  {/*  <FaUserAstronaut size={20} /> */}
                 </Button>
                 <ul className="dropdown-menu bg-dark bg-opacity-50">
                   <li>
