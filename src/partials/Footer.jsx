@@ -16,7 +16,7 @@ export default function App() {
               <h3>Local</h3>
               <p>
                 Av 18 de Julio 1704 . Montevideo
-                <br />M a F: 9 a 18 hs.
+                <br />M to F: 9 to 18 hs.
               </p>
             </div>
             <div className="footerColumn col d-none d-md-block">
@@ -112,7 +112,7 @@ export default function App() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2023 Copyright: Team9 Hack
+        © 2023 Copyright: Team 9 Hack Academy
       </div>
     </MDBFooter>
   );

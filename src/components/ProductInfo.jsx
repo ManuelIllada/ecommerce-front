@@ -57,7 +57,7 @@ const ProductInfo = () => {
           <NavBar />
         </section>
         <div
-          className="p-5 text-center bg-image hero-container"
+          className="p-5 text-center bg-image hero-container "
           style={{
             backgroundImage:
               "url('https://cdn.discordapp.com/attachments/852698000890658876/1090763480115712163/portada.jpg')",
@@ -78,15 +78,19 @@ const ProductInfo = () => {
                       className="preView border-1 rounded p-2"
                       onMouseOver={() => handleClick(item)}
                     >
-                      <img src={item} alt={name} className="img-fluid" />
+                      <img
+                        src={item}
+                        alt={name}
+                        className="img-fluid border border-5 border-dark"
+                      />
                     </div>
                   ))}
                 </div>
-                <div className="col-9  imageZoom">
+                <div className="col-9  imageZoom ">
                   <img
                     src={showedImage}
                     alt={name}
-                    className="img-fluid"
+                    className="img-fluid border border-5 border-dark"
                     onClick={handleShow}
                   />
                 </div>
