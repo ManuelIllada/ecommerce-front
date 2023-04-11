@@ -75,13 +75,13 @@ const ProductInfo = () => {
                   {media.map((item) => (
                     <div
                       key={item}
-                      className="preView border-1 rounded p-2"
+                      className="preView m-3"
                       onMouseOver={() => handleClick(item)}
                     >
                       <img
                         src={item}
                         alt={name}
-                        className="img-fluid border border-5 border-dark"
+                        className="img-fluid bg-dark rounded bg-opacity-25 shadow"
                       />
                     </div>
                   ))}
@@ -90,7 +90,7 @@ const ProductInfo = () => {
                   <img
                     src={showedImage}
                     alt={name}
-                    className="img-fluid border border-5 border-dark"
+                    className="img-fluid bg-dark rounded bg-opacity-25 shadow"
                     onClick={handleShow}
                   />
                 </div>
