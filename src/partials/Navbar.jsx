@@ -120,8 +120,6 @@ function NavBar() {
                   ) : (
                     <FaUserAstronaut size={20} />
                   )}
-
-                  {/*  <FaUserAstronaut size={20} /> */}
                 </Button>
                 <ul className="dropdown-menu bg-dark bg-opacity-50">
                   <li>
