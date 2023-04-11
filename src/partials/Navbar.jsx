@@ -10,7 +10,6 @@ import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import LogOutModal from "./LogOutModal";
 import ProfileEdit from "./ProfileEdit";
-import { BiUserCircle } from "react-icons/bi";
 import ShopList from "./ShopList";
 
 function NavBar() {
