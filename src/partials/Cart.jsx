@@ -25,14 +25,14 @@ function Cart({ name, ...props }) {
         show={show}
         onHide={handleClose}
         {...props}
-        className="img-fluid bg-dark bg-opacity-75"
+        className="img-fluid bg-dark bg-opacity-75 pt-5"
       >
         <Offcanvas.Header closeButton>
           <Link to={"/cart"}>
             <Button
               onClick={handleShow}
-              className="m-2 p-2 text-white opacity-50"
-              variant="light"
+              className="m-2 p-2 text-white opacity-75 hover"
+              variant="dark"
               size="sm"
             >
               Go to Cart
@@ -49,7 +49,7 @@ function Cart({ name, ...props }) {
                 data-bs-placement="right"
                 title={item.name}
               >
-                <div className="col-4 rounded bg-dark bg-opacity-25 hover-zoom d-flex align-items-center justify-content-center p-2">
+                <div className="col-4 rounded hover-zoom d-flex align-items-center justify-content-center p-2">
                   <Link to={`/${item.category.slug}/${item.slug}`} state={item}>
                     <img
                       src={item.media[0]}

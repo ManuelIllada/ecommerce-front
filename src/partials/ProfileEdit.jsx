@@ -22,11 +22,16 @@ function ProfileEdit({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid bg-dark bg-opacity-75"
+        className="img-fluid bg-dark bg-opacity-75 pt-5"
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="text-white">
-            <h3>Profile Edit</h3>
+          <Offcanvas.Title>
+            <h3
+              className="text-white opacity-75"
+              style={{ font: "BlinkMacSystemFont" }}
+            >
+              Profile Edit
+            </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
