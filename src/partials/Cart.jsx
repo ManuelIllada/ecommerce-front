@@ -25,16 +25,9 @@ function Cart({ name, ...props }) {
         show={show}
         onHide={handleClose}
         {...props}
-        className="img-fluid"
-        style={{
-          backgroundImage:
-            'url("https://cdn.discordapp.com/attachments/992571782294929533/1091085727468621934/mars-plex-Rqqh0DH_3js-unsplash.jpg")',
-        }}
+        className="img-fluid bg-dark bg-opacity-75"
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="text-white">
-            <h3>My Cart</h3>
-          </Offcanvas.Title>
           <Link to={"/cart"}>
             <Button
               onClick={handleShow}
@@ -56,7 +49,7 @@ function Cart({ name, ...props }) {
                 data-bs-placement="right"
                 title={item.name}
               >
-                <div className="col-4 rounded bg-light bg-opacity-25 hover-zoom d-flex align-items-center justify-content-center p-2">
+                <div className="col-4 rounded bg-dark bg-opacity-25 hover-zoom d-flex align-items-center justify-content-center p-2">
                   <Link to={`/${item.category.slug}/${item.slug}`} state={item}>
                     <img
                       src={item.media[0]}
@@ -69,7 +62,7 @@ function Cart({ name, ...props }) {
                 <div className="col-8 rounded my-2 mx-1 row">
                   <div className="col-12 d-flex align-items-center justify-content-start p-3">
                     <p className="m-0" style={{ fontSize: 20 }}>
-                      {item.category.name}: {item.name}
+                      {item.category.name}
                     </p>
                   </div>
                   <div className="col-6 d-flex justify-content-start align-items-end">
