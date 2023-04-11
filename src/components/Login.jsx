@@ -113,10 +113,8 @@ function Login() {
                     </Link>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <p>For admins</p>
                     <Link to={"http://localhost:3005/"} className="ms-1">
-                      {" "}
-                      click here
+                      Go to Admin Panel
                     </Link>
                   </div>
                 </div>
