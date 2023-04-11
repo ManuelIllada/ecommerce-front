@@ -268,7 +268,7 @@ function AboutUs() {
                       floating
                       className="m-1"
                       style={{ backgroundColor: "#4f4f4f" }}
-                      href="https://www.linkedin.com/in/manuillada/"
+                      href={member.linkedin}
                       role="button"
                     >
                       <MDBIcon fab icon="linkedin-in" />
@@ -277,7 +277,7 @@ function AboutUs() {
                       floating
                       className="m-1"
                       style={{ backgroundColor: "#4f4f4f" }}
-                      href="https://github.com/ManuelIllada"
+                      href={member.github}
                       role="button"
                     >
                       <MDBIcon fab icon="github" />
