@@ -31,8 +31,8 @@ function Cart({ name, ...props }) {
           <Link to={"/cart"}>
             <Button
               onClick={handleShow}
-              className=" p-1 me-2 text-white"
-              variant="dark"
+              className="m-2 p-2 text-white opacity-50"
+              variant="light"
               size="sm"
             >
               Go to Cart

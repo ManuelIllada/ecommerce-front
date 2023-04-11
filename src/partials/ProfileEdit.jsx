@@ -22,11 +22,7 @@ function ProfileEdit({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid"
-        style={{
-          backgroundImage:
-            'url("https://cdn.discordapp.com/attachments/992571782294929533/1091085727468621934/mars-plex-Rqqh0DH_3js-unsplash.jpg")',
-        }}
+        className="img-fluid bg-dark bg-opacity-75"
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="text-white">
@@ -66,7 +62,7 @@ function ProfileEdit({ user }) {
                     />
                   </div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -92,7 +88,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.firstname}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -118,7 +114,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.lastname}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -144,7 +140,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.email}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -170,7 +166,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.address}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -196,7 +192,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.phone}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>

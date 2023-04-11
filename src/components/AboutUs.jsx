@@ -11,14 +11,14 @@ function AboutUs() {
   return (
     <>
       <div>
-        <section className="mb-5">
+        <section>
           <NavBar />
         </section>
         <div
           className="p-5 text-center bg-image hero-container"
           style={{
             backgroundImage:
-              "url('https://cdn.discordapp.com/attachments/852698000890658876/1090763480115712163/portada.jpg')",
+              "url('https://cdn.discordapp.com/attachments/852698000890658876/1095357036595777586/berkay-gumustekin-hRg1KL4-AUE-unsplash.jpg')",
             backgroundPosition: "bottom",
             width: "100%",
             height: "16rem",
