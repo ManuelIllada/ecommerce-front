@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Modal, Carousel, Button } from "react-bootstrap";
 import Footer from "../partials/Footer";
 import { toast } from "react-hot-toast";
+import { FaOpencart } from "react-icons/fa";
 
 const ProductInfo = () => {
   const stateCart = useSelector((state) => state.productCart);
@@ -43,8 +44,23 @@ const ProductInfo = () => {
   };
 
   const handleBuy = (item) => {
-    dispatch(addToCart(item));
-    navigate("/cart");
+    const match = stateCart.some((product) => item.id === product.id);
+    const itemStore = stateCart.find((product) => item.id === product.id);
+    if (item.stock > 0 && !match) {
+      console.log("agregar", match);
+      dispatch(addToCart(item));
+      navigate("/cart");
+    } else if (match && item.stock > itemStore.quantity) {
+      console.log("match", match);
+      dispatch(addToCart(item));
+
+      navigate("/cart");
+    } else {
+      toast.error("No tenemos mas Stock disponible 😢", {
+        position: "bottom-right",
+        duration: 3000,
+      });
+    }
   };
 
   const handleClick = (item) => {
@@ -111,7 +127,7 @@ const ProductInfo = () => {
                   onClick={() => handleAddToCart(location.state)}
                   className="btn btn-outline-success m-3"
                 >
-                  Add to Cart +
+                  + <FaOpencart size={25} />
                 </button>
               </div>
             </div>
