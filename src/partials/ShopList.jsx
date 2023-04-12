@@ -22,15 +22,16 @@ function ShopList({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid"
-        style={{
-          backgroundImage:
-            'url("https://cdn.discordapp.com/attachments/992571782294929533/1091085727468621934/mars-plex-Rqqh0DH_3js-unsplash.jpg")',
-        }}
+        className="img-fluid bg-dark bg-opacity-75 pt-5"
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="text-white">
-            <h3>Profile Edit</h3>
+          <Offcanvas.Title>
+            <h3
+              className="text-white opacity-75"
+              style={{ font: "BlinkMacSystemFont" }}
+            >
+              Shop List
+            </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-white ">

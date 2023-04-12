@@ -76,7 +76,7 @@ const ProductInfo = () => {
           className="p-5 text-center bg-image hero-container "
           style={{
             backgroundImage:
-              "url('https://cdn.discordapp.com/attachments/852698000890658876/1090763480115712163/portada.jpg')",
+              "url('https://cdn.discordapp.com/attachments/852698000890658876/1095357036595777586/berkay-gumustekin-hRg1KL4-AUE-unsplash.jpg')",
             backgroundPosition: "bottom",
             width: "100%",
             height: "16rem",
@@ -91,13 +91,13 @@ const ProductInfo = () => {
                   {media.map((item) => (
                     <div
                       key={item}
-                      className="preView border-1 rounded p-2"
+                      className="preView m-3"
                       onMouseOver={() => handleClick(item)}
                     >
                       <img
                         src={item}
                         alt={name}
-                        className="img-fluid border border-5 border-dark"
+                        className="img-fluid bg-dark rounded bg-opacity-25 shadow"
                       />
                     </div>
                   ))}
@@ -106,7 +106,7 @@ const ProductInfo = () => {
                   <img
                     src={showedImage}
                     alt={name}
-                    className="img-fluid border border-5 border-dark"
+                    className="img-fluid bg-dark rounded bg-opacity-25 shadow"
                     onClick={handleShow}
                   />
                 </div>

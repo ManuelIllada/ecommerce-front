@@ -22,15 +22,16 @@ function ProfileEdit({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid"
-        style={{
-          backgroundImage:
-            'url("https://cdn.discordapp.com/attachments/992571782294929533/1091085727468621934/mars-plex-Rqqh0DH_3js-unsplash.jpg")',
-        }}
+        className="img-fluid bg-dark bg-opacity-75 pt-5"
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="text-white">
-            <h3>Profile Edit</h3>
+          <Offcanvas.Title>
+            <h3
+              className="text-white opacity-75"
+              style={{ font: "BlinkMacSystemFont" }}
+            >
+              Profile Edit
+            </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
@@ -66,7 +67,7 @@ function ProfileEdit({ user }) {
                     />
                   </div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -92,7 +93,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.firstname}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -118,7 +119,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.lastname}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -144,7 +145,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.email}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -170,7 +171,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.address}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
@@ -196,7 +197,7 @@ function ProfileEdit({ user }) {
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
                   <div className="col-6">{user.phone}</div>
                   <div className="col-6 d-flex justify-content-end align-items-center">
-                    <AiFillEdit className="text-light" size="25" />
+                    <AiFillEdit className="text-light opacity-50" size="25" />
                   </div>
                 </div>
               </div>
