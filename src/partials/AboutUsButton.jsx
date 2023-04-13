@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 export default function AboutUsButton() {
   return (
-    <Link className="link-to-about btn fw-bold" to="/about" role="button">
+    <Link
+      className="link-to-about btn fw-bold  btn btn-warning"
+      to="/about"
+      role="button"
+    >
       About This Project
     </Link>
   );
