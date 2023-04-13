@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 import "./CategoryCard.css";
 
 function CategoryCard({ category }) {
+  const imageOk = () => {
+    if (
+      typeof category.cardImage === "string" &&
+      category.cardImage.includes("https://")
+    ) {
+      return category.cardImage;
+    } else {
+      return `${process.env.REACT_APP_API_URL}/img/${category.cardImage}`;
+    }
+  };
   return (
     <Link
       state={category}
@@ -15,7 +25,7 @@ function CategoryCard({ category }) {
           <h2 className="title">{category.name}</h2>
           <img
             variant="top"
-            src={category.cardImage}
+            src={imageOk()}
             className="img-fluid rounded"
             alt={category.name}
           />

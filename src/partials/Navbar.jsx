@@ -40,6 +40,14 @@ function NavBar() {
   window.addEventListener("resize", changeBackground);
   window.addEventListener("scroll", changeBackground);
 
+  const avatarOk = () => {
+    if (typeof user.avatar === "string" && user.avatar.includes("https://")) {
+      return user.avatar;
+    } else {
+      return `${process.env.REACT_APP_API_URL}/img/${user.avatar}`;
+    }
+  };
+
   return (
     <nav
       id="prueba"
@@ -111,7 +119,7 @@ function NavBar() {
                 >
                   {user.avatar ? (
                     <img
-                      src={user.avatar}
+                      src={avatarOk()}
                       alt="user avatar"
                       className="img-fluid rounded-circle  object-fit-cover"
                       width={"30px"}

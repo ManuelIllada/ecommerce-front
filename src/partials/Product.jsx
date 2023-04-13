@@ -4,6 +4,16 @@ import ListGroup from "react-bootstrap/ListGroup";
 //import Button from "react-bootstrap/esm/Button";
 
 export const Product = ({ product }) => {
+  const imageOk = () => {
+    if (
+      typeof product.media[0] === "string" &&
+      product.media[0].includes("https://")
+    ) {
+      return product.media[0];
+    } else {
+      return `${process.env.REACT_APP_API_URL}/img/${product.media[0]}`;
+    }
+  };
   return (
     <Card
       className="bg-black bg-opacity-25 m-4 rounded hover-zoom hover-shadow"
@@ -11,11 +21,7 @@ export const Product = ({ product }) => {
     >
       <Card.Body>
         <div style={{ height: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={product.media[0]}
-            className="img-fluid"
-          />
+          <Card.Img variant="top" src={imageOk()} className="img-fluid" />
         </div>
       </Card.Body>
       <Card.Body
