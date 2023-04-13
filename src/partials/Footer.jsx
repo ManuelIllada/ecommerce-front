@@ -1,13 +1,10 @@
 import React from "react";
-
-import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
+import { Button } from "react-bootstrap";
+import { MDBFooter, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function App() {
   return (
-    <MDBFooter
-      className="bg-dark text-center text-white"
-      style={{ font: "small-caps 100%/200% serif" }}
-    >
+    <MDBFooter className="bg-dark text-center text-white">
       <MDBContainer className="p-4 pb-0">
         <hr />
         <section>
@@ -47,64 +44,79 @@ export default function App() {
           </div>
         </section>
         <hr />
-        <section className="mb-4">
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "#3b5998" }}
+        <section className="mb-4 ">
+          <Button
+            className="m-1 rounded-circle border border-dark text-center"
+            style={{
+              backgroundColor: "#3b5998",
+              width: "40px",
+              height: "40px",
+            }}
             href="facebook"
+            role="button"
           >
             <MDBIcon fab icon="facebook-f" />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "#55acee" }}
+          <Button
+            className="m-1 rounded-circle border border-dark text-center"
+            style={{
+              backgroundColor: "#55acee",
+              width: "40px",
+              height: "40px",
+            }}
             href="twitter"
             role="button"
           >
             <MDBIcon fab icon="twitter" />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "#dd4b39" }}
+          <Button
+            className="m-1 rounded-circle border border-dark text-center"
+            style={{
+              backgroundColor: "#dd4b39",
+              width: "40px",
+              height: "40px",
+            }}
             href="google"
             role="button"
           >
             <MDBIcon fab icon="google" />
-          </MDBBtn>
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "#ac2bac" }}
+          </Button>
+          <Button
+            className="m-1 rounded-circle border border-dark text-center"
+            style={{
+              backgroundColor: "#ac2bac",
+              width: "40px",
+              height: "40px",
+            }}
             href="instagram"
             role="button"
           >
             <MDBIcon fab icon="instagram" />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "#0082ca" }}
+          <Button
+            className="m-1 rounded-circle border border-dark text-center"
+            style={{
+              backgroundColor: "#0082ca",
+              width: "40px",
+              height: "40px",
+            }}
             href="linkedin"
             role="button"
           >
             <MDBIcon fab icon="linkedin-in" />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
-            floating
-            className="m-1"
-            style={{ backgroundColor: "dark" }}
+          <Button
+            className="m-1 rounded-circle border border-dark text-center  "
+            style={{ backgroundColor: "dark", width: "40px", height: "40px" }}
             href="github"
             role="button"
           >
             <MDBIcon fab icon="github" />
-          </MDBBtn>
+          </Button>
         </section>
       </MDBContainer>
 

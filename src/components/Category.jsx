@@ -2,7 +2,7 @@ import NavBar from "../partials/Navbar";
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Product } from "../partials/Product";
 import HeroProducts from "../partials/HeroProducts";
 import Footer from "../partials/Footer";
@@ -23,6 +23,15 @@ function Category() {
     getProducts();
   }, [location.state.id]);
 
+  const stock = (item) => {
+    setProducts(
+      products.map((p) => {
+        if (p.id !== item.id) return p;
+        return { ...p, stock: p.stock - 1 };
+      })
+    );
+  };
+
   return (
     <>
       <div className="bg-image" style={{ backgroundColor: "rgb(65, 61, 61)" }}>
@@ -38,15 +47,9 @@ function Category() {
 
         <h1 className="text-center text-white my-5">Our Products</h1>
 
-        <div className="d-flex flex-wrap justify-content-around">
+        <div className="d-flex flex-wrap justify-content-around mb-5">
           {products.map((product) => (
-            <Link
-              to={`/${product.category.slug}/${product.slug}`}
-              key={product.id}
-              state={product}
-            >
-              <Product product={product} key={product.id} />
-            </Link>
+            <Product product={product} key={product.id} stock={stock} />
           ))}
         </div>
         <section>

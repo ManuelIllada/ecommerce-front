@@ -5,7 +5,8 @@ import Card from "react-bootstrap/Card";
 import members from "../membersdb";
 import "./ProductInfo.css";
 import Footer from "../partials/Footer";
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import { MDBIcon } from "mdb-react-ui-kit";
+import { Button } from "react-bootstrap";
 
 function AboutUs() {
   return (
@@ -264,24 +265,22 @@ function AboutUs() {
                   </h5>
                   <h6>{member.lastname}</h6>
                   <Card.Body>
-                    <MDBBtn
-                      floating
-                      className="m-1"
+                    <Button
+                      className="m-1 rounded-circle border border-dark text-center "
                       style={{ backgroundColor: "#4f4f4f" }}
                       href={member.linkedin}
                       role="button"
                     >
                       <MDBIcon fab icon="linkedin-in" />
-                    </MDBBtn>
-                    <MDBBtn
-                      floating
-                      className="m-1"
+                    </Button>
+                    <Button
+                      className="m-1 rounded-circle border border-dark text-center"
                       style={{ backgroundColor: "#4f4f4f" }}
                       href={member.github}
                       role="button"
                     >
-                      <MDBIcon fab icon="github" />
-                    </MDBBtn>
+                      <MDBIcon fab icon="github" className="text-center" />
+                    </Button>
                   </Card.Body>
                 </div>
               </div>

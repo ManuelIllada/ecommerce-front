@@ -42,7 +42,6 @@ function home() {
           </div>
         </section>
         <section>
-          <h1 className="text-white">Aca un Carousel de Marcas</h1>
           <CategoryList />
         </section>
 
@@ -54,7 +53,7 @@ function home() {
                   <h2 className="text-white text-center fs-4">
                     Official sponsor Final eSkootr Championship at Marseille
                   </h2>
-                  <div className="ratio ratio-16x9">
+                  <div className="ratio ratio-16x9 shadow">
                     <iframe
                       width="560"
                       height="315"

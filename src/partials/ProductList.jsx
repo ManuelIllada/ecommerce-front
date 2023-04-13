@@ -18,12 +18,24 @@ function ProductList() {
     getProducts();
   }, []);
 
+  const stock = (item) => {
+    // setProducts(
+    //   products.map((p) => {
+    //     if (p.id !== item.id) return p;
+    //     return { ...p, stock: p.stock - 1 };
+    //   })
+    // );
+    console.log("prueba");
+  };
+
   return (
-    <div className="col-12 d-flex flex-wrap justify-content-around">
-      {products.map((product) => (
-        <Product product={product} key={product.id} />
-      ))}
-    </div>
+    products.length > 0 && (
+      <div className="col-12 d-flex flex-wrap justify-content-around">
+        {products.map((product) => (
+          <Product product={product} key={product.id} stock={stock} />
+        ))}
+      </div>
+    )
   );
 }
 
