@@ -66,6 +66,15 @@ const ProductInfo = () => {
   const handleClick = (item) => {
     setShowedImage(item);
   };
+
+  const itemOk = ({ itemok }) => {
+    if (typeof itemok === "string" && itemok.includes("https://")) {
+      return itemok;
+    } else {
+      return `${process.env.REACT_APP_API_URL}/img/${itemok}`;
+    }
+  };
+
   return (
     <>
       <body style={{ backgroundColor: "rgb(65, 61, 61)" }}>
@@ -95,18 +104,18 @@ const ProductInfo = () => {
                       onMouseOver={() => handleClick(item)}
                     >
                       <img
-                        src={item}
+                        src={itemOk(item)}
                         alt={name}
-                        className="img-fluid bg-dark rounded bg-opacity-25 shadow"
+                        className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
                       />
                     </div>
                   ))}
                 </div>
                 <div className="col-9  imageZoom ">
                   <img
-                    src={showedImage}
+                    src={itemOk(showedImage)}
                     alt={name}
-                    className="img-fluid bg-dark rounded bg-opacity-25 shadow"
+                    className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
                     onClick={handleShow}
                   />
                 </div>

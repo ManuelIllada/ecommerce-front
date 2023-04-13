@@ -76,7 +76,11 @@ export const Product = ({ product, stock }) => {
             state={product}
             className="hover-zoom hover-shadow"
           >
-            <Card.Img variant="top" src={imageOk()} className="img-fluid" />
+            <Card.Img
+              variant="top"
+              src={imageOk()}
+              className="img-fluid object-fit-cover"
+            />
           </Link>
         </div>
       </Card.Body>

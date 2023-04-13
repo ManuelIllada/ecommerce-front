@@ -26,7 +26,7 @@ function CategoryCard({ category }) {
           <img
             variant="top"
             src={imageOk()}
-            className="img-fluid rounded"
+            className="img-fluid object-fit-cover rounded"
             alt={category.name}
           />
         </div>
