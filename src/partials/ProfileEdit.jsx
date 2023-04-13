@@ -108,7 +108,7 @@ function ProfileEdit({ user }) {
                     {
                       <img
                         src={avatarOk()}
-                        className=" img-fluid rounded"
+                        className=" img-fluid object-fit-cover rounded"
                         alt="avatar"
                         style={{ height: "4rem", width: "4rem" }}
                       />

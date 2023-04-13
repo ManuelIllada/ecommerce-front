@@ -121,8 +121,11 @@ function NavBar() {
                     <img
                       src={avatarOk()}
                       alt="user avatar"
-                      className="img-fluid rounded-circle  object-fit-cover"
-                      width={"30px"}
+                      className="img-fluid object-fit-cover rounded-circle"
+                      style={{
+                        height: "2rem",
+                        width: "2rem",
+                      }}
                     />
                   ) : (
                     <FaUserAstronaut size={20} />
