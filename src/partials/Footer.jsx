@@ -4,10 +4,7 @@ import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 
 export default function App() {
   return (
-    <MDBFooter
-      className="bg-dark text-center text-white"
-      style={{ font: "small-caps 100%/200% serif" }}
-    >
+    <MDBFooter className="bg-dark text-center text-white">
       <MDBContainer className="p-4 pb-0">
         <hr />
         <section>
