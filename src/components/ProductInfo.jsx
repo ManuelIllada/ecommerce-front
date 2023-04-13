@@ -6,7 +6,7 @@ import NavBar from "../partials/Navbar";
 import { addToCart } from "../redux/productsCartSlice";
 import "./ProductInfo.css";
 import { useState } from "react";
-import { Modal, Carousel, Button } from "react-bootstrap";
+import { Modal, Carousel } from "react-bootstrap";
 import Footer from "../partials/Footer";
 import { toast } from "react-hot-toast";
 import { FaOpencart } from "react-icons/fa";
@@ -83,11 +83,11 @@ const ProductInfo = () => {
           }}
         ></div>
         <section>
-          <div className="px-5 row d-flex justify-content-center py-5">
+          <div className="container px-5 row d-flex justify-content-center py-5">
             <div className="my-3"></div>
-            <div className="col-12 col-md-6 col-lg-4 my-5">
-              <div className="row">
-                <div className="col-3">
+            <div className=" col-12 col-md-6 col-lg-4 my-5">
+              <div className="shadow row">
+                <div className="col-3 shadow">
                   {media.map((item) => (
                     <div
                       key={item}
@@ -112,7 +112,7 @@ const ProductInfo = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-8 col-sm-10  d-flex justify-content-center align-items-center flex-column ms-5 text-center">
+            <div className="col-lg-6 col-md-8 col-sm-10  d-flex justify-content-center align-items-center flex-column  ms-5 text-center  shadow">
               <h3 className="mb-4 text-white">{name}</h3>
               <p className="text-white">{description}</p>
               <small className="text-white">${price}</small>
@@ -134,10 +134,9 @@ const ProductInfo = () => {
           </div>
         </section>
         <hr className="mx-5" />
-        <div className=" text-white container d-flex justify-content-around">
-          <div className="p-3 col-3 shadow">
+        <div className=" text-white container d-flex justify-content-around my-5">
+          <div className="p-3 col-3 shadow text-center">
             <h4 className="semi-bold">Payment Methods</h4>
-            <Button></Button>
             <p>Credit cards</p>
             <small>Interest free installments with selected banks!</small>
             <div>
@@ -172,9 +171,9 @@ const ProductInfo = () => {
               alt="masterCard"
             />
           </div>
-          <div className="p-3 col-3 shadow">
+          <div className="p-3 col-3 shadow text-center">
             <h4>Protected Purchase with Mercado Pago</h4>
-            <div className="">
+            <div>
               <p>Receive the product you were expecting or your money back.</p>
               <p>Learn more about warranty</p>
             </div>

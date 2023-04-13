@@ -113,7 +113,10 @@ function Login() {
                     </Link>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <Link to={"http://localhost:3005/"} className="ms-1">
+                    <Link
+                      to={"http://localhost:3005/"}
+                      className="ms-2 link-secondary"
+                    >
                       Go to Admin Panel
                     </Link>
                   </div>
