@@ -67,11 +67,11 @@ const ProductInfo = () => {
     setShowedImage(item);
   };
 
-  const itemOk = ({ itemok }) => {
-    if (typeof itemok === "string" && itemok.includes("https://")) {
-      return itemok;
+  const itemOk = (item) => {
+    if (typeof item === "string" && item.includes("https://")) {
+      return item;
     } else {
-      return `${process.env.REACT_APP_API_URL}/img/${itemok}`;
+      return `${process.env.REACT_APP_API_URL}/img/${item}`;
     }
   };
 
