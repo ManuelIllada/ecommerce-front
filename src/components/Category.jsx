@@ -23,6 +23,15 @@ function Category() {
     getProducts();
   }, [location.state.id]);
 
+  const stock = (item) => {
+    setProducts(
+      products.map((p) => {
+        if (p.id !== item.id) return p;
+        return { ...p, stock: p.stock - 1 };
+      })
+    );
+  };
+
   return (
     <>
       <div className="bg-image" style={{ backgroundColor: "rgb(65, 61, 61)" }}>
@@ -40,7 +49,7 @@ function Category() {
 
         <div className="d-flex flex-wrap justify-content-around mb-5">
           {products.map((product) => (
-            <Product product={product} key={product.id} />
+            <Product product={product} key={product.id} stock={stock} />
           ))}
         </div>
         <section>

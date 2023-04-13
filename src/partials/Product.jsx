@@ -23,7 +23,7 @@ export const Product = ({ product, stock }) => {
       stock(item);
       dispatch(addToCart(item));
     } else if (match && item.stock > itemStore.quantity) {
-      // stock(item);
+      stock(item);
       dispatch(addToCart(item));
     } else {
       toast.error("No tenemos mas Stock disponible 😢", {
