@@ -11,7 +11,11 @@ export default function HeroProducts({ background, name }) {
   };
   return (
     <div className="bg-image hero-product">
-      <img src={bgOk()} className="img-fluid w-100" alt="hero Section" />
+      <img
+        src={bgOk()}
+        className="img-fluid w-100 object-fit-cover"
+        alt="hero Section"
+      />
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
         <div className="d-flex justify-content-center align-items-center w-100 h-100">
           <div className="d-none  d-md-block text-white d-flex justify-content-center align-items-center flex-column text-center">
