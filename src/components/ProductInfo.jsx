@@ -86,8 +86,8 @@ const ProductInfo = () => {
           <div className="container px-5 row d-flex justify-content-center py-5">
             <div className="my-3"></div>
             <div className=" col-12 col-md-6 col-lg-4 my-5">
-              <div className="shadow row">
-                <div className="col-3 shadow">
+              <div className="row">
+                <div className="col-3">
                   {media.map((item) => (
                     <div
                       key={item}
