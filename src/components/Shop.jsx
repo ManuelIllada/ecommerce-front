@@ -50,7 +50,6 @@ function Shop() {
   };
   const handleCheckoutClick = async () => {
     if (!user.token) {
-      console.log("falta logear");
       Swal.fire({
         text: "Debe logearse para continuar",
         icon: "info",
@@ -59,7 +58,6 @@ function Shop() {
         confirmButtonText: "Si",
       }).then((response) => {
         if (response.isDenied) {
-          console.log("negado..");
         } else {
           navigate("/login");
         }
