@@ -4,7 +4,10 @@ import { MDBFooter, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function App() {
   return (
-    <MDBFooter className="bg-dark text-center text-white">
+    <MDBFooter
+      className=" text-center text-white"
+      style={{ backgroundColor: "#383a33" }}
+    >
       <MDBContainer className="p-4 pb-0">
         <hr />
         <section>
@@ -120,10 +123,7 @@ export default function App() {
         </section>
       </MDBContainer>
 
-      <div
-        className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-      >
+      <div className="text-center p-3" style={{ backgroundColor: "#1b1f19" }}>
         © 2023 Copyright: Team 9 Hack Academy
       </div>
     </MDBFooter>

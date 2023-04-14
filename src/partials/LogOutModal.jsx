@@ -20,10 +20,7 @@ function LogOutModal() {
 
   return (
     <>
-      <div
-        onClick={handleShow}
-        className="link-secondary dropdown-item text-white"
-      >
+      <div onClick={handleShow} className="link-dark dropdown-item text-white">
         Logout
       </div>
       <Modal

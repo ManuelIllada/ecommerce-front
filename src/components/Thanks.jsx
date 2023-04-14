@@ -20,7 +20,10 @@ const Thanks = () => {
           ) : (
             <>
               <div className="border border-3 border-success"></div>
-              <div className="card  bg-white shadow p-5">
+              <div
+                className="card  shadow p-5"
+                style={{ backgroundColor: "rgb(63, 65, 61)" }}
+              >
                 <div className="mb-4 text-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

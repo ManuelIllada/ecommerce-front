@@ -52,7 +52,7 @@ function SignUp() {
     <>
       <MDBContainer
         fluid
-        className="overflow-y-auto pb-5 pt-3 px-5 bg-image vh-100"
+        className="d-flex justify-content-center overflow-y-auto pb-5 pt-3 px-5 bg-image vh-100"
         style={{
           backgroundImage:
             'url("https://wallpapercrafter.com/desktop/34708-BMW-Motorrad-Concept-Link-Electric-bike-HD-4k.jpg")',
@@ -61,7 +61,7 @@ function SignUp() {
         <MDBRow>
           <MDBCol
             md="6"
-            className="text-center text-md-start d-flex flex-column justify-content-center mb-5"
+            className="text-center text-md-start d-flex flex-column pt-5"
           >
             <Link to={"/"} className="text-body text-white">
               <h5 className=" text-white">
@@ -85,7 +85,7 @@ function SignUp() {
             </p>
           </MDBCol>
 
-          <MDBCol md="6">
+          <MDBCol md="6" className="pt-5">
             <MDBCard style={{ opacity: "85%" }}>
               <MDBCardBody className="p-5">
                 <form onSubmit={(event) => handleSubmit(event)}>
@@ -162,7 +162,7 @@ function SignUp() {
                     />
                   </div>
                   <MDBBtn
-                    className="w-100 mb-4 btn btn-info"
+                    className="w-100 mb-4"
                     size="md"
                     id="submit-btn"
                     type="submit"

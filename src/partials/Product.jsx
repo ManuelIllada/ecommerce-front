@@ -69,36 +69,34 @@ export const Product = ({ product, stock }) => {
       style={{ width: "20rem", height: "40rem", borderRadius: "100px" }}
     >
       <Card.Body>
-        <div style={{ height: "18rem" }}>
-          <Link
-            to={`/${product.category.slug}/${product.slug}`}
-            key={product.id}
-            state={product}
-            className="hover-zoom hover-shadow"
-          >
-            <Card.Img
-              variant="top"
-              src={imageOk()}
-              className="img-fluid object-fit-cover"
-            />
-          </Link>
-        </div>
+        <Link
+          to={`/${product.category.slug}/${product.slug}`}
+          key={product.id}
+          state={product}
+          className="hover-zoom hover-shadow"
+        >
+          <Card.Img
+            variant="top"
+            src={imageOk()}
+            className="img-fluid object-fit-cover"
+          />
+        </Link>
       </Card.Body>
-      <Card.Body
-        className="d-flex align-items-center"
-        style={{ height: "5rem" }}
-      >
-        <Card.Title className="text-light" style={{ height: "10rem" }}>
+      <Card.Body className="d-flex justify-content-center align-items-end">
+        <Card.Title className="text-light">
           <div>{product.name}</div>
         </Card.Title>
       </Card.Body>
 
       <ListGroup className="list-group-flush ">
-        <ListGroup.Item className="d-flex justify-content-center fs-4 fw-bold">
+        <ListGroup.Item
+          className="d-flex justify-content-center fs-4 fw-bold"
+          style={{ backgroundColor: "#cacaca" }}
+        >
           $ {product.price}
         </ListGroup.Item>
         <ListGroup.Item
-          style={{ height: "3.5rem" }}
+          style={{ height: "3.5rem", backgroundColor: "#cacaca" }}
           className="d-flex justify-content-center fs-4 fw-bold"
         >
           <Button
@@ -119,7 +117,7 @@ export const Product = ({ product, stock }) => {
           </Button>
         </ListGroup.Item>
         <ListGroup.Item
-          style={{ height: "2.5rem" }}
+          style={{ height: "2.5rem", backgroundColor: "#cacaca" }}
           className={`d-flex justify-content-center fw-bold ${
             product.stock === 0 ? "withinStock" : ""
           }`}

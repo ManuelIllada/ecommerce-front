@@ -131,7 +131,7 @@ function NavBar() {
                     <FaUserAstronaut size={20} />
                   )}
                 </Button>
-                <ul className="dropdown-menu bg-dark bg-opacity-50 p-0">
+                <ul className="dropdown-menu bg-black bg-opacity-50 p-0">
                   <li>
                     <ProfileEdit user={user} />
                   </li>
@@ -149,7 +149,7 @@ function NavBar() {
                 <Button className="bg-transparent p-0 me-auto" variant="link">
                   <Cart />
                 </Button>
-                <div className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary bg-opacity-50">
+                <div className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-black bg-opacity-50">
                   {stateCart.reduce(
                     (accumulator, currentItem) =>
                       accumulator + Number(currentItem.quantity),

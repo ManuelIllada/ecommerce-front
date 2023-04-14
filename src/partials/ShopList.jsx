@@ -10,10 +10,7 @@ function ShopList({ user }) {
 
   return (
     <>
-      <div
-        onClick={toggleShow}
-        className="link-secondary dropdown-item text-white"
-      >
+      <div onClick={toggleShow} className="link-dark dropdown-item text-white">
         ShopList
       </div>
 
@@ -22,24 +19,21 @@ function ShopList({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid bg-dark bg-opacity-75 pt-5"
+        className="img-fluid bg-black bg-opacity-25 pt-5"
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <h3
-              className="text-white opacity-75"
-              style={{ font: "BlinkMacSystemFont" }}
-            >
+            <h3 className="text-white" style={{ font: "BlinkMacSystemFont" }}>
               Shop List
             </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-white ">
           <div className="accordion " id="accordionExample">
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
