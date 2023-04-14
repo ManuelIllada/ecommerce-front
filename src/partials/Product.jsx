@@ -61,16 +61,16 @@ export const Product = ({ product, stock }) => {
   };
   return (
     <Card
-      className="bg-black bg-opacity-25 m-4 rounded mb-5"
+      className="hover-zoom bg-black bg-opacity-25 m-4 rounded mb-5"
       style={{ width: "20rem", height: "40rem", borderRadius: "100px" }}
     >
-      <Card.Body>
+      <Card.Body className="hover-zoom d-flex align-items-center">
         <div style={{ height: "18rem" }}>
           <Link
             to={`/${product.category.slug}/${product.slug}`}
             key={product.id}
             state={product}
-            className="hover-zoom hover-shadow"
+            className="hover-shadow"
           >
             <Card.Img
               variant="top"
@@ -84,7 +84,10 @@ export const Product = ({ product, stock }) => {
         className="d-flex align-items-center"
         style={{ height: "5rem" }}
       >
-        <Card.Title className="text-light" style={{ height: "10rem" }}>
+        <Card.Title
+          className="text-light d-flex align-items-center"
+          style={{ height: "10rem" }}
+        >
           <div>{product.name}</div>
         </Card.Title>
       </Card.Body>

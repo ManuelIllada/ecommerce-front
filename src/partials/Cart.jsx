@@ -64,19 +64,19 @@ function Cart({ name, ...props }) {
                   </Link>
                 </div>
                 <div className="col-8 rounded my-2 mx-1 row">
-                  <div className="col-12 d-flex align-items-center justify-content-start p-3">
+                  <div className="col-12 d-flex align-items-center p-3">
                     <p className="m-0" style={{ fontSize: 20 }}>
                       {item.category.name}{" "}
-                      <span
-                        onClick={() => {
-                          handleDeleteElement(item.id);
-                        }}
-                        role="button"
-                        className="cursor-pointer"
-                      >
-                        <i className="fas fa-trash-alt text-danger"></i>
-                      </span>
                     </p>
+                    <span
+                      onClick={() => {
+                        handleDeleteElement(item.id);
+                      }}
+                      role="button"
+                      className="cursor-pointer ms-auto"
+                    >
+                      <i className="fas fa-trash-alt text-danger"></i>
+                    </span>
                   </div>
                   <div className="col-6 d-flex justify-content-start align-items-end">
                     <p className="m-1" style={{ fontSize: 15 }}>
