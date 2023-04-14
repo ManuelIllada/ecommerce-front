@@ -30,10 +30,8 @@ const ProductInfo = () => {
     const match = stateCart.some((product) => item.id === product.id);
     const itemStore = stateCart.find((product) => item.id === product.id);
     if (item.stock > 0 && !match) {
-      console.log("agregar", match);
       dispatch(addToCart(item));
     } else if (match && item.stock > itemStore.quantity) {
-      console.log("match", match);
       dispatch(addToCart(item));
     } else {
       toast.error("No tenemos mas Stock disponible 😢", {
@@ -47,11 +45,9 @@ const ProductInfo = () => {
     const match = stateCart.some((product) => item.id === product.id);
     const itemStore = stateCart.find((product) => item.id === product.id);
     if (item.stock > 0 && !match) {
-      console.log("agregar", match);
       dispatch(addToCart(item));
       navigate("/cart");
     } else if (match && item.stock > itemStore.quantity) {
-      console.log("match", match);
       dispatch(addToCart(item));
 
       navigate("/cart");
