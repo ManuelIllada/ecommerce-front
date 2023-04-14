@@ -104,32 +104,37 @@ function ProfileEdit({ user }) {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
-                  <div className="col-6">
-                    {
-                      <img
-                        src={avatarOk()}
-                        className=" img-fluid object-fit-cover rounded"
-                        alt="avatar"
-                        style={{ height: "4rem", width: "4rem" }}
-                      />
-                    }
-                    <input
-                      type="file"
-                      className="form-control w-50"
-                      name="avatar"
-                      onChange={(event) => setAvatar(event.target.files[0])}
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
+                  <div className="col-10 row">
+                    <div className="col-4">
+                      {
+                        <img
+                          src={avatarOk()}
+                          className="img-fluid object-fit-cover rounded"
+                          alt="avatar"
+                          style={{ height: "4rem", width: "4rem" }}
+                        />
+                      }
                     </div>
-                  </button>
+                    <div className="col-8 d-flex justify-content-end align-items-center">
+                      <input
+                        type="file"
+                        className="form-control"
+                        name="avatar"
+                        onChange={(event) => setAvatar(event.target.files[0])}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,32 +156,34 @@ function ProfileEdit({ user }) {
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-                <div className="p-0 accordion-body d-flex justify-content-center align-items-center row">
-                  <form className="col-10">
-                    <input
-                      onChange={(e) => setFirstname(e.target.value)}
-                      type="firstname"
-                      id="firstname"
-                      name="firstname"
-                      className="form-control form-control-lg bg-black bg-opacity-75 text-light"
-                      placeholder={user.firstname}
-                    />
-                    <label
-                      className="form-label text-light"
-                      htmlFor="typeName"
-                    ></label>
-                  </form>
-
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
-                    </div>
-                  </button>
+                <div className="accordion-body d-flex justify-content-center align-items-center row">
+                  <div className="col-10">
+                    <form className="d-flex justify-content-center align-items-center">
+                      <input
+                        onChange={(e) => setFirstname(e.target.value)}
+                        type="firstname"
+                        id="firstname"
+                        name="firstname"
+                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        placeholder={user.firstname}
+                      />
+                      <label
+                        className="form-label text-light "
+                        htmlFor="typeName"
+                      ></label>
+                    </form>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,32 +205,34 @@ function ProfileEdit({ user }) {
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-                <div className="p-0 accordion-body d-flex justify-content-center align-items-center row">
-                  <form className="col-10">
-                    <input
-                      onChange={(e) => setLastname(e.target.value)}
-                      type="lastname"
-                      id="lastname"
-                      name="lastname"
-                      className="form-control form-control-lg bg-black bg-opacity-75 text-light"
-                      placeholder={user.lastname}
-                    />
-                    <label
-                      className="form-label text-light"
-                      htmlFor="typeName"
-                    ></label>
-                  </form>
-
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
-                    </div>
-                  </button>
+                <div className="accordion-body d-flex justify-content-center align-items-center row">
+                  <div className="col-10">
+                    <form className="d-flex justify-content-center align-items-center">
+                      <input
+                        onChange={(e) => setLastname(e.target.value)}
+                        type="lastname"
+                        id="lastname"
+                        name="lastname"
+                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        placeholder={user.lastname}
+                      />
+                      <label
+                        className="form-label text-light "
+                        htmlFor="typeName"
+                      ></label>
+                    </form>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -245,32 +254,34 @@ function ProfileEdit({ user }) {
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-                <div className="p-0 accordion-body d-flex justify-content-center align-items-center row">
-                  <form className="col-10">
-                    <input
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="form-control form-control-lg bg-black bg-opacity-75 text-light"
-                      placeholder={user.email}
-                    />
-                    <label
-                      className="form-label text-light"
-                      htmlFor="typeName"
-                    ></label>
-                  </form>
-
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
-                    </div>
-                  </button>
+                <div className="accordion-body d-flex justify-content-center align-items-center row">
+                  <div className="col-10">
+                    <form className="d-flex justify-content-center align-items-center">
+                      <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        id="email"
+                        name="email"
+                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        placeholder={user.email}
+                      />
+                      <label
+                        className="form-label text-light "
+                        htmlFor="typeName"
+                      ></label>
+                    </form>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -292,32 +303,34 @@ function ProfileEdit({ user }) {
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-                <div className="p-0 accordion-body d-flex justify-content-center align-items-center row">
-                  <form className="col-10">
-                    <input
-                      onChange={(e) => setAddress(e.target.value)}
-                      type="address"
-                      id="address"
-                      name="address"
-                      className="form-control form-control-lg bg-black bg-opacity-75 text-light"
-                      placeholder={user.address}
-                    />
-                    <label
-                      className="form-label text-light"
-                      htmlFor="typeName"
-                    ></label>
-                  </form>
-
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
-                    </div>
-                  </button>
+                <div className="accordion-body d-flex justify-content-center align-items-center row">
+                  <div className="col-10">
+                    <form className="d-flex justify-content-center align-items-center">
+                      <input
+                        onChange={(e) => setAddress(e.target.value)}
+                        type="address"
+                        id="address"
+                        name="address"
+                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        placeholder={user.address}
+                      />
+                      <label
+                        className="form-label text-light "
+                        htmlFor="typeName"
+                      ></label>
+                    </form>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -339,32 +352,34 @@ function ProfileEdit({ user }) {
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
               >
-                <div className="p-0 accordion-body d-flex justify-content-center align-items-center row">
-                  <form className="col-10">
-                    <input
-                      onChange={(e) => setPhone(e.target.value)}
-                      type="phone"
-                      id="phone"
-                      name="phone"
-                      className="form-control form-control-lg bg-black bg-opacity-75 text-light"
-                      placeholder={user.phone}
-                    />
-                    <label
-                      className="form-label text-light"
-                      htmlFor="typeName"
-                    ></label>
-                  </form>
-
-                  <button
-                    type="button"
-                    className="col-2 btn btn-success btn-block btn-lg"
-                    id="checkout"
-                    onClick={patchUser}
-                  >
-                    <div className="d-flex justify-content-end align-items-center">
-                      <AiFillEdit className="text-light opacity-50" size="25" />
-                    </div>
-                  </button>
+                <div className="accordion-body d-flex justify-content-center align-items-center row">
+                  <div className="col-10">
+                    <form className="d-flex justify-content-center align-items-center">
+                      <input
+                        onChange={(e) => setPhone(e.target.value)}
+                        type="phone"
+                        id="phone"
+                        name="phone"
+                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        placeholder={user.phone}
+                      />
+                      <label
+                        className="form-label text-light "
+                        htmlFor="typeName"
+                      ></label>
+                    </form>
+                  </div>
+                  <div className="col-2">
+                    <button
+                      type="button"
+                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      id="checkout"
+                      onClick={patchUser}
+                      style={{ height: "2rem", width: "2rem" }}
+                    >
+                      <AiFillEdit className="text-light opacity-50" size="20" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
