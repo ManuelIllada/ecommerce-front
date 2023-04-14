@@ -49,8 +49,9 @@ export default function App() {
         <hr />
         <section className="mb-4 ">
           <Button
-            className="m-1 rounded-circle border border-dark text-center"
+            className="m-1 rounded-circle text-center"
             style={{
+              border: "#3b5998",
               backgroundColor: "#3b5998",
               width: "40px",
               height: "40px",
@@ -62,8 +63,9 @@ export default function App() {
           </Button>
 
           <Button
-            className="m-1 rounded-circle border border-dark text-center"
+            className="m-1 rounded-circle text-center"
             style={{
+              border: "#55acee",
               backgroundColor: "#55acee",
               width: "40px",
               height: "40px",
@@ -75,8 +77,9 @@ export default function App() {
           </Button>
 
           <Button
-            className="m-1 rounded-circle border border-dark text-center"
+            className="m-1 rounded-circle text-center"
             style={{
+              border: "#dd4b39",
               backgroundColor: "#dd4b39",
               width: "40px",
               height: "40px",
@@ -84,11 +87,18 @@ export default function App() {
             href="google"
             role="button"
           >
-            <MDBIcon fab icon="google" />
+            <MDBIcon
+              fab
+              icon="google"
+              style={{
+                boxShadow: "#fffff",
+              }}
+            />
           </Button>
           <Button
-            className="m-1 rounded-circle border border-dark text-center"
+            className="m-1 rounded-circle text-center"
             style={{
+              border: "#ac2bac",
               backgroundColor: "#ac2bac",
               width: "40px",
               height: "40px",
@@ -100,8 +110,9 @@ export default function App() {
           </Button>
 
           <Button
-            className="m-1 rounded-circle border border-dark text-center"
+            className="m-1 rounded-circle text-center"
             style={{
+              border: "#0082ca",
               backgroundColor: "#0082ca",
               width: "40px",
               height: "40px",
@@ -113,8 +124,13 @@ export default function App() {
           </Button>
 
           <Button
-            className="m-1 rounded-circle border border-dark text-center  "
-            style={{ backgroundColor: "dark", width: "40px", height: "40px" }}
+            className="m-1 rounded-circle text-center  "
+            style={{
+              border: "rgb(38, 38, 38)",
+              backgroundColor: "rgb(38, 38, 38)",
+              width: "40px",
+              height: "40px",
+            }}
             href="github"
             role="button"
           >

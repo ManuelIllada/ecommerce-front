@@ -20,7 +20,7 @@ function CategoryCard({ category }) {
       className="m-3 bg-image rounded hover-zoom hover-shadow hover-overlay col-9 col-sm-5 col-lg-3 col-xl-2 g-0"
       to={`/${category.slug}`}
     >
-      <Card>
+      <Card style={{ backgroundColor: "rgb(63, 65, 61)" }}>
         <div className="image-container">
           <h2 className="title">{category.name}</h2>
           <img

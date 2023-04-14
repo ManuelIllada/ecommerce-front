@@ -61,7 +61,7 @@ export const Product = ({ product, stock }) => {
   };
   return (
     <Card
-      className="bg-black bg-opacity-25 m-4 rounded mb-5"
+      className="hover-zoom bg-black bg-opacity-25 m-4 rounded mb-5"
       style={{ width: "20rem", height: "40rem", borderRadius: "100px" }}
     >
       <Card.Body>
@@ -69,7 +69,7 @@ export const Product = ({ product, stock }) => {
           to={`/${product.category.slug}/${product.slug}`}
           key={product.id}
           state={product}
-          className="hover-zoom hover-shadow"
+          className="hover-zoom"
         >
           <Card.Img
             variant="top"
@@ -112,14 +112,14 @@ export const Product = ({ product, stock }) => {
             + <FaOpencart size={25} />
           </Button>
         </ListGroup.Item>
-        <ListGroup.Item
+        {/*  <ListGroup.Item
           style={{ height: "2.5rem", backgroundColor: "#cacaca" }}
           className={`d-flex justify-content-center fw-bold ${
             product.stock === 0 ? "withinStock" : ""
           }`}
         >
           In stock: {product.stock}
-        </ListGroup.Item>
+        </ListGroup.Item> */}
       </ListGroup>
     </Card>
   );
