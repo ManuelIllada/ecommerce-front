@@ -19,9 +19,13 @@ function ShopList({ user }) {
 
       setOrders(response.data);
     };
+
     getOrders();
   }, []);
-
+  let numerito = 1;
+  const incrementarNumerito = () => {
+    numerito = numerito + 1;
+  };
   return (
     <>
       <div onClick={toggleShow} className="link-dark dropdown-item text-white">
@@ -45,45 +49,45 @@ function ShopList({ user }) {
         <Offcanvas.Body className="text-white ">
           <div className="accordion " id="accordionExample">
             <div className="accordion-item bg-black bg-opacity-25 text-white">
-              <h2 className="accordion-header">
-                <button
-                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  <div className="col-6">
-                    Order #1
-                    <TbTruckDelivery
-                      className="ms-3"
-                      style={{ fontSize: 40 }}
-                    />
+              {orders.length > 0 &&
+                orders.map((order) => (
+                  <div>
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed bg-black bg-opacity-25 text-white"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div className="col-6">
+                          Order {numerito}
+                          <TbTruckDelivery
+                            className="ms-3"
+                            style={{ fontSize: 40 }}
+                          />
+                        </div>
+                        <div className="col-6 d-flex justify-content-end align-items-center">
+                          {order.status.name}
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      {order.products.map((product) => (
+                        <div className="accordion-body d-flex justify-conten-between align-items-center row">
+                          <div className="col-10">{product.name}</div>
+                          <div className="col-2">${product.price}</div>
+                        </div>
+                      ))}
+                    </div>
+                    {incrementarNumerito()}
                   </div>
-                  <div className="col-6 d-flex justify-content-end align-items-center">
-                    In Coming
-                  </div>
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                className="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
-                <div className="accordion-body d-flex justify-conten-between align-items-center row">
-                  {orders.length > 0 &&
-                    orders.map((order) => (
-                      <p>
-                        {order.id}
-                        {order.status.name}
-                        {order.products.map((product) => (
-                          <p>{product.price}</p>
-                        ))}
-                      </p>
-                    ))}
-                </div>
-              </div>
+                ))}
             </div>
           </div>
         </Offcanvas.Body>
