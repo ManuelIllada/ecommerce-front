@@ -57,7 +57,11 @@ function Cart({ name, ...props }) {
                 <div className="col-4 rounded hover-zoom d-flex align-items-center justify-content-center p-2">
                   <Link to={`/${item.category.slug}/${item.slug}`} state={item}>
                     <img
-                      src={item.media[0]}
+                      src={
+                        item.media.length > 1
+                          ? item.media[0]
+                          : `http://localhost:8000/img/${item.media}`
+                      }
                       className="img-fluid"
                       alt={item.name}
                       style={{ height: "5rem" }}

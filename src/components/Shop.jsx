@@ -69,40 +69,6 @@ function Shop() {
     }
   };
 
-  /*   const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ products: stateCart, user: user }),
-      }).then((res) => res.json());
-    console.log(response); */
-  /*   if (user) {
-      const tooltip = new window.bootstrap.Tooltip(
-        document.getElementById("checkout"),
-        {
-          title: "¡Compra exitosa!",
-          placement: "bottom",
-          trigger: "click",
-        }
-      );
-      tooltip.show();
-      setTimeout(() => {
-        tooltip.hide();
-      }, 5000);
-    } else {
-      const tooltip = new window.bootstrap.Tooltip(
-        document.getElementById("checkout"),
-        {
-          title: "Debes iniciar sesión para continuar",
-          placement: "bottom",
-          trigger: "click",
-        }
-      );
-      tooltip.show();
-      setTimeout(() => {
-        tooltip.hide();
-      }, 5000);
-    } */
-
   const itemOk = (item) => {
     if (typeof item === "string" && item.includes("https://")) {
       return item;

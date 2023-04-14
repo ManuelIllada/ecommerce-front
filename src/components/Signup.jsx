@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-/* import { useSelector } from "react-redux"; */
+
 import axios from "axios";
 import {
   MDBBtn,
@@ -14,8 +14,19 @@ import {
   MDBCol,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
+import { toast } from "react-hot-toast";
 
 function SignUp() {
+  const notifySuccess = (message) =>
+    toast.success(message, {
+      duration: 2000,
+      position: "bottom-right",
+    });
+  const notifyError = (error) =>
+    toast.error(error, {
+      duration: 3000,
+      position: "bottom-right",
+    });
   const [inputFirstname, setInputFirstname] = useState("");
   const [inputLastname, setInputLastname] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -44,8 +55,11 @@ function SignUp() {
         "Content-Type": "multipart/form-data",
       },
     });
-    console.log(response);
-    navigate("/");
+    response.data.message
+      ? notifySuccess(response.data.message)
+      : notifyError(response.data.error);
+
+    navigate(-1);
   };
 
   return (
