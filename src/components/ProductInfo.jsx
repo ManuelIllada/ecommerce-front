@@ -10,6 +10,7 @@ import { Modal, Carousel } from "react-bootstrap";
 import Footer from "../partials/Footer";
 import { toast } from "react-hot-toast";
 import { FaOpencart } from "react-icons/fa";
+import { Button } from "react-bootstrap";
 
 const ProductInfo = () => {
   const stateCart = useSelector((state) => state.productCart);
@@ -125,20 +126,24 @@ const ProductInfo = () => {
             <div className="col-lg-6 col-md-8 col-sm-10  d-flex justify-content-center align-items-center flex-column  ms-5 text-center  shadow">
               <h3 className="mb-4 text-white">{name}</h3>
               <p className="text-white">{description}</p>
-              <small className="text-white">${price}</small>
-              <div>
-                <button
+              <small className="text-white fs-2">${price}</small>
+              <div className="mt-4">
+                <Button
+                  variant={"outline-primary"}
+                  className="mx-2 product-btn"
                   onClick={() => handleBuy(location.state)}
-                  className="btn btn-primary m-3"
+                  disabled={location.state.stock === 0}
                 >
                   Buy
-                </button>
-                <button
+                </Button>
+                <Button
+                  variant={"outline-success"}
+                  className="mx-2 product-btn"
                   onClick={() => handleAddToCart(location.state)}
-                  className="btn btn-outline-success m-3"
+                  disabled={location.state.stock === 0}
                 >
                   + <FaOpencart size={25} />
-                </button>
+                </Button>
               </div>
             </div>
           </div>

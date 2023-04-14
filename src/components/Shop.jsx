@@ -300,7 +300,7 @@ function Shop() {
                         <div className="d-flex justify-content-between">
                           <p className="mb-2">Shipping</p>
                           <p className="mb-2">
-                            ${" "}
+                            $
                             {stateCart.reduce(
                               (accumulator, currentItem) =>
                                 accumulator + currentItem.quantity * 20,
