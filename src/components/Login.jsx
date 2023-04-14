@@ -14,8 +14,19 @@ import {
   MDBInput,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
+import { toast } from "react-hot-toast";
 
 function Login() {
+  const notifySuccess = (message) =>
+    toast.success(message, {
+      duration: 2000,
+      position: "bottom-right",
+    });
+  const notifyError = (error) =>
+    toast.error(error, {
+      duration: 3000,
+      position: "bottom-right",
+    });
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
@@ -30,8 +41,13 @@ function Login() {
       method: "POST",
     });
     console.log(response.data);
-    dispatch(setUser(response.data));
-    navigate(-1);
+    if (response.data.message) {
+      navigate("/");
+      notifySuccess(response.data.message);
+      dispatch(setUser(response.data));
+    } else {
+      notifyError(response.data.error);
+    }
   };
 
   return (

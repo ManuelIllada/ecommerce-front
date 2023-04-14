@@ -189,9 +189,11 @@ function Shop() {
                           <div>
                             <img
                               src={
-                                user && user.avatar
+                                !user
+                                  ? "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"
+                                  : user.avatar.includes("https")
                                   ? user.avatar
-                                  : "https://icon-library.com/images/no-profile-picture-icon-female/no-profile-picture-icon-female-24.jpg"
+                                  : `${process.env.REACT_APP_API_URL}/img/${user.avatar}`
                               }
                               className="img-fluid rounded-3 border border-white"
                               style={{ width: "60px" }}
