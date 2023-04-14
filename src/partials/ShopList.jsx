@@ -1,12 +1,26 @@
-import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { TbTruckDelivery } from "react-icons/tb";
+import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function ShopList({ user }) {
   const [show, setShow] = useState(false);
-
+  const [orders, setOrders] = useState([]);
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+
+  useEffect(() => {
+    const getOrders = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${process.env.REACT_APP_API_URL}/orders/${user.id}`,
+      });
+
+      setOrders(response.data);
+    };
+    getOrders();
+  }, []);
 
   return (
     <>
@@ -24,7 +38,7 @@ function ShopList({ user }) {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             <h3 className="text-white" style={{ font: "BlinkMacSystemFont" }}>
-              Shop List
+              Order List
             </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
@@ -58,7 +72,16 @@ function ShopList({ user }) {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body d-flex justify-conten-between align-items-center row">
-                  Lista de productos del pedido
+                  {orders.length > 0 &&
+                    orders.map((order) => (
+                      <p>
+                        {order.id}
+                        {order.status.name}
+                        {order.products.map((product) => (
+                          <p>{product.price}</p>
+                        ))}
+                      </p>
+                    ))}
                 </div>
               </div>
             </div>
