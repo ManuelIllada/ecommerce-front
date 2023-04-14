@@ -112,14 +112,14 @@ export const Product = ({ product, stock }) => {
             + <FaOpencart size={25} />
           </Button>
         </ListGroup.Item>
-        <ListGroup.Item
+        {/*  <ListGroup.Item
           style={{ height: "2.5rem", backgroundColor: "#cacaca" }}
           className={`d-flex justify-content-center fw-bold ${
             product.stock === 0 ? "withinStock" : ""
           }`}
         >
           In stock: {product.stock}
-        </ListGroup.Item>
+        </ListGroup.Item> */}
       </ListGroup>
     </Card>
   );

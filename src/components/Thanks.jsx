@@ -19,11 +19,11 @@ const Thanks = () => {
             <Loading />
           ) : (
             <>
-              <div className="border border-3 border-success"></div>
               <div
-                className="card  shadow p-5"
+                className="border border-3 border-success"
                 style={{ backgroundColor: "rgb(63, 65, 61)" }}
-              >
+              ></div>
+              <div className="card  shadow p-5">
                 <div className="mb-4 text-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
