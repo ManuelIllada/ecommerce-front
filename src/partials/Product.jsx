@@ -69,7 +69,7 @@ export const Product = ({ product, stock }) => {
           to={`/${product.category.slug}/${product.slug}`}
           key={product.id}
           state={product}
-          className="hover-zoom hover-shadow"
+          className="hover-zoom"
         >
           <Card.Img
             variant="top"
