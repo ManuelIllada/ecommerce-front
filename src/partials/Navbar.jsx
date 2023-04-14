@@ -131,7 +131,7 @@ function NavBar() {
                     <FaUserAstronaut size={20} />
                   )}
                 </Button>
-                <ul className="dropdown-menu bg-dark bg-opacity-50">
+                <ul className="dropdown-menu bg-dark bg-opacity-50 p-0">
                   <li>
                     <ProfileEdit user={user} />
                   </li>
