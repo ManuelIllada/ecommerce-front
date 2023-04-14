@@ -13,7 +13,7 @@ export default function HeroProducts({ background, name }) {
     <div className="bg-image hero-product">
       <img
         src={bgOk()}
-        className="img-fluid w-100 object-fit-cover"
+        className="img-fluid w-100 h-100 object-fit-cover"
         alt="hero Section"
       />
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
