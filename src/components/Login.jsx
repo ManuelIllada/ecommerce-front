@@ -40,7 +40,7 @@ function Login() {
       data: { email, password },
       method: "POST",
     });
-    console.log(response.data);
+
     if (response.data.message) {
       navigate("/");
       notifySuccess(response.data.message);
