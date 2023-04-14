@@ -7,6 +7,7 @@ import "./ProductInfo.css";
 import Footer from "../partials/Footer";
 import { MDBIcon } from "mdb-react-ui-kit";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./AboutUs.css";
 
 function AboutUs() {
@@ -214,23 +215,31 @@ function AboutUs() {
               <div className="col-sm-12 col-md-3 text-center">
                 <h3>For Customers</h3>
                 <p>
-                  Sientete libre de navegar por este sitio, agrega productos a
-                  tu carrito, y finaliza tu compra logeandote con las
-                  credenciales de usuario:
+                  Feel free to browse this site, add products to your cart, and
+                  finalize your purchase by logging in with your user
+                  credentials:
                 </p>
-                <p>Email: username@gmail.com</p>
-                <p>Contraseña: password</p>
+                <h4>
+                  You can
+                  <Link to="/SignUp" className="ms-2 link-secondary">
+                    Register
+                  </Link>{" "}
+                  or LogIn with your credentials
+                </h4>
+                <p>Email: username@something.com</p>
+                <p>Password: User Password</p>
               </div>
               <div className="col-sm-12 col-md-3 text-center">
                 <h3>For Admins</h3>
                 <p>
-                  Si quieres probar las funcionalidades de Admin, como crear,
-                  aditar o borrar ya sea categorias, productos, usuarios u
-                  ordenes puedes acceder con las siguientes credenciales:
+                  If you want to test the Admin functionalities, such as
+                  creating, editing or deleting either categories, products,
+                  users or orders, you can access with the following
+                  credentials:
                 </p>
 
-                <p>Email: admin@gmail.com</p>
-                <p>Contraseña: password</p>
+                <p>Email: admin@admin.com</p>
+                <p>Password: 1234</p>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function HeroProducts({ background, name }) {
               alt="logo"
               className="img-fluid"
             />
-            <h1 className="mb-3">{name}</h1>
+            <h1 className="mt-5">{name}</h1>
           </div>
         </div>
       </div>

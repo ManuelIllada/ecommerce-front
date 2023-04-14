@@ -45,7 +45,7 @@ function Category() {
           />
         </section>
 
-        <h1 className="text-center text-white my-5">Our Products</h1>
+        <h1 className="text-center text-white my-5">Products</h1>
 
         <div className="d-flex flex-wrap justify-content-around mb-5">
           {products.map((product) => (
