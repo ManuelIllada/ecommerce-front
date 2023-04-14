@@ -32,13 +32,10 @@ export const Product = ({ product, stock }) => {
     if (item.stock > 0 && !match) {
       stock(item);
       dispatch(addToCart(item));
-    } else if (match && itemStore.stock >= itemStore.quantity) {
+    } else if (match && itemStore.stock > itemStore.quantity) {
       stock(item);
       dispatch(addToCart(item));
     } else {
-      console.log("itemstock", item.stock);
-      console.log("itemquantiy", itemStore.quantity);
-      console.log("itemstock2", itemStore.stock);
       toast.error("No tenemos mas Stock disponible 😢", {
         position: "bottom-right",
         duration: 3000,
@@ -52,9 +49,8 @@ export const Product = ({ product, stock }) => {
     if (item.stock > 0 && !match) {
       dispatch(addToCart(item));
       navigate("/cart");
-    } else if (match && item.stock > itemStore.quantity) {
+    } else if (match && itemStore.stock > itemStore.quantity) {
       dispatch(addToCart(item));
-
       navigate("/cart");
     } else {
       toast.error("No tenemos mas Stock disponible 😢", {

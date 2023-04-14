@@ -10,6 +10,7 @@ import { Modal, Carousel } from "react-bootstrap";
 import Footer from "../partials/Footer";
 import { toast } from "react-hot-toast";
 import { FaOpencart } from "react-icons/fa";
+import { Button } from "react-bootstrap";
 
 const ProductInfo = () => {
   const stateCart = useSelector((state) => state.productCart);

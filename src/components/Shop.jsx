@@ -155,36 +155,33 @@ function Shop() {
                         <h5>{product.name}</h5>
                       </div>
                     </div>
-                    <div className="d-flex flex-row align-items-center">
-                      <div style={{ width: "75px" }}>
-                        <input
-                          className="w-75"
-                          type="number"
-                          min="1"
-                          max={product.stock}
-                          value={product.quantity}
-                          onChange={(event) => {
-                            handleUpdateQuantity(
-                              event.target.value,
-                              product.id
-                            );
-                          }}
-                        />
-                      </div>
-                      <div style={{ width: "80px" }}>
-                        <h5 className="mb-0">
-                          ${product.price * product.quantity}
-                        </h5>
-                      </div>
-                      <div
-                        onClick={() => {
-                          handleDeleteElement(product.id);
+                  </div>
+                  <div className="d-flex flex-row align-items-center">
+                    <div style={{ width: "75px" }}>
+                      <input
+                        className="w-75"
+                        type="number"
+                        min="1"
+                        max={product.stock}
+                        value={product.quantity}
+                        onChange={(event) => {
+                          handleUpdateQuantity(event.target.value, product.id);
                         }}
-                        role="button"
-                        className="cursor-pointer"
-                      >
-                        <i className="fas fa-trash-alt text-danger"></i>
-                      </div>
+                      />
+                    </div>
+                    <div style={{ width: "80px" }}>
+                      <h5 className="mb-0">
+                        ${product.price * product.quantity}
+                      </h5>
+                    </div>
+                    <div
+                      onClick={() => {
+                        handleDeleteElement(product.id);
+                      }}
+                      role="button"
+                      className="cursor-pointer"
+                    >
+                      <i className="fas fa-trash-alt text-danger"></i>
                     </div>
                   </div>
                 </div>
