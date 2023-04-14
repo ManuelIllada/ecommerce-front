@@ -3,7 +3,9 @@ import "./Loading.css";
 const Loading = () => {
   return (
     <>
-      <div className="progress"></div>
+      <div className="d-flex justify-content-center align-items-center">
+        <div className="progress"></div>
+      </div>
     </>
   );
 };
