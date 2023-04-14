@@ -16,6 +16,14 @@ function Cart({ name, ...props }) {
   };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const itemOk = (item) => {
+    if (typeof item === "string" && item.includes("https://")) {
+      return item;
+    } else {
+      return `${process.env.REACT_APP_API_URL}/img/${item}`;
+    }
+  };
   return (
     <div>
       <FaOpencart
@@ -57,11 +65,7 @@ function Cart({ name, ...props }) {
                 <div className="col-4 rounded hover-zoom d-flex align-items-center justify-content-center p-2">
                   <Link to={`/${item.category.slug}/${item.slug}`} state={item}>
                     <img
-                      src={
-                        item.media.length > 1
-                          ? item.media[0]
-                          : `http://localhost:8000/img/${item.media}`
-                      }
+                      src={itemOk(item.media[0])}
                       className="img-fluid"
                       alt={item.name}
                       style={{ height: "5rem" }}
