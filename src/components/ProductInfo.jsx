@@ -107,6 +107,7 @@ const ProductInfo = () => {
                         src={itemOk(item)}
                         alt={name}
                         className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
+                        style={{ width: "3rem", height: "3rem" }}
                       />
                     </div>
                   ))}
