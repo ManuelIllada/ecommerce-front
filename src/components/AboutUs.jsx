@@ -250,16 +250,16 @@ function AboutUs() {
             <div class="conteinere">
               <Card.Body>
                 <Button
-                  className="ms-2 rounded-circle border border-dark text-center "
-                  style={{ backgroundColor: "#4f4f4f" }}
+                  className="ms-0 rounded-circle text-center "
+                  style={{ border: "#4f4f4f", backgroundColor: "#4f4f4f" }}
                   href={member.linkedin}
                   role="button"
                 >
                   <MDBIcon fab icon="linkedin-in" />
                 </Button>
                 <Button
-                  className="m-3 rounded-circle border border-dark text-center"
-                  style={{ backgroundColor: "#4f4f4f" }}
+                  className="m-3 rounded-circle text-center"
+                  style={{ border: "#4f4f4f", backgroundColor: "#4f4f4f" }}
                   href={member.github}
                   role="button"
                 >
