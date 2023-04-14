@@ -34,7 +34,7 @@ function Shop() {
   };
 
   const createNewOrder = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/order`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/orders/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ products: stateCart, user: user }),
