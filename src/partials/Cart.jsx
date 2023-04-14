@@ -26,17 +26,18 @@ function Cart({ name, ...props }) {
 
       <Offcanvas
         placement="end"
+        scroll="true"
         show={show}
         onHide={handleClose}
         {...props}
-        className="img-fluid bg-dark bg-opacity-75 pt-5"
+        className="img-fluid bg-black bg-opacity-25 pt-5"
       >
         <Offcanvas.Header closeButton>
           <Link to={"/cart"}>
             <Button
               onClick={handleShow}
-              className="m-2 p-2 text-white opacity-75 hover"
-              variant="dark"
+              className="m-2 p-2 text-black opacity-75  hover"
+              variant="light"
               size="sm"
             >
               Go to Cart
@@ -48,7 +49,7 @@ function Cart({ name, ...props }) {
             stateCart.map((item) => (
               <div
                 key={item.id}
-                className="d-flex align-items-center mb-2 text-white bg-dark bg-opacity-50 rounded py-2 px-4 "
+                className="d-flex align-items-center mb-2 text-white bg-black bg-opacity-50 rounded py-2 px-4 "
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title={item.name}

@@ -8,11 +8,12 @@ import Footer from "../partials/Footer";
 import { MDBIcon } from "mdb-react-ui-kit";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./AboutUs.css";
 
 function AboutUs() {
   return (
     <>
-      <div>
+      <div style={{ backgroundColor: "#f7f7f7" }}>
         <section>
           <NavBar />
         </section>
@@ -26,11 +27,7 @@ function AboutUs() {
             height: "16rem",
           }}
         ></div>
-        <section
-          style={{
-            backgroundColor: "rgb(65, 61, 61)",
-          }}
-        >
+        <section style={{ backgroundColor: "rgb(63, 65, 61)" }}>
           <div className="container text-center py-5 text-light">
             <h2>About this project</h2>
             <p>
@@ -208,10 +205,7 @@ function AboutUs() {
         </section>
         <section
           className="text-light"
-          style={{
-            backgroundColor: "rgb(65, 61, 61)",
-            height: "25rem",
-          }}
+          style={{ backgroundColor: "rgb(63, 65, 61)", height: "25rem" }}
         >
           <h2 className="py-4 text-center">
             Instructivo de cómo usar la página
@@ -250,53 +244,50 @@ function AboutUs() {
             </div>
           </div>
         </section>
-        <section className="my-5">
-          <div className="d-flex justify-content-center align-items-center">
-            {members.map((member, index) => (
-              <div key={index}>
-                <div
-                  className="d-flex flex-column align-items-center justify-content-center"
-                  style={{ width: "15rem" }}
+
+        <section class="team bodi my-5">
+          {members.map((member, index) => (
+            <div class="conteinere">
+              <Card.Body>
+                <Button
+                  className="ms-2 rounded-circle border border-dark text-center "
+                  style={{ backgroundColor: "#4f4f4f" }}
+                  href={member.linkedin}
+                  role="button"
                 >
-                  <Card.Img
-                    className="img-fluid object-fit-cover mb-3"
-                    variant="top"
-                    src={member.img}
-                    style={{
-                      height: "10rem",
-                      width: "10rem",
-                      borderRadius: "100%",
-                    }}
-                  />
+                  <MDBIcon fab icon="linkedin-in" />
+                </Button>
+                <Button
+                  className="m-3 rounded-circle border border-dark text-center"
+                  style={{ backgroundColor: "#4f4f4f" }}
+                  href={member.github}
+                  role="button"
+                >
+                  <MDBIcon fab icon="github" className="text-center" />
+                </Button>
+              </Card.Body>
+              <div className="profile">
+                <img
+                  className="img-fluid object-fit-cover"
+                  variant="top"
+                  src={member.img}
+                  style={{
+                    height: "10rem",
+                    width: "11rem",
+                  }}
+                  alt=""
+                />
+                <span class="name">
                   <h5>
                     {" "}
                     <strong> {member.firstname}</strong>
                   </h5>
                   <h6>{member.lastname}</h6>
-                  <Card.Body>
-                    <Button
-                      className="m-1 rounded-circle border border-dark text-center "
-                      style={{ backgroundColor: "#4f4f4f" }}
-                      href={member.linkedin}
-                      role="button"
-                    >
-                      <MDBIcon fab icon="linkedin-in" />
-                    </Button>
-                    <Button
-                      className="m-1 rounded-circle border border-dark text-center"
-                      style={{ backgroundColor: "#4f4f4f" }}
-                      href={member.github}
-                      role="button"
-                    >
-                      <MDBIcon fab icon="github" className="text-center" />
-                    </Button>
-                  </Card.Body>
-                </div>
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </section>
-
         <section className="mt-5">
           <Footer />
         </section>

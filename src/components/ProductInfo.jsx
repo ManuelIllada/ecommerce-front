@@ -78,8 +78,8 @@ const ProductInfo = () => {
 
   return (
     <>
-      <body style={{ backgroundColor: "rgb(65, 61, 61)" }}>
-        <section style={{ backgroundColor: "rgb(65, 61, 61)" }}>
+      <body style={{ backgroundColor: "rgb(63, 65, 61)" }}>
+        <section style={{ backgroundColor: "rgb(63, 65, 61)" }}>
           <NavBar />
         </section>
         <div
@@ -92,59 +92,52 @@ const ProductInfo = () => {
             height: "16rem",
           }}
         ></div>
-        <section>
-          <div className="container px-5 row d-flex justify-content-center py-5">
-            <div className="my-3"></div>
-            <div className=" col-12 col-md-6 col-lg-4 my-5">
-              <div className="row">
-                <div className="col-3">
-                  {media.map((item) => (
-                    <div
-                      key={item}
-                      className="preView m-3"
-                      onMouseOver={() => handleClick(item)}
-                    >
-                      <img
-                        src={itemOk(item)}
-                        alt={name}
-                        className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
-                        style={{ width: "3rem", height: "3rem" }}
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="col-9  imageZoom ">
-                  <img
-                    src={itemOk(showedImage)}
-                    alt={name}
-                    className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
-                    onClick={handleShow}
-                  />
-                </div>
+        <section className="container d-flex justify-content-center align-items-center  p-5">
+          <div className=" col-12 col-md-6 col-lg-4 my-5">
+            <div className="row">
+              <div className="col-3">
+                {media.map((item) => (
+                  <div
+                    key={item}
+                    className="preView m-3"
+                    onMouseOver={() => handleClick(item)}
+                  >
+                    <img
+                      src={itemOk(item)}
+                      alt={name}
+                      className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
+                      style={{ width: "3rem", height: "3rem" }}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="col-9  imageZoom ">
+                <img
+                  src={itemOk(showedImage)}
+                  alt={name}
+                  className="img-fluid object-fit-cover bg-dark rounded bg-opacity-25 shadow"
+                  onClick={handleShow}
+                />
               </div>
             </div>
-            <div className="col-lg-6 col-md-8 col-sm-10  d-flex justify-content-center align-items-center flex-column  ms-5 text-center  shadow">
-              <h3 className="mb-4 text-white">{name}</h3>
-              <p className="text-white">{description}</p>
-              <small className="text-white fs-2">${price}</small>
-              <div className="mt-4">
-                <Button
-                  variant={"outline-primary"}
-                  className="mx-2 product-btn"
-                  onClick={() => handleBuy(location.state)}
-                  disabled={location.state.stock === 0}
-                >
-                  Buy
-                </Button>
-                <Button
-                  variant={"outline-success"}
-                  className="mx-2 product-btn"
-                  onClick={() => handleAddToCart(location.state)}
-                  disabled={location.state.stock === 0}
-                >
-                  + <FaOpencart size={25} />
-                </Button>
-              </div>
+          </div>
+          <div className="col-lg-6 col-md-8 col-12  d-flex justify-content-center align-items-center flex-column  ms-5 text-center  shadow">
+            <h3 className="mb-4 text-white">{name}</h3>
+            <p className="text-white">{description}</p>
+            <small className="text-white">${price}</small>
+            <div>
+              <button
+                onClick={() => handleBuy(location.state)}
+                className="btn btn-primary m-3"
+              >
+                Buy
+              </button>
+              <button
+                onClick={() => handleAddToCart(location.state)}
+                className="btn btn-outline-success m-3"
+              >
+                + <FaOpencart size={25} />
+              </button>
             </div>
           </div>
         </section>

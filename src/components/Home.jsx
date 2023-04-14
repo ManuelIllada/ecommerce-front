@@ -9,7 +9,7 @@ function home() {
   return (
     <>
       {/* Hero */}
-      <div style={{ backgroundColor: "rgb(65, 61, 61)" }}>
+      <div style={{ backgroundColor: "rgb(63, 65, 61)" }}>
         <section className="position-relative hero-container">
           <NavBar />
           <AboutUsButton />

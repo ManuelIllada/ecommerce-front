@@ -53,7 +53,7 @@ function Login() {
   return (
     <MDBContainer
       fluid
-      className="overflow-y-auto p-4 bg-image vh-100"
+      className="d-flex justify-content-center overflow-y-auto pb-5 pt-3 px-5 bg-image vh-100"
       style={{
         backgroundImage:
           'url("https://wallpapercrafter.com/desktop/34708-BMW-Motorrad-Concept-Link-Electric-bike-HD-4k.jpg")',
@@ -62,10 +62,10 @@ function Login() {
       <MDBRow>
         <MDBCol
           md="6"
-          className="text-center text-md-start d-flex flex-column justify-content-center"
+          className="text-center text-md-start d-flex flex-column pt-5"
         >
           <Link to={"/"} className="text-body text-white">
-            <h5 className="mb-3 text-white">
+            <h5 className="text-white">
               <i className="fas fa-long-arrow-alt-left me-2 text-white"></i>
               Go Home
             </h5>
@@ -84,7 +84,7 @@ function Login() {
             aliquid ipsum atque?
           </p>
         </MDBCol>
-        <MDBCol md="6">
+        <MDBCol md="6" className="pt-5">
           <MDBCard className="my-5 " style={{ opacity: "85%" }}>
             <form onSubmit={(event) => handleSubmit(event)}>
               <MDBCardBody className="p-5 ">

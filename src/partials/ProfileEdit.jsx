@@ -59,10 +59,7 @@ function ProfileEdit({ user }) {
 
   return (
     <>
-      <div
-        onClick={toggleShow}
-        className="link-secondary dropdown-item text-white"
-      >
+      <div onClick={toggleShow} className="link-dark dropdown-item text-white">
         {user.firstname}
       </div>
 
@@ -71,24 +68,21 @@ function ProfileEdit({ user }) {
         placement="end"
         show={show}
         onHide={handleClose}
-        className="img-fluid bg-dark bg-opacity-75 pt-5"
+        className="img-fluid bg-black bg-opacity-25 pt-5"
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <h3
-              className="text-white opacity-75"
-              style={{ font: "BlinkMacSystemFont" }}
-            >
+            <h3 className="text-white" style={{ font: "BlinkMacSystemFont" }}>
               Profile Edit
             </h3>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="accordion " id="accordionExample">
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button bg-dark bg-opacity-25 text-white"
+                  className="accordion-button bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -127,7 +121,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}
@@ -138,10 +132,10 @@ function ProfileEdit({ user }) {
                 </div>
               </div>
             </div>
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -164,7 +158,7 @@ function ProfileEdit({ user }) {
                         type="firstname"
                         id="firstname"
                         name="firstname"
-                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        className="g-0 form-control form-control-md bg-black text-light"
                         placeholder={user.firstname}
                       />
                       <label
@@ -176,7 +170,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}
@@ -187,10 +181,10 @@ function ProfileEdit({ user }) {
                 </div>
               </div>
             </div>
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -213,7 +207,7 @@ function ProfileEdit({ user }) {
                         type="lastname"
                         id="lastname"
                         name="lastname"
-                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        className="g-0 form-control form-control-md bg-black text-light"
                         placeholder={user.lastname}
                       />
                       <label
@@ -225,7 +219,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}
@@ -236,10 +230,10 @@ function ProfileEdit({ user }) {
                 </div>
               </div>
             </div>
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
@@ -262,7 +256,7 @@ function ProfileEdit({ user }) {
                         type="email"
                         id="email"
                         name="email"
-                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        className="g-0 form-control form-control-md bg-black text-light"
                         placeholder={user.email}
                       />
                       <label
@@ -274,7 +268,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}
@@ -285,10 +279,10 @@ function ProfileEdit({ user }) {
                 </div>
               </div>
             </div>
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
@@ -311,7 +305,7 @@ function ProfileEdit({ user }) {
                         type="address"
                         id="address"
                         name="address"
-                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        className="g-0 form-control form-control-md bg-black text-light"
                         placeholder={user.address}
                       />
                       <label
@@ -323,7 +317,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}
@@ -334,10 +328,10 @@ function ProfileEdit({ user }) {
                 </div>
               </div>
             </div>
-            <div className="accordion-item bg-dark bg-opacity-50 text-white">
+            <div className="accordion-item bg-black bg-opacity-25 text-white">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button collapsed bg-dark bg-opacity-25 text-white"
+                  className="accordion-button collapsed bg-black bg-opacity-25 text-white"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
@@ -360,7 +354,7 @@ function ProfileEdit({ user }) {
                         type="phone"
                         id="phone"
                         name="phone"
-                        className="g-0 form-control form-control-md bg-black bg-opacity-75 text-light"
+                        className="g-0 form-control form-control-md bg-black text-light"
                         placeholder={user.phone}
                       />
                       <label
@@ -372,7 +366,7 @@ function ProfileEdit({ user }) {
                   <div className="col-2">
                     <button
                       type="button"
-                      className="btn bg-black bg-opacity-75 text-light btn-sm d-flex justify-content-end align-items-center"
+                      className="btn bg-light bg-opacity-25 text-light btn-sm d-flex justify-content-end align-items-center"
                       id="checkout"
                       onClick={patchUser}
                       style={{ height: "2rem", width: "2rem" }}

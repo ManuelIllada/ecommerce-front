@@ -34,7 +34,7 @@ function Category() {
 
   return (
     <>
-      <div className="bg-image" style={{ backgroundColor: "rgb(65, 61, 61)" }}>
+      <div className="bg-image" style={{ backgroundColor: "rgb(63, 65, 61)" }}>
         {/* Hero */}
         <section>
           <NavBar />

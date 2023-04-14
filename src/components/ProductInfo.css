@@ -1,5 +1,5 @@
 .preView:hover {
-  border: 3px solid lightblue;
+  border: 3px solid rgb(63, 65, 61);
   border-radius: 5px;
   cursor: pointer;
 }
