@@ -130,7 +130,7 @@ function Login() {
                   </div>
                   <div className="d-flex justify-content-center">
                     <Link
-                      to={"http://localhost:3005/"}
+                      to={"https://ecommerce-front-admin.vercel.app/login"}
                       className="ms-2 link-secondary"
                     >
                       Go to Admin Panel
